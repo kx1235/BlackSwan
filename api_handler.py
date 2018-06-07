@@ -18,6 +18,7 @@ class Controller:
     credentials: dict
     links: dict
     data: str
+    first_name: str
 
     def __init__(self):
         """Constructor to create the controller
@@ -26,6 +27,7 @@ class Controller:
             self.credentials = json.load(f)
         self.links = {}
         self.data = None
+        self.first_name = ""
 
     def generate_url(self, url: str, params: dict) -> str:
         """Generate url using the given parameters
@@ -96,6 +98,14 @@ class Controller:
         """
         return self.data is not None
 
+    def get_first_name(self):
+        """Get the first name of this client
+        """
+        url = 'https://api.sandbox.wealthsimple.com/v1/%s' % 'people'
+        headers = {'Authorization': 'Bearer %s' % self.credentials['access_token']}
+        response = requests.get(url, headers=headers)
+        data = json.loads(response.text)
+        self.first_name = data.get('results')[0].get('full_legal_name').get('first_name')
 
 if __name__ == "__main__":
     controller = Controller()

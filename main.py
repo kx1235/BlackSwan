@@ -17,6 +17,7 @@ def get_code():
     """
     controller.credentials['code'] = request.form['code']
     controller.token_exchange()
+    controller.get_first_name()  # TODO: Remove this
     return render_template("home.html", controller=controller)
 
 
