@@ -17,10 +17,11 @@ class Controller:
     """
     credentials: dict
 
-    def __init__(self, credentials: dict):
+    def __init__(self):
         """Constructor to create the controller
         """
-        self.credentials = credentials
+        with open('credentials.json', 'r') as f:
+            self.credentials = json.load(f)
 
     def generate_url(self, url: str, params: dict) -> str:
         """Generate url using the given parameters
@@ -83,16 +84,13 @@ class Controller:
         json_data = json.loads(response.text)
         print(json.dumps(json_data, indent=4, sort_keys=True))
 
+    def is_authenticated(self) -> bool:
+        """Return if the controller has been authenticated
+        """
+        return 'access_token' in self.credentials
 
-credentials = {'client_id': 'f8f8763b60e6e2a73d3e5c2b455b95d9eefee96e072dd5c9f1fd63144e166703',
-               'redirect_uri': 'https://localhost:3000/auth',
-               'response_type': 'code',
-               'state': 'random',
-               'scope': 'read write',
-               'client_secret': '5bb7db765ea8906ffa308c351e70cc4682bf420262c99fe1030a642ac4c37acb',
-               'grant_type': 'authorization_code'}
 
 if __name__ == "__main__":
-    controller = Controller(credentials)
+    controller = Controller()
     endpoint = input("Enter endpoint")
     controller.get_data(endpoint)
