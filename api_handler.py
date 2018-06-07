@@ -16,12 +16,16 @@ class Controller:
     """Read and write data using the Wealthsimple API
     """
     credentials: dict
+    links: dict
+    data: str
 
     def __init__(self):
         """Constructor to create the controller
         """
         with open('credentials.json', 'r') as f:
             self.credentials = json.load(f)
+        self.links = {}
+        self.data = None
 
     def generate_url(self, url: str, params: dict) -> str:
         """Generate url using the given parameters
@@ -36,7 +40,7 @@ class Controller:
         url_with_params = urlparse.urlunparse(url_parts)
         return url_with_params
 
-    def request_access(self) -> str:
+    def request_access(self) -> None:
         """Obtain consent from user to use the Wealthsimple API"""
         url = 'https://staging.wealthsimple.com/oauth/authorize'
         params = {'client_id': self.credentials['client_id'],
@@ -49,9 +53,7 @@ class Controller:
 
         # Provide url to user
         print(url_with_params)
-        code = input('What is the code after logging into the above url?')
-        self.credentials['code'] = code
-        return code
+        self.links['request_access'] = url_with_params
 
     def token_exchange(self) -> str:
         """Exchange authorization code for access token"""
@@ -82,12 +84,17 @@ class Controller:
         headers = {'Authorization': 'Bearer %s' % self.credentials['access_token']}
         response = requests.get(url, headers=headers)
         json_data = json.loads(response.text)
-        print(json.dumps(json_data, indent=4, sort_keys=True))
+        self.data = json.dumps(json_data, indent=4, sort_keys=True)
 
     def is_authenticated(self) -> bool:
         """Return if the controller has been authenticated
         """
         return 'access_token' in self.credentials
+
+    def has_data(self) -> bool:
+        """Return if the data is ready to be displayed
+        """
+        return self.data is not None
 
 
 if __name__ == "__main__":

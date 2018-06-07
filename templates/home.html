@@ -3,7 +3,23 @@
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
 
 {% if controller.is_authenticated() %}
-<h1>Hello, user</h1>
+<h1>Welcome to the Black Swan Wealthsimple API Interface Framework Bootstrap Hackthesix! Machine</h1>
+<p>Here you can pick what type of data you want to view and I will get it for you.</p>
+<form action="{{ url_for('get_data') }}" method="post">
+    Endpoint: <br>
+    <input type="text" name="endpoint">
+    <input type="submit" value="Search">
+</form>
+
+{% if controller.has_data() %}
+<p>{{ controller.data }}</p>
+{% endif %}
 {% else %}
-<h1>Get the code by following this link: {{ controller. }} </h1>
+<h1>Black Swan</h1>
+<p>Get the code by following this <a href="{{ controller.links['request_access'] }}" target="_blank">link</a></p>
+<form action="{{ url_for('get_code') }}" method="post">
+    Code: <br>
+    <input type="text" name="code">
+    <input type="submit" value="Get started!">
+</form>
 {% endif %}
