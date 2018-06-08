@@ -1,11 +1,11 @@
-import HelloController_py as api
+import api_handler as api
 import json
 from pprint import pprint
 
 def get_account():
 
     #converts json to python dict
-    j= json.loads(api.data_getter.get_data('accounts'))
+    j = json.loads(api.data_getter.get_data('accounts?account_types=ca_tfsa,ca_rrsp'))
     ids = j['results']
     count = j['total_count']
     account_list = []
