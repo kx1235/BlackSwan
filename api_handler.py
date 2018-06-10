@@ -74,7 +74,7 @@ class Controller:
         self.credentials['access_token'] = access_token
         return access_token
 
-    def get_data(self, endpoint: str) -> None:
+    def get_data(self, endpoint: str):
         """Get data from the Wealthsimple account
         """
         if 'code' not in self.credentials or 'access_token' not in self.credentials:
@@ -86,7 +86,9 @@ class Controller:
         headers = {'Authorization': 'Bearer %s' % self.credentials['access_token']}
         response = requests.get(url, headers=headers)
         json_data = json.loads(response.text)
-        self.data = json.dumps(json_data, indent=4, sort_keys=True)
+        data = json.dumps(json_data, indent=4, sort_keys=True)
+        self.data = data
+        return data
 
     def is_authenticated(self) -> bool:
         """Return if the controller has been authenticated
@@ -106,6 +108,7 @@ class Controller:
         response = requests.get(url, headers=headers)
         data = json.loads(response.text)
         self.first_name = data.get('results')[0].get('full_legal_name').get('first_name')
+
 
 if __name__ == "__main__":
     controller = Controller()
