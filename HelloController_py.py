@@ -127,7 +127,7 @@ class HelloController():
 
         # Now swap this authorization code for an access token
         #access_token = self.token_exchange(authorization_code)
-        access_token = '1b7e746f0e5d194d99ec5edb146604249ba28c88270d3b510b851c405be833b4'
+        access_token = 'b88cbeccc7c685e05eb41b8bac20984f40e67788cbbd9c1210a927f218e36b89'
 
         # Use access_token to get information from the server
         # Instead of -H in the URL like the documentation show python appends headers

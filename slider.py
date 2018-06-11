@@ -5,28 +5,22 @@ import dash_core_components as dcc
 app = dash.Dash()
 app.layout = html.Div([
 
-    html.Div(dcc.Input(id='input-box', type='text')),
-    html.Div(dcc.Slider(min=0,max=100,step=10,value=20)),
-    html.Button('Submit', id='button'),
-    html.Div(id='output-container-button',
-             children='Enter a value and press submit'),
-    html.Div(id='slider-output')
-])
+    html.Div(dcc.Slider(
+        id='slider',
+        min=0,
+        max=10,
+        value=0,
+        step=1,
+        )),
+    html.Button('next',id='nextbut')])
 
 
-@app.callback(
-    dash.dependencies.Output('output-container-button', 'children'),
-    [dash.dependencies.Input('button', 'n_clicks')],
-    [dash.dependencies.State('input-box', 'value')])
-def update_output(n_clicks, value):
-    return 'The input value was "{}" and the button has been clicked {} times'.format(
-        value,
-        n_clicks
-    )
 
 @app.callback(
-    dash.dependencies.Output('')
-)
+    dash.dependencies.Output('slider','value'),
+    [dash.dependencies.Input('nextbut','n_clicks')])
+def update_slider(value):
+    return value+1
 
 
 if __name__ == '__main__':
