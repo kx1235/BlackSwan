@@ -1,7 +1,11 @@
 from flask import Flask, render_template, request
+from flask_sslify import SSLify
 from api_handler import Controller
 
+# Set up app
 app = Flask(__name__)
+
+# Set up controller
 controller = Controller()
 controller.request_access()
 
@@ -28,5 +32,12 @@ def get_data():
     return render_template("home.html", controller=controller)
 
 
+@app.route('/auth', methods=['GET', 'POST'])
+def auth():
+    access_token = request.args.get('code')
+    print(access_token)
+    return render_template("auth.html", access_token=access_token, controller=controller)
+
+
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=False, host="localhost", port=3000)

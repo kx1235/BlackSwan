@@ -28,11 +28,12 @@ class Controller:
         self.links = {}
         self.data = None
         self.first_name = ""
-        # self.setup() TODO: Uncomment this
+        # self.setup() TODO: Need this to automatically log in and authenticate
 
     def setup(self):
-        # TODO: Clean this up
-        self.request_access()
+        """Checks for access code and obtains it if it is not found
+        """
+        self.request_access()  # TODO: Need this to get authorization code
         self.token_exchange()
 
     def generate_url(self, url: str, params: dict) -> str:
@@ -60,7 +61,7 @@ class Controller:
         url_with_params = self.generate_url(url, params)
 
         # Provide url to user
-        print(url_with_params)
+        print(url_with_params)  # TODO: Need this to enter in url automatically
         self.links['request_access'] = url_with_params
 
     def token_exchange(self) -> str:
@@ -85,8 +86,7 @@ class Controller:
         """
         if 'access_token' not in self.credentials:
             # Obtain access token if it has not done yet
-            self.request_access()
-            self.token_exchange()
+            self.setup()
 
         url = 'https://api.sandbox.wealthsimple.com/v1/%s' % endpoint
         headers = {'Authorization': 'Bearer %s' % self.credentials['access_token']}
