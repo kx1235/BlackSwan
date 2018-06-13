@@ -12,7 +12,9 @@
 </form>
 
 {% if controller.has_data() %}
-<p>{{ controller.data }}</p>
+<div class="data">
+    <pre>{{ controller.data }}</pre>
+</div>
 {% endif %}
 {% else %}
 <h1>Black Swan</h1>
