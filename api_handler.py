@@ -28,6 +28,12 @@ class Controller:
         self.links = {}
         self.data = None
         self.first_name = ""
+        # self.setup() TODO: Uncomment this
+
+    def setup(self):
+        # TODO: Clean this up
+        self.request_access()
+        self.token_exchange()
 
     def generate_url(self, url: str, params: dict) -> str:
         """Generate url using the given parameters
@@ -77,7 +83,7 @@ class Controller:
     def get_data(self, endpoint: str) -> None:
         """Get data from the Wealthsimple account
         """
-        if 'code' not in self.credentials or 'access_token' not in self.credentials:
+        if 'access_token' not in self.credentials:
             # Obtain access token if it has not done yet
             self.request_access()
             self.token_exchange()
@@ -87,6 +93,7 @@ class Controller:
         response = requests.get(url, headers=headers)
         json_data = json.loads(response.text)
         self.data = json.dumps(json_data, indent=4, sort_keys=True)
+        return response.text
 
     def is_authenticated(self) -> bool:
         """Return if the controller has been authenticated
@@ -106,6 +113,9 @@ class Controller:
         response = requests.get(url, headers=headers)
         data = json.loads(response.text)
         self.first_name = data.get('results')[0].get('full_legal_name').get('first_name')
+
+
+data_getter = Controller()
 
 if __name__ == "__main__":
     controller = Controller()
