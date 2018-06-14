@@ -11,6 +11,16 @@ import urllib.parse as urlparse
 from urllib.parse import urlencode
 import json
 
+creds = {
+    "client_id": "f8f8763b60e6e2a73d3e5c2b455b95d9eefee96e072dd5c9f1fd63144e166703",
+    "redirect_uri": "https://localhost:3000/auth",
+    "response_type": "code",
+    "state": "random",
+    "scope": "read write",
+    "client_secret": "5bb7db765ea8906ffa308c351e70cc4682bf420262c99fe1030a642ac4c37acb",
+    "grant_type": "authorization_code"
+}
+
 
 class Controller:
     """Read and write data using the Wealthsimple API
@@ -21,22 +31,25 @@ class Controller:
     first_name: str
 
     def __init__(self):
-        """Constructor to create the controller
         """
-        with open('credentials.json', 'r') as f:
-            self.credentials = json.load(f)
+        Constructor to create the controller
+        """
+        self.credentials = creds
         self.links = {}
         self.data = None
         self.first_name = ""
         # self.setup() TODO: Uncomment this
 
     def setup(self):
-        # TODO: Clean this up
-        self.request_access()
-        self.token_exchange()
+        """Set up the Controller"""
+        if 'access_token' not in self.credentials:
+            url = self.request_access()
+            self.credentials['code'] = input("Get the code from the browser: %s\n" % url)
+            self.token_exchange()
 
     def generate_url(self, url: str, params: dict) -> str:
-        """Generate url using the given parameters
+        """
+        Generate url using the given parameters
 
         Code from https://stackoverflow.com/questions/2506379/add-params-to-given-url-in-python
         """
@@ -48,7 +61,7 @@ class Controller:
         url_with_params = urlparse.urlunparse(url_parts)
         return url_with_params
 
-    def request_access(self) -> None:
+    def request_access(self) -> str:
         """Obtain consent from user to use the Wealthsimple API"""
         url = 'https://staging.wealthsimple.com/oauth/authorize'
         params = {'client_id': self.credentials['client_id'],
@@ -60,8 +73,8 @@ class Controller:
         url_with_params = self.generate_url(url, params)
 
         # Provide url to user
-        print(url_with_params)
         self.links['request_access'] = url_with_params
+        return url_with_params
 
     def token_exchange(self) -> str:
         """Exchange authorization code for access token"""
@@ -80,7 +93,7 @@ class Controller:
         self.credentials['access_token'] = access_token
         return access_token
 
-    def get_data(self, endpoint: str) -> None:
+    def get_data(self, endpoint: str, parameters=None) -> str:
         """Get data from the Wealthsimple account
         """
         if 'access_token' not in self.credentials:
@@ -89,11 +102,16 @@ class Controller:
             self.token_exchange()
 
         url = 'https://api.sandbox.wealthsimple.com/v1/%s' % endpoint
+
+        if parameters is not None:
+            url = self.generate_url(url, parameters)
         headers = {'Authorization': 'Bearer %s' % self.credentials['access_token']}
         response = requests.get(url, headers=headers)
         json_data = json.loads(response.text)
-        self.data = json.dumps(json_data, indent=4, sort_keys=True)
-        return response.text
+        formatted_data = json.dumps(json_data, indent=4, sort_keys=True)
+        self.data = formatted_data
+
+        return formatted_data
 
     def is_authenticated(self) -> bool:
         """Return if the controller has been authenticated
