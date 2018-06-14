@@ -10,7 +10,6 @@ app = dash.Dash()
 
 df = pd.read_csv("https://raw.githubusercontent.com/plotly/datasets/master/finance-charts-apple.csv")
 
-
 chart1 = {
             "values": [16, 15, 12, 6, 5, 4, 42],
             "labels": [
@@ -20,35 +19,63 @@ chart1 = {
                 "Russian Federation",
                 "Brazil",
                 "India",
-                "Rest of World"
+                "Japan"
             ],
             "domain": {"x": [0, .48]},
-            "name": "GHG Emissions",
-            "hoverinfo": "label+percent+name",
+            "hoverinfo": "label+percent",
             "hole": .4,
             "type": "pie"
 
         }
 
-chart2 = {
-            "values": [27, 11, 25, 8, 1, 3, 25],
-            "labels": [
-                "US",
-                "China",
-                "European Union",
-                "Russian Federation",
-                "Brazil",
-                "India",
-                "Rest of World"
-            ],
+fig1 = go.Layout(
+        showlegend=False,
+        autosize=False,
+        width=570,
+        height=400,
+        margin=go.Margin(
+            l=40,
+            r=50,
+            b=100,
+            t=100,
+            pad=1
+        ),
+        paper_bgcolor='#333333',
+        plot_bgcolor='#333333'
+    )
 
-            "domain": {"x": [.52, 1]},
-            "name": "CO2 Emissions",
-            "hoverinfo": "label+percent+name",
-            "hole": .4,
-            "type": "pie"
+fig2 = go.Layout(
+        showlegend=False,
+        autosize=False,
+        width=570,
+        height=400,
+        margin=go.Margin(
+            l=0,
+            r=50,
+            b=100,
+            t=100,
+            pad=1
+        ),
+        paper_bgcolor='#333333',
+        plot_bgcolor='#333333')
 
-        }
+fig3 = go.Layout(
+        showlegend=False,
+        autosize=False,
+        width=570,
+        height=400,
+        margin=go.Margin(
+            l=0,
+            r=0,
+            b=100,
+            t=100,
+            pad=7
+        ),
+        paper_bgcolor='#333333',
+        plot_bgcolor='#333333'
+    )
+
+
 
 trace0 = go.Scatter(
                 x=df.Date,
@@ -61,7 +88,7 @@ trace1 = go.Scatter(
                 x=df.Date,
                 y=df['AAPL.Low'],
                 name = "RRSP",
-                line = dict(color = '#7F7F7F'),
+                line = dict(color = '#FFFFFF'),
                 opacity = 0.8)
 
 trace2 = go.Scatter(
@@ -71,98 +98,93 @@ trace2 = go.Scatter(
                 line = dict(color = '#F8B041'),
                 opacity = 0.8)
 
+portfolio_value = {
+                        'data': [trace0,trace1, trace2],
+                        "layout":dict(
+                            title = "Portfolio value",
+                            showlegend= False,
+                            width = 200,
+                            titlefont= dict(color='#dbdbdb'),
+                            margin=go.Margin(
+                                l=50,
+                                r=40,
+                                b=150,
+                                t=100,
+                                pad=7
+                            ),
+                            xaxis = dict(
+                                range = ['2016-07-01','2016-12-31'],
+                                showgrid= True,
+                                gridcolor = '#898989',
+                                linecolor='#dbdbdb',
+                                tickcolor='#dbdbdb',
+                                tickfont = dict(color='#dbdbdb'),
 
-pielayout = {
-            'height': 500,
-            'width': '100%',
-        }
+                            ),
+                            yaxis = dict(
+                                showgrid= True,
+                                gridcolor = '#898989',
+                                linecolor='#dbdbdb',
+                                tickcolor='#dbdbdb',
+                                tickfont = dict(color='#dbdbdb'),
+                            ),
+                            paper_bgcolor='#333333',
+                            plot_bgcolor='#333333'
+                        ),
+                    }
 
 app = dash.Dash()
 app.layout = html.Div([
 
     html.Div([
-        html.H1("Black Swan", style={'color':'#ffffff', 'margin': 15}),
-        html.H2("See what we've been up to", style={'color':'#caccce', 'margin': 15}),
+        html.H1("Black Swan", style={'color':'#ffffff', 'margin': 20}),
+        html.H2("See what we've been up to", style={'color':'#caccce', 'margin': 20}),
     ], style={'backgroundColor':'#333333'}),
 
     html.Div([
         html.Div([
             dcc.Graph(
                 id='g1',
-                style={'margin': 30},
                 figure={
-                    'data': [chart1],
-                    'layout': [pielayout],
-                    'layout' : go.Layout(showlegend=False, autosize=True,
-                                         margin=go.Margin(
-                                             l=170,
-                                             r=5,
-                                             b=10,
-                                             t=0,
-                                             pad=0
-                                         ),
-                                         ),
+                    'data':[chart1],
+                    'layout': fig1,
                 }
             )
-        ], className="four columns"),
+        ],className="two columns"),
 
         html.Div([
             dcc.Graph(
                 id='g2',
-                style={'margin': 30},
+                style={'margin-left': 60},
                 figure={
-                    'data': [chart2],
-                    'layout': [pielayout],
-                    'layout': go.Layout(showlegend=False,
-                                        margin=go.Margin(
-                                             l=0,
-                                             r=180,
-                                             b=10,
-                                             t=10,
-                                             pad=0
-                                         ),
-                                        ),
+                    'data': [chart1],
+                    'layout':fig2,
                 }
             )
-        ],style={'border': '#333333'},className="four columns"),
+        ],className="two columns"),
 
         html.Div([
             dcc.Graph(
                 id='g3',
-                style={'margin': 30},
+                style={'margin-left': 70},
                 figure={
-                    'data': [chart2],
-                    'layout': [pielayout],
-                    'layout' : go.Layout(showlegend=False, autosize=True,
-                                         margin=go.Margin(
-                                             l=0,
-                                             r=180,
-                                             b=10,
-                                             t=10,
-                                             pad=0
-                                         ),
-                                         ),
-
+                    'data': [chart1],
+                    'layout': fig3,
                 }
             )
-        ], className="four columns"),
+        ], className="three columns"),
+
+        html.Div([
+                dcc.Graph(
+                    id = 's1',
+                    style={'margin-left': 0, 'margin-bottom': 150},
+                    figure= portfolio_value,
+                )
+            ], className="five columns"),
 
     ], className="row"),
 
-    html.Div([
-        dcc.Graph(
-            id = 's1',
-            style={'margin': 30},
-            figure={
-                'data': [trace0,trace1, trace2],
-                "layout":dict(
-                    title = "Portfolio value",
-                    xaxis = dict(range = ['2016-07-01','2016-12-31'])
-                )
-            }
-        )
-    ])
-    ], style={'backgroundColor':'#EEEEEE'})
+], style={'backgroundColor':'#333333'})
 
 app.css.append_css({"external_url": "https://codepen.io/chriddyp/pen/bWLwgP.css"})
 
