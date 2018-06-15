@@ -19,7 +19,7 @@ creds = {
     "scope": "read write",
     "client_secret": "5bb7db765ea8906ffa308c351e70cc4682bf420262c99fe1030a642ac4c37acb",
     "grant_type": "authorization_code",
-    "access_token": "c3afe4a903b19601ac44fa423d840a7e768e0373c2dfd82b9c4b8f6849dad2d9"
+    "access_token": "66354b2024da79dd4021365729706a9aa5f200e3b090e15ab7c4fdddd3a72fe0"
 }
 
 
@@ -138,5 +138,4 @@ data_getter = Controller()
 
 if __name__ == "__main__":
     controller = Controller()
-    endpoint = input("Enter endpoint")
-    controller.get_data(endpoint)
+    controller.setup()
