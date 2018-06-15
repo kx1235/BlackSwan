@@ -6,9 +6,51 @@ import plotly.plotly as py
 import plotly.graph_objs as go
 import pandas as pd
 
+from datetime import date
+from data import data_getter
+from data.data_getter import list_positions, get_dates
+
+dates = get_dates(date(2018, month=3, day=12), date(2018, month=4, day=23))
+
+account = 'rrsp-50dttgfe'
+rrsp = list_positions(account, dates)
+amount_rrsp, symbol_rrsp, total_rrsp = rrsp
+
+account = 'tfsa-arbu_-o3'
+tfsa = list_positions(account, dates)
+amount_tfsa, symbol_tfsa, total_tfsa = tfsa
+
+account = 'ca-hisa-lciuw77c'
+hisa = list_positions(account, dates)
+amount_hisa, symbol_hisa, total_hisa = hisa
+
+
+
 app = dash.Dash()
 
 df = pd.read_csv("https://raw.githubusercontent.com/plotly/datasets/master/finance-charts-apple.csv")
+
+slider = dcc.Slider(
+    id='slider',
+    min=0,
+    max=9,
+    value=0,
+    step=1,
+    marks={
+        0: dates[0],
+        1: dates[1],
+        2: dates[2],
+        3: dates[3],
+        4: dates[4],
+        5: dates[5],
+        6: dates[6],
+        7: dates[7],
+        8: dates[8],
+        9: dates[9],
+    }
+)
+
+nextbut = html.Button('Next', id='button')
 
 chart1 = {
             "values": [16, 15, 12, 6, 5, 4, 42],
@@ -184,9 +226,85 @@ app.layout = html.Div([
 
     ], className="row"),
 
-], style={'backgroundColor':'#333333'})
+    html.Div(slider),
+    html.Div(nextbut),
+], style={'backgroundColor': '#333333'}, )
 
 app.css.append_css({"external_url": "https://codepen.io/chriddyp/pen/bWLwgP.css"})
+
+
+@app.callback(
+    Output('slider', 'value'),
+    [Input('button', 'n_clicks')])
+def update_slider(clicks):
+    print('slider triggered')
+    return clicks
+
+
+@app.callback(
+    Output('g1', 'figure'),
+    [Input('button', 'n_clicks')])
+def update_g1(clicks):
+    print('g1 triggered')
+    new_figure = {
+        'data': [{
+            "values": amount_rrsp[dates[clicks]],
+            "labels": symbol_rrsp,
+            "domain": {"x": [0, .48]},
+            "hoverinfo": "label+percent",
+            "hole": .4,
+            "type": "pie"
+
+        }],
+        'layout': fig1
+    }
+    return new_figure
+
+
+@app.callback(
+    Output('g2', 'figure'),
+    [Input('button', 'n_clicks')])
+def update_g1(clicks):
+    print('g1 triggered')
+    new_figure = {
+        'data': [{
+            "values": amount_tfsa[dates[clicks]],
+            "labels": symbol_tfsa,
+            "domain": {"x": [0, .48]},
+            "hoverinfo": "label+percent",
+            "hole": .4,
+            "type": "pie"
+
+        }],
+        'layout': fig1
+    }
+    return new_figure
+
+
+@app.callback(
+    Output('g3', 'figure'),
+    [Input('button', 'n_clicks')])
+def update_g1(clicks):
+    print('g1 triggered')
+    new_figure = {
+        'data': [{
+            "values": amount_hisa[dates[clicks]],
+            "labels": symbol_hisa,
+            "domain": {"x": [0, .48]},
+            "hoverinfo": "label+percent",
+            "hole": .4,
+            "type": "pie"
+
+        }],
+        'layout': fig1
+    }
+    return new_figure
+
+
+
+
+
+
 
 
 

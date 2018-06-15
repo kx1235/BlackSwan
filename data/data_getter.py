@@ -73,7 +73,7 @@ def list_positions(id_: str, dates: List[date]) -> (Dict[date, List[float]], Lis
 
         # Calculate the percentage for each asset
         for value in values:
-            percentages.append(value / sum_)
+            percentages.append(int((value / sum_) * 1000))
         position_percentages[date] = percentages
 
     return position_percentages, symbols, totals
