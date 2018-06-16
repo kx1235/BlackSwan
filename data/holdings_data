@@ -1,0 +1,311 @@
+{
+    "object": "position",
+    "results": [
+        {
+            "object": "position",
+            "account_id": "rrsp-50dttgfe",
+            "asset": {
+                "type": null,
+                "symbol": "BAM.A",
+                "country_code": "CA",
+                "name": "BROOKFIELD ASSET MANAGEMENT INC",
+                "currency": "CAD",
+                "exchange": "TOR"
+            },
+            "quantity": "152.0",
+            "book_value": {
+                "amount": "11182.51",
+                "currency": "CAD"
+            },
+            "adjusted_book_value": {
+                "amount": "11042.29",
+                "currency": "CAD"
+            },
+            "market_value": {
+                "amount": "8211.04",
+                "currency": "CAD"
+            },
+            "market_price": {
+                "amount": "54.02",
+                "currency": "CAD"
+            },
+            "average_price": {
+                "amount": "72.65",
+                "currency": "CAD"
+            },
+            "account_value": {
+                "amount": "8211.04",
+                "currency": "CAD"
+            },
+            "position_date": "2018-06-13"
+        },
+        {
+            "object": "position",
+            "account_id": "rrsp-50dttgfe",
+            "asset": {
+                "type": null,
+                "symbol": "CAD",
+                "country_code": null,
+                "name": "CAD",
+                "currency": "CAD",
+                "exchange": null
+            },
+            "quantity": "-1434.0052",
+            "book_value": {
+                "amount": "-1434.0",
+                "currency": "CAD"
+            },
+            "adjusted_book_value": {
+                "amount": "-1434.0",
+                "currency": "CAD"
+            },
+            "market_value": {
+                "amount": "-1434.01",
+                "currency": "CAD"
+            },
+            "market_price": {
+                "amount": "1.0",
+                "currency": "CAD"
+            },
+            "average_price": {
+                "amount": "1.0",
+                "currency": "CAD"
+            },
+            "account_value": {
+                "amount": "-1434.01",
+                "currency": "CAD"
+            },
+            "position_date": "2018-06-13"
+        },
+        {
+            "object": "position",
+            "account_id": "rrsp-50dttgfe",
+            "asset": {
+                "type": null,
+                "symbol": "GOOG",
+                "country_code": "US",
+                "name": "Alphabet Inc.",
+                "currency": "USD",
+                "exchange": "NMS"
+            },
+            "quantity": "67.0",
+            "book_value": {
+                "amount": "105457.09",
+                "currency": "CAD"
+            },
+            "adjusted_book_value": {
+                "amount": "100000.46",
+                "currency": "CAD"
+            },
+            "market_value": {
+                "amount": "76334.44",
+                "currency": "USD"
+            },
+            "market_price": {
+                "amount": "1139.319946",
+                "currency": "USD"
+            },
+            "average_price": {
+                "amount": "1492.54",
+                "currency": "CAD"
+            },
+            "account_value": {
+                "amount": "99350.18",
+                "currency": "CAD"
+            },
+            "position_date": "2018-06-13"
+        },
+        {
+            "object": "position",
+            "account_id": "rrsp-50dttgfe",
+            "asset": {
+                "type": null,
+                "symbol": "USD",
+                "country_code": null,
+                "name": "USD",
+                "currency": "USD",
+                "exchange": null
+            },
+            "quantity": "-75959.8192",
+            "book_value": {
+                "amount": "-75959.82",
+                "currency": "USD"
+            },
+            "adjusted_book_value": {
+                "amount": "-75959.82",
+                "currency": "USD"
+            },
+            "market_value": {
+                "amount": "-75959.82",
+                "currency": "USD"
+            },
+            "market_price": {
+                "amount": "1.0",
+                "currency": "USD"
+            },
+            "average_price": {
+                "amount": "1.0",
+                "currency": "USD"
+            },
+            "account_value": {
+                "amount": "-98862.61",
+                "currency": "CAD"
+            },
+            "position_date": "2018-06-13"
+        },
+        {
+            "object": "position",
+            "account_id": "rrsp-50dttgfe",
+            "asset": {
+                "type": null,
+                "symbol": "VAB",
+                "country_code": "CA",
+                "name": "Vanguard Canadian Aggregate Bo",
+                "currency": "CAD",
+                "exchange": "TOR"
+            },
+            "quantity": "72.0",
+            "book_value": {
+                "amount": "2627.61",
+                "currency": "CAD"
+            },
+            "adjusted_book_value": {
+                "amount": "2641.75",
+                "currency": "CAD"
+            },
+            "market_value": {
+                "amount": "1789.92",
+                "currency": "CAD"
+            },
+            "market_price": {
+                "amount": "24.860001",
+                "currency": "CAD"
+            },
+            "average_price": {
+                "amount": "36.69",
+                "currency": "CAD"
+            },
+            "account_value": {
+                "amount": "1789.92",
+                "currency": "CAD"
+            },
+            "position_date": "2018-06-13"
+        },
+        {
+            "object": "position",
+            "account_id": "rrsp-50dttgfe",
+            "asset": {
+                "type": null,
+                "symbol": "VIG",
+                "country_code": "US",
+                "name": "Vanguard Dividend Appreciation Index Fund ETF Shares",
+                "currency": "USD",
+                "exchange": "PCX"
+            },
+            "quantity": "7.0",
+            "book_value": {
+                "amount": "886.64",
+                "currency": "CAD"
+            },
+            "adjusted_book_value": {
+                "amount": "995.62",
+                "currency": "CAD"
+            },
+            "market_value": {
+                "amount": "732.97",
+                "currency": "USD"
+            },
+            "market_price": {
+                "amount": "104.709999",
+                "currency": "USD"
+            },
+            "average_price": {
+                "amount": "142.23",
+                "currency": "CAD"
+            },
+            "account_value": {
+                "amount": "953.96",
+                "currency": "CAD"
+            },
+            "position_date": "2018-06-13"
+        },
+        {
+            "object": "position",
+            "account_id": "rrsp-50dttgfe",
+            "asset": {
+                "type": null,
+                "symbol": "XUS",
+                "country_code": "CA",
+                "name": "iSHARES CORE SP 500 INDEX ETF",
+                "currency": "CAD",
+                "exchange": "TOR"
+            },
+            "quantity": "12.0",
+            "book_value": {
+                "amount": "-34.95",
+                "currency": "CAD"
+            },
+            "adjusted_book_value": {
+                "amount": "739.88",
+                "currency": "CAD"
+            },
+            "market_value": {
+                "amount": "546.6",
+                "currency": "CAD"
+            },
+            "market_price": {
+                "amount": "45.549999",
+                "currency": "CAD"
+            },
+            "average_price": {
+                "amount": "61.66",
+                "currency": "CAD"
+            },
+            "account_value": {
+                "amount": "546.6",
+                "currency": "CAD"
+            },
+            "position_date": "2018-06-13"
+        },
+        {
+            "object": "position",
+            "account_id": "rrsp-50dttgfe",
+            "asset": {
+                "type": null,
+                "symbol": "ZEF",
+                "country_code": "CA",
+                "name": "BMO EMG MKT BOND HDGD TO CAD ID",
+                "currency": "CAD",
+                "exchange": "TOR"
+            },
+            "quantity": "100.0",
+            "book_value": {
+                "amount": "2232.45",
+                "currency": "CAD"
+            },
+            "adjusted_book_value": {
+                "amount": "2215.57",
+                "currency": "CAD"
+            },
+            "market_value": {
+                "amount": "1548.0",
+                "currency": "CAD"
+            },
+            "market_price": {
+                "amount": "15.48",
+                "currency": "CAD"
+            },
+            "average_price": {
+                "amount": "22.16",
+                "currency": "CAD"
+            },
+            "account_value": {
+                "amount": "1548.0",
+                "currency": "CAD"
+            },
+            "position_date": "2018-06-13"
+        }
+    ],
+    "offset": 0,
+    "total_count": 8
+}

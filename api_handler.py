@@ -115,7 +115,6 @@ class Controller:
         self.first_name = data.get('results')[0].get('full_legal_name').get('first_name')
 
 
-data_getter = Controller()
 
 if __name__ == "__main__":
     controller = Controller()

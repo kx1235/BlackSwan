@@ -1,0 +1,3277 @@
+Date,Account,Action,Company,Amount,Info
+"March 1
+",RRSP,Bought,GOOG,"$1,069.52
+","1 share at $1,069.52 USD/share"
+"March 1
+",RRSP,Bought,VIG,"$1,522.80
+",15 shares at $101.52 USD/share
+"March 1
+",RRSP,Bought,XUS,"$1,544.40
+",36 shares at $42.90/share
+"March 1
+",RRSP,Bought,ZEF,"$1,569.96
+",98 shares at $16.02/share
+"March 1
+",RRSP,Bought,VAB,"$1,576.89
+",63 shares at $25.03/share
+"March 1
+",RRSP,Bought,BAM.A,"$1,578.24
+",32 shares at $49.32/share
+"March 1
+",TFSA,Bought,XUS,"$1,544.40
+",36 shares at $42.90/share
+"March 1
+",TFSA,Bought,ZEF,"$1,569.96
+",98 shares at $16.02/share
+"March 1
+",TFSA,Bought,VAB,"$1,576.89
+",63 shares at $25.03/share
+"March 1
+",TFSA,Bought,BAM.A,"$1,578.24
+",32 shares at $49.32/share
+"March 1
+",TFSA,Bought,GOOG,"$1,069.52
+","1 share at $1,069.52 USD/share"
+"March 1
+",TFSA,Bought,VIG,"$1,522.80
+",15 shares at $101.52 USD/share
+"March 2
+",RRSP,Bought,VAB,"$24.98
+",1 share at $24.98/share
+"March 2
+",RRSP,Bought,ZEF,"$129.20
+",8 shares at $16.15/share
+"March 2
+",TFSA,Bought,VAB,"$199.84
+",8 shares at $24.98/share
+"March 2
+",TFSA,Bought,XUS,"$433.70
+",10 shares at $43.37/share
+"March 2
+",TFSA,Sold,VIG,"$611.10
+",6 shares at $101.85 USD/share
+"March 2
+",TFSA,Sold,GOOG,"$1,078.92
+","1 share at $1,078.92 USD/share"
+"March 2
+",RRSP,Sold,BAM.A,"$250.50
+",5 shares at $50.10/share
+"March 2
+",RRSP,Sold,XUS,"$346.96
+",8 shares at $43.37/share
+"March 2
+",RRSP,Sold,VIG,"$101.85
+",1 share at $101.85 USD/share
+"March 2
+",RRSP,Sold,GOOG,"$1,078.92
+","1 share at $1,078.92 USD/share"
+"March 2
+",TFSA,Sold,ZEF,"$129.20
+",8 shares at $16.15/share
+"March 2
+",TFSA,Sold,BAM.A,"$150.30
+",3 shares at $50.10/share
+"March 3
+",RRSP,Sold,VAB,"$99.92
+",4 shares at $24.98/share
+"March 3
+",RRSP,Sold,GOOG,"$0.00
+","0 shares at $1,078.92 USD/share"
+"March 3
+",RRSP,Sold,VIG,"$814.80
+",8 shares at $101.85 USD/share
+"March 3
+",TFSA,Sold,GOOG,"$0.00
+","0 shares at $1,078.92 USD/share"
+"March 3
+",TFSA,Sold,VIG,"$509.25
+",5 shares at $101.85 USD/share
+"March 3
+",TFSA,Sold,BAM.A,"$100.20
+",2 shares at $50.10/share
+"March 3
+",TFSA,Bought,XUS,"$43.37
+",1 share at $43.37/share
+"March 3
+",TFSA,Bought,ZEF,"$145.35
+",9 shares at $16.15/share
+"March 3
+",TFSA,Bought,VAB,"$249.80
+",10 shares at $24.98/share
+"March 3
+",RRSP,Bought,ZEF,"$16.15
+",1 share at $16.15/share
+"March 3
+",RRSP,Bought,BAM.A,"$250.50
+",5 shares at $50.10/share
+"March 3
+",RRSP,Bought,XUS,"$303.59
+",7 shares at $43.37/share
+"March 4
+",TFSA,Bought,XUS,"$303.59
+",7 shares at $43.37/share
+"March 4
+",TFSA,Bought,GOOG,"$1,078.92
+","1 share at $1,078.92 USD/share"
+"March 4
+",TFSA,Sold,ZEF,"$32.30
+",2 shares at $16.15/share
+"March 4
+",TFSA,Sold,VAB,"$174.86
+",7 shares at $24.98/share
+"March 4
+",TFSA,Sold,BAM.A,"$501.00
+",10 shares at $50.10/share
+"March 4
+",TFSA,Sold,VIG,"$407.40
+",4 shares at $101.85 USD/share
+"March 4
+",RRSP,Bought,VIG,"$916.65
+",9 shares at $101.85 USD/share
+"March 4
+",RRSP,Bought,GOOG,"$5,394.60
+","5 shares at $1,078.92 USD/share"
+"March 4
+",RRSP,Sold,BAM.A,"$50.10
+",1 share at $50.10/share
+"March 4
+",RRSP,Bought,ZEF,"$16.15
+",1 share at $16.15/share
+"March 4
+",RRSP,Bought,VAB,"$49.96
+",2 shares at $24.98/share
+"March 4
+",RRSP,Bought,XUS,"$260.22
+",6 shares at $43.37/share
+"March 5
+",TFSA,Sold,BAM.A,"$152.91
+",3 shares at $50.97/share
+"March 5
+",TFSA,Bought,VIG,"$1,029.10
+",10 shares at $102.91 USD/share
+"March 5
+",TFSA,Bought,ZEF,"$48.45
+",3 shares at $16.15/share
+"March 5
+",TFSA,Bought,VAB,"$199.52
+",8 shares at $24.94/share
+"March 5
+",TFSA,Bought,XUS,"$441.80
+",10 shares at $44.18/share
+"March 5
+",RRSP,Sold,VIG,"$205.82
+",2 shares at $102.91 USD/share
+"March 5
+",RRSP,Sold,GOOG,"$5,454.65
+","5 shares at $1,090.93 USD/share"
+"March 5
+",RRSP,Sold,ZEF,"$80.75
+",5 shares at $16.15/share
+"March 5
+",RRSP,Bought,XUS,"$44.18
+",1 share at $44.18/share
+"March 5
+",RRSP,Bought,VAB,"$149.64
+",6 shares at $24.94/share
+"March 5
+",RRSP,Bought,BAM.A,"$356.79
+",7 shares at $50.97/share
+"March 5
+",TFSA,Sold,GOOG,"$1,090.93
+","1 share at $1,090.93 USD/share"
+"March 6
+",RRSP,Bought,VAB,"$24.89
+",1 share at $24.89/share
+"March 6
+",RRSP,Bought,ZEF,"$145.17
+",9 shares at $16.13/share
+"March 6
+",RRSP,Bought,XUS,"$175.72
+",4 shares at $43.93/share
+"March 6
+",RRSP,Bought,BAM.A,"$459.45
+",9 shares at $51.05/share
+"March 6
+",TFSA,Bought,VIG,"$516.15
+",5 shares at $103.23 USD/share
+"March 6
+",TFSA,Sold,GOOG,"$0.00
+","0 shares at $1,095.06 USD/share"
+"March 6
+",TFSA,Sold,VAB,"$49.78
+",2 shares at $24.89/share
+"March 6
+",TFSA,Sold,ZEF,"$112.91
+",7 shares at $16.13/share
+"March 6
+",TFSA,Sold,XUS,"$175.72
+",4 shares at $43.93/share
+"March 6
+",TFSA,Sold,BAM.A,"$255.25
+",5 shares at $51.05/share
+"March 6
+",RRSP,Sold,GOOG,"$0.00
+","0 shares at $1,095.06 USD/share"
+"March 6
+",RRSP,Sold,VIG,"$1,032.30
+",10 shares at $103.23 USD/share
+"March 7
+",TFSA,Bought,ZEF,"$16.08
+",1 share at $16.08/share
+"March 7
+",TFSA,Bought,BAM.A,"$204.52
+",4 shares at $51.13/share
+"March 7
+",TFSA,Bought,XUS,"$219.85
+",5 shares at $43.97/share
+"March 7
+",TFSA,Bought,GOOG,"$4,438.56
+","4 shares at $1,109.64 USD/share"
+"March 7
+",TFSA,Sold,VAB,"$173.88
+",7 shares at $24.84/share
+"March 7
+",TFSA,Sold,VIG,"$618.72
+",6 shares at $103.12 USD/share
+"March 7
+",RRSP,Sold,VAB,"$173.88
+",7 shares at $24.84/share
+"March 7
+",RRSP,Sold,XUS,"$219.85
+",5 shares at $43.97/share
+"March 7
+",RRSP,Bought,VIG,"$206.24
+",2 shares at $103.12 USD/share
+"March 7
+",RRSP,Bought,GOOG,"$9,986.76
+","9 shares at $1,109.64 USD/share"
+"March 7
+",RRSP,Bought,ZEF,"$160.80
+",10 shares at $16.08/share
+"March 7
+",RRSP,Bought,BAM.A,"$511.30
+",10 shares at $51.13/share
+"March 8
+",TFSA,Sold,GOOG,"$4,504.00
+","4 shares at $1,126.00 USD/share"
+"March 8
+",RRSP,Sold,ZEF,"$32.34
+",2 shares at $16.17/share
+"March 8
+",TFSA,Bought,VIG,"$207.24
+",2 shares at $103.62 USD/share
+"March 8
+",RRSP,Bought,VIG,"$621.72
+",6 shares at $103.62 USD/share
+"March 8
+",RRSP,Bought,VAB,"$99.48
+",4 shares at $24.87/share
+"March 8
+",RRSP,Bought,XUS,"$132.33
+",3 shares at $44.11/share
+"March 8
+",RRSP,Bought,BAM.A,"$516.70
+",10 shares at $51.67/share
+"March 8
+",RRSP,Sold,GOOG,"$10,134.00
+","9 shares at $1,126.00 USD/share"
+"March 8
+",TFSA,Bought,ZEF,"$32.34
+",2 shares at $16.17/share
+"March 8
+",TFSA,Bought,VAB,"$248.70
+",10 shares at $24.87/share
+"March 8
+",TFSA,Bought,BAM.A,"$310.02
+",6 shares at $51.67/share
+"March 8
+",TFSA,Bought,XUS,"$352.88
+",8 shares at $44.11/share
+"March 9
+",TFSA,Bought,GOOG,"$2,320.08
+","2 shares at $1,160.04 USD/share"
+"March 9
+",TFSA,Sold,XUS,"$44.61
+",1 share at $44.61/share
+"March 9
+",TFSA,Sold,ZEF,"$129.52
+",8 shares at $16.19/share
+"March 9
+",TFSA,Sold,VAB,"$248.30
+",10 shares at $24.83/share
+"March 9
+",TFSA,Sold,BAM.A,"$309.00
+",6 shares at $51.50/share
+"March 9
+",RRSP,Bought,XUS,"$312.27
+",7 shares at $44.61/share
+"March 9
+",RRSP,Bought,BAM.A,"$360.50
+",7 shares at $51.50/share
+"March 9
+",RRSP,Sold,ZEF,"$145.71
+",9 shares at $16.19/share
+"March 9
+",RRSP,Sold,VAB,"$248.30
+",10 shares at $24.83/share
+"March 9
+",RRSP,Sold,GOOG,"$0.00
+","0 shares at $1,160.04 USD/share"
+"March 9
+",RRSP,Sold,VIG,"$1,053.60
+",10 shares at $105.36 USD/share
+"March 9
+",TFSA,Sold,VIG,"$210.72
+",2 shares at $105.36 USD/share
+"March 10
+",RRSP,Bought,ZEF,"$32.38
+",2 shares at $16.19/share
+"March 10
+",RRSP,Bought,BAM.A,"$463.50
+",9 shares at $51.50/share
+"March 10
+",RRSP,Sold,GOOG,"$0.00
+","0 shares at $1,160.04 USD/share"
+"March 10
+",RRSP,Sold,VAB,"$49.66
+",2 shares at $24.83/share
+"March 10
+",RRSP,Sold,XUS,"$267.66
+",6 shares at $44.61/share
+"March 10
+",RRSP,Bought,VIG,"$316.08
+",3 shares at $105.36 USD/share
+"March 10
+",TFSA,Sold,ZEF,"$145.71
+",9 shares at $16.19/share
+"March 10
+",TFSA,Sold,GOOG,"$2,320.08
+","2 shares at $1,160.04 USD/share"
+"March 10
+",TFSA,Bought,BAM.A,"$51.50
+",1 share at $51.50/share
+"March 10
+",TFSA,Bought,XUS,"$89.22
+",2 shares at $44.61/share
+"March 10
+",TFSA,Bought,VAB,"$173.81
+",7 shares at $24.83/share
+"March 10
+",TFSA,Bought,VIG,"$1,053.60
+",10 shares at $105.36 USD/share
+"March 11
+",TFSA,Bought,VAB,"$248.30
+",10 shares at $24.83/share
+"March 11
+",TFSA,Bought,GOOG,"$11,600.40
+","10 shares at $1,160.04 USD/share"
+"March 11
+",RRSP,Sold,ZEF,"$16.19
+",1 share at $16.19/share
+"March 11
+",RRSP,Sold,XUS,"$446.10
+",10 shares at $44.61/share
+"March 11
+",RRSP,Sold,GOOG,"$0.00
+","0 shares at $1,160.04 USD/share"
+"March 11
+",RRSP,Bought,VAB,"$148.98
+",6 shares at $24.83/share
+"March 11
+",RRSP,Bought,BAM.A,"$360.50
+",7 shares at $51.50/share
+"March 11
+",RRSP,Bought,VIG,"$632.16
+",6 shares at $105.36 USD/share
+"March 11
+",TFSA,Sold,ZEF,"$64.76
+",4 shares at $16.19/share
+"March 11
+",TFSA,Sold,XUS,"$89.22
+",2 shares at $44.61/share
+"March 11
+",TFSA,Sold,BAM.A,"$360.50
+",7 shares at $51.50/share
+"March 11
+",TFSA,Sold,VIG,"$737.52
+",7 shares at $105.36 USD/share
+"March 12
+",TFSA,Sold,ZEF,"$113.05
+",7 shares at $16.15/share
+"March 12
+",TFSA,Bought,VAB,"$124.30
+",5 shares at $24.86/share
+"March 12
+",TFSA,Bought,BAM.A,"$256.35
+",5 shares at $51.27/share
+"March 12
+",TFSA,Bought,XUS,"$357.68
+",8 shares at $44.71/share
+"March 12
+",TFSA,Sold,VIG,"$945.72
+",9 shares at $105.08 USD/share
+"March 12
+",TFSA,Sold,GOOG,"$10,480.50
+","9 shares at $1,164.50 USD/share"
+"March 12
+",RRSP,Sold,GOOG,"$0.00
+","0 shares at $1,164.50 USD/share"
+"March 12
+",RRSP,Sold,VIG,"$945.72
+",9 shares at $105.08 USD/share
+"March 12
+",RRSP,Sold,ZEF,"$145.35
+",9 shares at $16.15/share
+"March 12
+",RRSP,Bought,VAB,"$49.72
+",2 shares at $24.86/share
+"March 12
+",RRSP,Bought,XUS,"$178.84
+",4 shares at $44.71/share
+"March 12
+",RRSP,Bought,BAM.A,"$307.62
+",6 shares at $51.27/share
+"March 13
+",TFSA,Sold,VIG,"$314.13
+",3 shares at $104.71 USD/share
+"March 13
+",RRSP,Sold,XUS,"$448.80
+",10 shares at $44.88/share
+"March 13
+",RRSP,Bought,ZEF,"$48.39
+",3 shares at $16.13/share
+"March 13
+",RRSP,Bought,VAB,"$99.72
+",4 shares at $24.93/share
+"March 13
+",RRSP,Bought,BAM.A,"$461.16
+",9 shares at $51.24/share
+"March 13
+",RRSP,Sold,GOOG,"$0.00
+","0 shares at $1,138.17 USD/share"
+"March 13
+",RRSP,Sold,VIG,"$104.71
+",1 share at $104.71 USD/share
+"March 13
+",TFSA,Bought,GOOG,"$5,690.85
+","5 shares at $1,138.17 USD/share"
+"March 13
+",TFSA,Bought,ZEF,"$96.78
+",6 shares at $16.13/share
+"March 13
+",TFSA,Bought,VAB,"$124.65
+",5 shares at $24.93/share
+"March 13
+",TFSA,Bought,BAM.A,"$256.20
+",5 shares at $51.24/share
+"March 13
+",TFSA,Bought,XUS,"$359.04
+",8 shares at $44.88/share
+"March 14
+",TFSA,Bought,BAM.A,"$257.80
+",5 shares at $51.56/share
+"March 14
+",RRSP,Bought,VAB,"$100.04
+",4 shares at $25.01/share
+"March 14
+",TFSA,Sold,GOOG,"$1,149.49
+","1 share at $1,149.49 USD/share"
+"March 14
+",TFSA,Sold,ZEF,"$16.19
+",1 share at $16.19/share
+"March 14
+",TFSA,Sold,VAB,"$25.01
+",1 share at $25.01/share
+"March 14
+",TFSA,Sold,XUS,"$356.24
+",8 shares at $44.53/share
+"March 14
+",TFSA,Bought,VIG,"$518.85
+",5 shares at $103.77 USD/share
+"March 14
+",RRSP,Sold,BAM.A,"$51.56
+",1 share at $51.56/share
+"March 14
+",RRSP,Sold,ZEF,"$113.33
+",7 shares at $16.19/share
+"March 14
+",RRSP,Sold,XUS,"$311.71
+",7 shares at $44.53/share
+"March 14
+",RRSP,Bought,VIG,"$933.93
+",9 shares at $103.77 USD/share
+"March 14
+",RRSP,Bought,GOOG,"$10,345.41
+","9 shares at $1,149.49 USD/share"
+"March 15
+",TFSA,Sold,BAM.A,"$523.90
+",10 shares at $52.39/share
+"March 15
+",TFSA,Sold,VIG,"$414.64
+",4 shares at $103.66 USD/share
+"March 15
+",TFSA,Sold,GOOG,"$5,747.90
+","5 shares at $1,149.58 USD/share"
+"March 15
+",TFSA,Bought,VAB,"$75.24
+",3 shares at $25.08/share
+"March 15
+",TFSA,Bought,ZEF,"$112.91
+",7 shares at $16.13/share
+"March 15
+",TFSA,Bought,XUS,"$314.23
+",7 shares at $44.89/share
+"March 15
+",RRSP,Bought,ZEF,"$145.17
+",9 shares at $16.13/share
+"March 15
+",RRSP,Sold,VIG,"$725.62
+",7 shares at $103.66 USD/share
+"March 15
+",RRSP,Sold,GOOG,"$8,047.06
+","7 shares at $1,149.58 USD/share"
+"March 15
+",RRSP,Sold,BAM.A,"$52.39
+",1 share at $52.39/share
+"March 15
+",RRSP,Sold,VAB,"$100.32
+",4 shares at $25.08/share
+"March 15
+",RRSP,Sold,XUS,"$224.45
+",5 shares at $44.89/share
+"March 16
+",TFSA,Sold,XUS,"$180.60
+",4 shares at $45.15/share
+"March 16
+",TFSA,Sold,BAM.A,"$209.88
+",4 shares at $52.47/share
+"March 16
+",TFSA,Bought,ZEF,"$48.48
+",3 shares at $16.16/share
+"March 16
+",TFSA,Bought,VAB,"$150.48
+",6 shares at $25.08/share
+"March 16
+",TFSA,Bought,VIG,"$311.79
+",3 shares at $103.93 USD/share
+"March 16
+",TFSA,Bought,GOOG,"$11,357.30
+","10 shares at $1,135.73 USD/share"
+"March 16
+",RRSP,Bought,VIG,"$831.44
+",8 shares at $103.93 USD/share
+"March 16
+",RRSP,Bought,GOOG,"$10,221.57
+","9 shares at $1,135.73 USD/share"
+"March 16
+",RRSP,Bought,ZEF,"$64.64
+",4 shares at $16.16/share
+"March 16
+",RRSP,Bought,VAB,"$125.40
+",5 shares at $25.08/share
+"March 16
+",RRSP,Bought,BAM.A,"$209.88
+",4 shares at $52.47/share
+"March 16
+",RRSP,Bought,XUS,"$361.20
+",8 shares at $45.15/share
+"March 17
+",TFSA,Sold,ZEF,"$64.64
+",4 shares at $16.16/share
+"March 17
+",TFSA,Sold,VAB,"$150.48
+",6 shares at $25.08/share
+"March 17
+",TFSA,Bought,VIG,"$519.65
+",5 shares at $103.93 USD/share
+"March 17
+",RRSP,Sold,GOOG,"$3,407.19
+","3 shares at $1,135.73 USD/share"
+"March 17
+",RRSP,Bought,VAB,"$25.08
+",1 share at $25.08/share
+"March 17
+",RRSP,Bought,ZEF,"$64.64
+",4 shares at $16.16/share
+"March 17
+",RRSP,Bought,XUS,"$316.05
+",7 shares at $45.15/share
+"March 17
+",RRSP,Bought,BAM.A,"$472.23
+",9 shares at $52.47/share
+"March 17
+",RRSP,Bought,VIG,"$415.72
+",4 shares at $103.93 USD/share
+"March 17
+",TFSA,Bought,XUS,"$225.75
+",5 shares at $45.15/share
+"March 17
+",TFSA,Bought,BAM.A,"$262.35
+",5 shares at $52.47/share
+"March 17
+",TFSA,Sold,GOOG,"$10,221.57
+","9 shares at $1,135.73 USD/share"
+"March 18
+",RRSP,Bought,GOOG,"$11,357.30
+","10 shares at $1,135.73 USD/share"
+"March 18
+",RRSP,Sold,VAB,"$225.72
+",9 shares at $25.08/share
+"March 18
+",TFSA,Bought,VIG,"$519.65
+",5 shares at $103.93 USD/share
+"March 18
+",TFSA,Bought,GOOG,"$11,357.30
+","10 shares at $1,135.73 USD/share"
+"March 18
+",TFSA,Bought,VAB,"$125.40
+",5 shares at $25.08/share
+"March 18
+",TFSA,Bought,BAM.A,"$419.76
+",8 shares at $52.47/share
+"March 18
+",TFSA,Sold,ZEF,"$48.48
+",3 shares at $16.16/share
+"March 18
+",TFSA,Sold,XUS,"$90.30
+",2 shares at $45.15/share
+"March 18
+",RRSP,Sold,VIG,"$519.65
+",5 shares at $103.93 USD/share
+"March 18
+",RRSP,Bought,ZEF,"$80.80
+",5 shares at $16.16/share
+"March 18
+",RRSP,Bought,XUS,"$225.75
+",5 shares at $45.15/share
+"March 18
+",RRSP,Bought,BAM.A,"$419.76
+",8 shares at $52.47/share
+"March 19
+",TFSA,Bought,BAM.A,"$206.12
+",4 shares at $51.53/share
+"March 19
+",RRSP,Sold,VIG,"$719.88
+",7 shares at $102.84 USD/share
+"March 19
+",RRSP,Bought,GOOG,"$4,399.28
+","4 shares at $1,099.82 USD/share"
+"March 19
+",RRSP,Sold,ZEF,"$96.72
+",6 shares at $16.12/share
+"March 19
+",RRSP,Bought,BAM.A,"$154.59
+",3 shares at $51.53/share
+"March 19
+",RRSP,Bought,VAB,"$250.80
+",10 shares at $25.08/share
+"March 19
+",RRSP,Bought,XUS,"$443.70
+",10 shares at $44.37/share
+"March 19
+",TFSA,Sold,VIG,"$102.84
+",1 share at $102.84 USD/share
+"March 19
+",TFSA,Sold,GOOG,"$8,798.56
+","8 shares at $1,099.82 USD/share"
+"March 19
+",TFSA,Sold,ZEF,"$64.48
+",4 shares at $16.12/share
+"March 19
+",TFSA,Sold,XUS,"$88.74
+",2 shares at $44.37/share
+"March 19
+",TFSA,Sold,VAB,"$250.80
+",10 shares at $25.08/share
+"March 20
+",RRSP,Bought,VIG,"$103.23
+",1 share at $103.23 USD/share
+"March 20
+",RRSP,Sold,GOOG,"$10,977.10
+","10 shares at $1,097.71 USD/share"
+"March 20
+",RRSP,Sold,ZEF,"$80.35
+",5 shares at $16.07/share
+"March 20
+",RRSP,Sold,BAM.A,"$310.20
+",6 shares at $51.70/share
+"March 20
+",RRSP,Bought,XUS,"$178.00
+",4 shares at $44.50/share
+"March 20
+",RRSP,Bought,VAB,"$200.24
+",8 shares at $25.03/share
+"March 20
+",TFSA,Bought,VAB,"$50.06
+",2 shares at $25.03/share
+"March 20
+",TFSA,Bought,XUS,"$89.00
+",2 shares at $44.50/share
+"March 20
+",TFSA,Sold,ZEF,"$16.07
+",1 share at $16.07/share
+"March 20
+",TFSA,Sold,BAM.A,"$517.00
+",10 shares at $51.70/share
+"March 20
+",TFSA,Sold,VIG,"$412.92
+",4 shares at $103.23 USD/share
+"March 20
+",TFSA,Sold,GOOG,"$1,097.71
+","1 share at $1,097.71 USD/share"
+"March 21
+",TFSA,Sold,BAM.A,"$515.50
+",10 shares at $51.55/share
+"March 21
+",TFSA,Sold,VIG,"$515.60
+",5 shares at $103.12 USD/share
+"March 21
+",TFSA,Bought,GOOG,"$1,090.88
+","1 share at $1,090.88 USD/share"
+"March 21
+",RRSP,Sold,ZEF,"$16.07
+",1 share at $16.07/share
+"March 21
+",RRSP,Sold,VIG,"$309.36
+",3 shares at $103.12 USD/share
+"March 21
+",RRSP,Sold,GOOG,"$5,454.40
+","5 shares at $1,090.88 USD/share"
+"March 21
+",TFSA,Bought,ZEF,"$64.28
+",4 shares at $16.07/share
+"March 21
+",TFSA,Bought,VAB,"$99.64
+",4 shares at $24.91/share
+"March 21
+",TFSA,Bought,XUS,"$262.80
+",6 shares at $43.80/share
+"March 21
+",RRSP,Bought,VAB,"$49.82
+",2 shares at $24.91/share
+"March 21
+",RRSP,Bought,BAM.A,"$206.20
+",4 shares at $51.55/share
+"March 21
+",RRSP,Bought,XUS,"$438.00
+",10 shares at $43.80/share
+"March 22
+",RRSP,Sold,XUS,"$384.57
+",9 shares at $42.73/share
+"March 22
+",RRSP,Bought,VAB,"$75.24
+",3 shares at $25.08/share
+"March 22
+",RRSP,Bought,BAM.A,"$100.02
+",2 shares at $50.01/share
+"March 22
+",RRSP,Bought,ZEF,"$144.72
+",9 shares at $16.08/share
+"March 22
+",RRSP,Bought,VIG,"$402.12
+",4 shares at $100.53 USD/share
+"March 22
+",TFSA,Bought,VIG,"$1,005.30
+",10 shares at $100.53 USD/share
+"March 22
+",TFSA,Bought,GOOG,"$9,441.72
+","9 shares at $1,049.08 USD/share"
+"March 22
+",TFSA,Bought,ZEF,"$112.56
+",7 shares at $16.08/share
+"March 22
+",TFSA,Bought,VAB,"$175.56
+",7 shares at $25.08/share
+"March 22
+",TFSA,Bought,XUS,"$256.38
+",6 shares at $42.73/share
+"March 22
+",TFSA,Bought,BAM.A,"$350.07
+",7 shares at $50.01/share
+"March 22
+",RRSP,Sold,GOOG,"$7,343.56
+","7 shares at $1,049.08 USD/share"
+"March 23
+",TFSA,Bought,XUS,"$83.40
+",2 shares at $41.70/share
+"March 23
+",TFSA,Bought,VAB,"$225.18
+",9 shares at $25.02/share
+"March 23
+",RRSP,Bought,VIG,"$890.10
+",9 shares at $98.90 USD/share
+"March 23
+",RRSP,Bought,GOOG,"$3,064.71
+","3 shares at $1,021.57 USD/share"
+"March 23
+",TFSA,Sold,BAM.A,"$49.79
+",1 share at $49.79/share
+"March 23
+",TFSA,Sold,ZEF,"$64.08
+",4 shares at $16.02/share
+"March 23
+",RRSP,Sold,XUS,"$83.40
+",2 shares at $41.70/share
+"March 23
+",RRSP,Sold,ZEF,"$112.14
+",7 shares at $16.02/share
+"March 23
+",RRSP,Sold,BAM.A,"$199.16
+",4 shares at $49.79/share
+"March 23
+",RRSP,Bought,VAB,"$175.14
+",7 shares at $25.02/share
+"March 23
+",TFSA,Sold,VIG,"$593.40
+",6 shares at $98.90 USD/share
+"March 23
+",TFSA,Sold,GOOG,"$6,129.42
+","6 shares at $1,021.57 USD/share"
+"March 24
+",TFSA,Sold,VIG,"$296.70
+",3 shares at $98.90 USD/share
+"March 24
+",RRSP,Bought,GOOG,"$5,107.85
+","5 shares at $1,021.57 USD/share"
+"March 24
+",RRSP,Bought,ZEF,"$16.02
+",1 share at $16.02/share
+"March 24
+",RRSP,Bought,VAB,"$100.08
+",4 shares at $25.02/share
+"March 24
+",RRSP,Bought,BAM.A,"$149.37
+",3 shares at $49.79/share
+"March 24
+",RRSP,Sold,VIG,"$791.20
+",8 shares at $98.90 USD/share
+"March 24
+",TFSA,Bought,GOOG,"$6,129.42
+","6 shares at $1,021.57 USD/share"
+"March 24
+",TFSA,Sold,ZEF,"$144.18
+",9 shares at $16.02/share
+"March 24
+",TFSA,Sold,XUS,"$417.00
+",10 shares at $41.70/share
+"March 24
+",TFSA,Bought,BAM.A,"$99.58
+",2 shares at $49.79/share
+"March 24
+",TFSA,Bought,VAB,"$250.20
+",10 shares at $25.02/share
+"March 24
+",RRSP,Sold,XUS,"$333.60
+",8 shares at $41.70/share
+"March 25
+",RRSP,Sold,BAM.A,"$149.37
+",3 shares at $49.79/share
+"March 25
+",RRSP,Sold,XUS,"$333.60
+",8 shares at $41.70/share
+"March 25
+",TFSA,Bought,VIG,"$890.10
+",9 shares at $98.90 USD/share
+"March 25
+",TFSA,Sold,VAB,"$25.02
+",1 share at $25.02/share
+"March 25
+",TFSA,Sold,GOOG,"$4,086.28
+","4 shares at $1,021.57 USD/share"
+"March 25
+",TFSA,Bought,ZEF,"$96.12
+",6 shares at $16.02/share
+"March 25
+",TFSA,Bought,XUS,"$250.20
+",6 shares at $41.70/share
+"March 25
+",TFSA,Bought,BAM.A,"$398.32
+",8 shares at $49.79/share
+"March 25
+",RRSP,Sold,VIG,"$395.60
+",4 shares at $98.90 USD/share
+"March 25
+",RRSP,Sold,GOOG,"$2,043.14
+","2 shares at $1,021.57 USD/share"
+"March 25
+",RRSP,Bought,ZEF,"$96.12
+",6 shares at $16.02/share
+"March 25
+",RRSP,Bought,VAB,"$200.16
+",8 shares at $25.02/share
+"March 26
+",TFSA,Sold,ZEF,"$32.20
+",2 shares at $16.10/share
+"March 26
+",TFSA,Bought,VAB,"$24.92
+",1 share at $24.92/share
+"March 26
+",TFSA,Bought,BAM.A,"$152.01
+",3 shares at $50.67/share
+"March 26
+",TFSA,Bought,XUS,"$256.50
+",6 shares at $42.75/share
+"March 26
+",RRSP,Sold,ZEF,"$48.30
+",3 shares at $16.10/share
+"March 26
+",RRSP,Sold,XUS,"$299.25
+",7 shares at $42.75/share
+"March 26
+",RRSP,Bought,GOOG,"$1,053.21
+","1 share at $1,053.21 USD/share"
+"March 26
+",RRSP,Bought,VAB,"$49.84
+",2 shares at $24.92/share
+"March 26
+",RRSP,Bought,BAM.A,"$101.34
+",2 shares at $50.67/share
+"March 26
+",RRSP,Sold,VIG,"$101.12
+",1 share at $101.12 USD/share
+"March 26
+",TFSA,Bought,VIG,"$101.12
+",1 share at $101.12 USD/share
+"March 26
+",TFSA,Bought,GOOG,"$3,159.63
+","3 shares at $1,053.21 USD/share"
+"March 27
+",RRSP,Sold,ZEF,"$112.35
+",7 shares at $16.05/share
+"March 27
+",RRSP,Sold,VAB,"$125.40
+",5 shares at $25.08/share
+"March 27
+",RRSP,Sold,VIG,"$0.00
+",0 shares at $99.72 USD/share
+"March 27
+",RRSP,Sold,GOOG,"$5,025.50
+","5 shares at $1,005.10 USD/share"
+"March 27
+",TFSA,Sold,VIG,"$698.04
+",7 shares at $99.72 USD/share
+"March 27
+",TFSA,Sold,GOOG,"$8,040.80
+","8 shares at $1,005.10 USD/share"
+"March 27
+",TFSA,Sold,XUS,"$294.84
+",7 shares at $42.12/share
+"March 27
+",TFSA,Sold,BAM.A,"$350.00
+",7 shares at $50.00/share
+"March 27
+",TFSA,Bought,VAB,"$100.32
+",4 shares at $25.08/share
+"March 27
+",TFSA,Bought,ZEF,"$112.35
+",7 shares at $16.05/share
+"March 27
+",RRSP,Bought,BAM.A,"$150.00
+",3 shares at $50.00/share
+"March 27
+",RRSP,Bought,XUS,"$294.84
+",7 shares at $42.12/share
+"March 28
+",TFSA,Bought,ZEF,"$128.88
+",8 shares at $16.11/share
+"March 28
+",TFSA,Bought,XUS,"$421.30
+",10 shares at $42.13/share
+"March 28
+",TFSA,Sold,GOOG,"$3,013.68
+","3 shares at $1,004.56 USD/share"
+"March 28
+",TFSA,Bought,VIG,"$898.11
+",9 shares at $99.79 USD/share
+"March 28
+",RRSP,Bought,VIG,"$798.32
+",8 shares at $99.79 USD/share
+"March 28
+",RRSP,Sold,GOOG,"$2,009.12
+","2 shares at $1,004.56 USD/share"
+"March 28
+",RRSP,Sold,ZEF,"$64.44
+",4 shares at $16.11/share
+"March 28
+",RRSP,Bought,VAB,"$150.78
+",6 shares at $25.13/share
+"March 28
+",RRSP,Bought,BAM.A,"$200.64
+",4 shares at $50.16/share
+"March 28
+",RRSP,Bought,XUS,"$379.17
+",9 shares at $42.13/share
+"March 28
+",TFSA,Sold,VAB,"$226.17
+",9 shares at $25.13/share
+"March 28
+",TFSA,Sold,BAM.A,"$351.12
+",7 shares at $50.16/share
+"March 29
+",RRSP,Bought,ZEF,"$161.80
+",10 shares at $16.18/share
+"March 29
+",RRSP,Bought,BAM.A,"$351.54
+",7 shares at $50.22/share
+"March 29
+",RRSP,Sold,GOOG,"$0.00
+","0 shares at $1,031.79 USD/share"
+"March 29
+",RRSP,Sold,XUS,"$213.05
+",5 shares at $42.61/share
+"March 29
+",RRSP,Sold,VAB,"$226.08
+",9 shares at $25.12/share
+"March 29
+",RRSP,Bought,VIG,"$909.45
+",9 shares at $101.05 USD/share
+"March 29
+",TFSA,Sold,ZEF,"$80.90
+",5 shares at $16.18/share
+"March 29
+",TFSA,Sold,BAM.A,"$251.10
+",5 shares at $50.22/share
+"March 29
+",TFSA,Bought,VAB,"$175.84
+",7 shares at $25.12/share
+"March 29
+",TFSA,Bought,XUS,"$255.66
+",6 shares at $42.61/share
+"March 29
+",TFSA,Sold,GOOG,"$0.00
+","0 shares at $1,031.79 USD/share"
+"March 29
+",TFSA,Sold,VIG,"$606.30
+",6 shares at $101.05 USD/share
+"March 30
+",TFSA,Sold,VIG,"$808.40
+",8 shares at $101.05 USD/share
+"March 30
+",RRSP,Bought,VAB,"$200.96
+",8 shares at $25.12/share
+"March 30
+",RRSP,Sold,GOOG,"$0.00
+","0 shares at $1,031.79 USD/share"
+"March 30
+",RRSP,Sold,VIG,"$202.10
+",2 shares at $101.05 USD/share
+"March 30
+",RRSP,Sold,ZEF,"$48.54
+",3 shares at $16.18/share
+"March 30
+",RRSP,Sold,XUS,"$85.22
+",2 shares at $42.61/share
+"March 30
+",RRSP,Sold,BAM.A,"$200.88
+",4 shares at $50.22/share
+"March 30
+",TFSA,Sold,BAM.A,"$100.44
+",2 shares at $50.22/share
+"March 30
+",TFSA,Sold,VAB,"$150.72
+",6 shares at $25.12/share
+"March 30
+",TFSA,Sold,XUS,"$426.10
+",10 shares at $42.61/share
+"March 30
+",TFSA,Bought,ZEF,"$32.36
+",2 shares at $16.18/share
+"March 30
+",TFSA,Bought,GOOG,"$10,317.90
+","10 shares at $1,031.79 USD/share"
+"March 31
+",RRSP,Bought,VIG,"$303.15
+",3 shares at $101.05 USD/share
+"March 31
+",RRSP,Bought,GOOG,"$8,254.32
+","8 shares at $1,031.79 USD/share"
+"March 31
+",RRSP,Sold,ZEF,"$145.62
+",9 shares at $16.18/share
+"March 31
+",RRSP,Bought,VAB,"$75.36
+",3 shares at $25.12/share
+"March 31
+",RRSP,Bought,XUS,"$213.05
+",5 shares at $42.61/share
+"March 31
+",RRSP,Bought,BAM.A,"$401.76
+",8 shares at $50.22/share
+"March 31
+",TFSA,Sold,VAB,"$175.84
+",7 shares at $25.12/share
+"March 31
+",TFSA,Sold,VIG,"$303.15
+",3 shares at $101.05 USD/share
+"March 31
+",TFSA,Sold,GOOG,"$8,254.32
+","8 shares at $1,031.79 USD/share"
+"March 31
+",TFSA,Bought,ZEF,"$16.18
+",1 share at $16.18/share
+"March 31
+",TFSA,Bought,BAM.A,"$200.88
+",4 shares at $50.22/share
+"March 31
+",TFSA,Bought,XUS,"$255.66
+",6 shares at $42.61/share
+"April 1
+",TFSA,Sold,ZEF,"$145.62
+",9 shares at $16.18/share
+"April 1
+",TFSA,Sold,VIG,"$0.00
+",0 shares at $101.05 USD/share
+"April 1
+",TFSA,Sold,GOOG,"$2,063.58
+","2 shares at $1,031.79 USD/share"
+"April 1
+",TFSA,Bought,VAB,"$75.36
+",3 shares at $25.12/share
+"April 1
+",TFSA,Bought,XUS,"$127.83
+",3 shares at $42.61/share
+"April 1
+",TFSA,Bought,BAM.A,"$502.20
+",10 shares at $50.22/share
+"April 1
+",RRSP,Bought,VAB,"$150.72
+",6 shares at $25.12/share
+"April 1
+",RRSP,Bought,ZEF,"$161.80
+",10 shares at $16.18/share
+"April 1
+",RRSP,Bought,BAM.A,"$200.88
+",4 shares at $50.22/share
+"April 1
+",RRSP,Bought,XUS,"$255.66
+",6 shares at $42.61/share
+"April 1
+",RRSP,Sold,VIG,"$101.05
+",1 share at $101.05 USD/share
+"April 1
+",RRSP,Sold,GOOG,"$4,127.16
+","4 shares at $1,031.79 USD/share"
+"April 2
+",RRSP,Bought,VAB,"$200.40
+",8 shares at $25.05/share
+"April 2
+",RRSP,Bought,BAM.A,"$248.35
+",5 shares at $49.67/share
+"April 2
+",RRSP,Bought,VIG,"$98.76
+",1 share at $98.76 USD/share
+"April 2
+",RRSP,Bought,GOOG,"$4,025.88
+","4 shares at $1,006.47 USD/share"
+"April 2
+",TFSA,Bought,VIG,"$197.52
+",2 shares at $98.76 USD/share
+"April 2
+",TFSA,Sold,GOOG,"$0.00
+","0 shares at $1,006.47 USD/share"
+"April 2
+",TFSA,Sold,VAB,"$225.45
+",9 shares at $25.05/share
+"April 2
+",TFSA,Sold,BAM.A,"$298.02
+",6 shares at $49.67/share
+"April 2
+",TFSA,Bought,ZEF,"$161.50
+",10 shares at $16.15/share
+"April 2
+",TFSA,Bought,XUS,"$417.20
+",10 shares at $41.72/share
+"April 2
+",RRSP,Sold,ZEF,"$145.35
+",9 shares at $16.15/share
+"April 2
+",RRSP,Sold,XUS,"$292.04
+",7 shares at $41.72/share
+"April 3
+",TFSA,Bought,VIG,"$500.45
+",5 shares at $100.09 USD/share
+"April 3
+",TFSA,Sold,GOOG,"$0.00
+","0 shares at $1,013.41 USD/share"
+"April 3
+",TFSA,Sold,VAB,"$249.80
+",10 shares at $24.98/share
+"April 3
+",TFSA,Sold,BAM.A,"$349.09
+",7 shares at $49.87/share
+"April 3
+",TFSA,Bought,ZEF,"$96.66
+",6 shares at $16.11/share
+"April 3
+",TFSA,Bought,XUS,"$167.52
+",4 shares at $41.88/share
+"April 3
+",RRSP,Bought,VIG,"$500.45
+",5 shares at $100.09 USD/share
+"April 3
+",RRSP,Bought,VAB,"$199.84
+",8 shares at $24.98/share
+"April 3
+",RRSP,Sold,GOOG,"$8,107.28
+","8 shares at $1,013.41 USD/share"
+"April 3
+",RRSP,Sold,BAM.A,"$149.61
+",3 shares at $49.87/share
+"April 3
+",RRSP,Sold,ZEF,"$161.10
+",10 shares at $16.11/share
+"April 3
+",RRSP,Sold,XUS,"$418.80
+",10 shares at $41.88/share
+"April 4
+",TFSA,Bought,VIG,"$911.52
+",9 shares at $101.28 USD/share
+"April 4
+",TFSA,Sold,GOOG,"$0.00
+","0 shares at $1,025.14 USD/share"
+"April 4
+",TFSA,Bought,ZEF,"$81.50
+",5 shares at $16.30/share
+"April 4
+",TFSA,Bought,BAM.A,"$347.83
+",7 shares at $49.69/share
+"April 4
+",RRSP,Bought,VIG,"$607.68
+",6 shares at $101.28 USD/share
+"April 4
+",RRSP,Bought,GOOG,"$6,150.84
+","6 shares at $1,025.14 USD/share"
+"April 4
+",RRSP,Sold,VAB,"$199.20
+",8 shares at $24.90/share
+"April 4
+",RRSP,Sold,BAM.A,"$347.83
+",7 shares at $49.69/share
+"April 4
+",RRSP,Bought,ZEF,"$163.00
+",10 shares at $16.30/share
+"April 4
+",RRSP,Bought,XUS,"$253.98
+",6 shares at $42.33/share
+"April 4
+",TFSA,Sold,VAB,"$224.10
+",9 shares at $24.90/share
+"April 4
+",TFSA,Sold,XUS,"$296.31
+",7 shares at $42.33/share
+"April 5
+",TFSA,Sold,VIG,"$101.83
+",1 share at $101.83 USD/share
+"April 5
+",RRSP,Sold,XUS,"$255.18
+",6 shares at $42.53/share
+"April 5
+",RRSP,Bought,ZEF,"$16.12
+",1 share at $16.12/share
+"April 5
+",RRSP,Bought,VAB,"$24.89
+",1 share at $24.89/share
+"April 5
+",RRSP,Bought,BAM.A,"$199.84
+",4 shares at $49.96/share
+"April 5
+",TFSA,Bought,GOOG,"$5,139.05
+","5 shares at $1,027.81 USD/share"
+"April 5
+",TFSA,Sold,VAB,"$99.56
+",4 shares at $24.89/share
+"April 5
+",TFSA,Sold,BAM.A,"$449.64
+",9 shares at $49.96/share
+"April 5
+",TFSA,Bought,ZEF,"$64.48
+",4 shares at $16.12/share
+"April 5
+",TFSA,Bought,XUS,"$297.71
+",7 shares at $42.53/share
+"April 5
+",RRSP,Sold,VIG,"$305.49
+",3 shares at $101.83 USD/share
+"April 5
+",RRSP,Sold,GOOG,"$6,166.86
+","6 shares at $1,027.81 USD/share"
+"April 6
+",TFSA,Sold,VAB,"$24.95
+",1 share at $24.95/share
+"April 6
+",TFSA,Bought,VIG,"$498.00
+",5 shares at $99.60 USD/share
+"April 6
+",TFSA,Bought,GOOG,"$4,028.16
+","4 shares at $1,007.04 USD/share"
+"April 6
+",RRSP,Sold,ZEF,"$48.30
+",3 shares at $16.10/share
+"April 6
+",RRSP,Sold,BAM.A,"$147.66
+",3 shares at $49.22/share
+"April 6
+",RRSP,Sold,XUS,"$416.40
+",10 shares at $41.64/share
+"April 6
+",RRSP,Bought,VAB,"$124.75
+",5 shares at $24.95/share
+"April 6
+",RRSP,Bought,VIG,"$199.20
+",2 shares at $99.60 USD/share
+"April 6
+",RRSP,Bought,GOOG,"$8,056.32
+","8 shares at $1,007.04 USD/share"
+"April 6
+",TFSA,Bought,ZEF,"$48.30
+",3 shares at $16.10/share
+"April 6
+",TFSA,Bought,BAM.A,"$196.88
+",4 shares at $49.22/share
+"April 6
+",TFSA,Bought,XUS,"$249.84
+",6 shares at $41.64/share
+"April 7
+",TFSA,Bought,VIG,"$498.00
+",5 shares at $99.60 USD/share
+"April 7
+",TFSA,Sold,GOOG,"$8,056.32
+","8 shares at $1,007.04 USD/share"
+"April 7
+",TFSA,Bought,ZEF,"$32.20
+",2 shares at $16.10/share
+"April 7
+",TFSA,Sold,VAB,"$74.85
+",3 shares at $24.95/share
+"April 7
+",TFSA,Sold,BAM.A,"$295.32
+",6 shares at $49.22/share
+"April 7
+",TFSA,Sold,XUS,"$374.76
+",9 shares at $41.64/share
+"April 7
+",RRSP,Sold,ZEF,"$80.50
+",5 shares at $16.10/share
+"April 7
+",RRSP,Sold,BAM.A,"$295.32
+",6 shares at $49.22/share
+"April 7
+",RRSP,Sold,VIG,"$996.00
+",10 shares at $99.60 USD/share
+"April 7
+",RRSP,Sold,GOOG,"$7,049.28
+","7 shares at $1,007.04 USD/share"
+"April 7
+",RRSP,Bought,VAB,"$124.75
+",5 shares at $24.95/share
+"April 7
+",RRSP,Bought,XUS,"$208.20
+",5 shares at $41.64/share
+"April 8
+",TFSA,Sold,GOOG,"$1,007.04
+","1 share at $1,007.04 USD/share"
+"April 8
+",TFSA,Bought,ZEF,"$128.80
+",8 shares at $16.10/share
+"April 8
+",TFSA,Bought,BAM.A,"$344.54
+",7 shares at $49.22/share
+"April 8
+",TFSA,Sold,VAB,"$174.65
+",7 shares at $24.95/share
+"April 8
+",TFSA,Sold,XUS,"$374.76
+",9 shares at $41.64/share
+"April 8
+",RRSP,Bought,BAM.A,"$196.88
+",4 shares at $49.22/share
+"April 8
+",RRSP,Bought,XUS,"$333.12
+",8 shares at $41.64/share
+"April 8
+",RRSP,Bought,VIG,"$996.00
+",10 shares at $99.60 USD/share
+"April 8
+",RRSP,Bought,GOOG,"$1,007.04
+","1 share at $1,007.04 USD/share"
+"April 8
+",RRSP,Sold,ZEF,"$80.50
+",5 shares at $16.10/share
+"April 8
+",RRSP,Sold,VAB,"$224.55
+",9 shares at $24.95/share
+"April 8
+",TFSA,Bought,VIG,"$298.80
+",3 shares at $99.60 USD/share
+"April 9
+",RRSP,Sold,VAB,"$24.96
+",1 share at $24.96/share
+"April 9
+",RRSP,Bought,XUS,"$41.54
+",1 share at $41.54/share
+"April 9
+",RRSP,Bought,ZEF,"$128.64
+",8 shares at $16.08/share
+"April 9
+",RRSP,Bought,BAM.A,"$345.66
+",7 shares at $49.38/share
+"April 9
+",TFSA,Sold,VAB,"$249.55
+",10 shares at $24.96/share
+"April 9
+",TFSA,Bought,VIG,"$598.26
+",6 shares at $99.71 USD/share
+"April 9
+",TFSA,Bought,GOOG,"$5,077.25
+","5 shares at $1,015.45 USD/share"
+"April 9
+",RRSP,Sold,VIG,"$897.39
+",9 shares at $99.71 USD/share
+"April 9
+",RRSP,Sold,GOOG,"$2,030.90
+","2 shares at $1,015.45 USD/share"
+"April 9
+",TFSA,Bought,ZEF,"$64.32
+",4 shares at $16.08/share
+"April 9
+",TFSA,Bought,BAM.A,"$98.76
+",2 shares at $49.38/share
+"April 9
+",TFSA,Bought,XUS,"$373.86
+",9 shares at $41.54/share
+"April 10
+",TFSA,Sold,VIG,"$100.86
+",1 share at $100.86 USD/share
+"April 10
+",TFSA,Sold,GOOG,"$4,126.56
+","4 shares at $1,031.64 USD/share"
+"April 10
+",RRSP,Sold,VIG,"$403.44
+",4 shares at $100.86 USD/share
+"April 10
+",RRSP,Bought,GOOG,"$9,284.76
+","9 shares at $1,031.64 USD/share"
+"April 10
+",RRSP,Bought,ZEF,"$64.44
+",4 shares at $16.11/share
+"April 10
+",RRSP,Sold,VAB,"$49.82
+",2 shares at $24.91/share
+"April 10
+",RRSP,Sold,BAM.A,"$246.05
+",5 shares at $49.21/share
+"April 10
+",RRSP,Sold,XUS,"$335.28
+",8 shares at $41.91/share
+"April 10
+",TFSA,Sold,ZEF,"$80.55
+",5 shares at $16.11/share
+"April 10
+",TFSA,Sold,VAB,"$149.46
+",6 shares at $24.91/share
+"April 10
+",TFSA,Sold,XUS,"$377.19
+",9 shares at $41.91/share
+"April 10
+",TFSA,Sold,BAM.A,"$442.89
+",9 shares at $49.21/share
+"April 11
+",RRSP,Bought,ZEF,"$48.42
+",3 shares at $16.14/share
+"April 11
+",RRSP,Bought,BAM.A,"$49.43
+",1 share at $49.43/share
+"April 11
+",RRSP,Sold,XUS,"$124.86
+",3 shares at $41.62/share
+"April 11
+",RRSP,Sold,VAB,"$149.34
+",6 shares at $24.89/share
+"April 11
+",RRSP,Sold,VIG,"$1,003.40
+",10 shares at $100.34 USD/share
+"April 11
+",RRSP,Sold,GOOG,"$4,079.88
+","4 shares at $1,019.97 USD/share"
+"April 11
+",TFSA,Bought,ZEF,"$48.42
+",3 shares at $16.14/share
+"April 11
+",TFSA,Bought,VIG,"$401.36
+",4 shares at $100.34 USD/share
+"April 11
+",TFSA,Bought,GOOG,"$5,099.85
+","5 shares at $1,019.97 USD/share"
+"April 11
+",TFSA,Sold,BAM.A,"$0.00
+",0 shares at $49.43/share
+"April 11
+",TFSA,Sold,VAB,"$74.67
+",3 shares at $24.89/share
+"April 11
+",TFSA,Sold,XUS,"$208.10
+",5 shares at $41.62/share
+"April 12
+",RRSP,Sold,VIG,"$505.50
+",5 shares at $101.10 USD/share
+"April 12
+",RRSP,Sold,GOOG,"$1,032.51
+","1 share at $1,032.51 USD/share"
+"April 12
+",RRSP,Sold,ZEF,"$112.98
+",7 shares at $16.14/share
+"April 12
+",RRSP,Sold,BAM.A,"$199.36
+",4 shares at $49.84/share
+"April 12
+",RRSP,Bought,XUS,"$167.96
+",4 shares at $41.99/share
+"April 12
+",RRSP,Bought,VAB,"$223.38
+",9 shares at $24.82/share
+"April 12
+",TFSA,Bought,VIG,"$303.30
+",3 shares at $101.10 USD/share
+"April 12
+",TFSA,Sold,GOOG,"$6,195.06
+","6 shares at $1,032.51 USD/share"
+"April 12
+",TFSA,Sold,ZEF,"$32.28
+",2 shares at $16.14/share
+"April 12
+",TFSA,Bought,BAM.A,"$49.84
+",1 share at $49.84/share
+"April 12
+",TFSA,Bought,VAB,"$173.74
+",7 shares at $24.82/share
+"April 12
+",TFSA,Bought,XUS,"$335.92
+",8 shares at $41.99/share
+"April 13
+",TFSA,Sold,VIG,"$1,009.00
+",10 shares at $100.90 USD/share
+"April 13
+",RRSP,Bought,VIG,"$605.40
+",6 shares at $100.90 USD/share
+"April 13
+",RRSP,Sold,GOOG,"$4,117.08
+","4 shares at $1,029.27 USD/share"
+"April 13
+",RRSP,Sold,ZEF,"$64.56
+",4 shares at $16.14/share
+"April 13
+",RRSP,Bought,VAB,"$149.46
+",6 shares at $24.91/share
+"April 13
+",RRSP,Bought,BAM.A,"$345.17
+",7 shares at $49.31/share
+"April 13
+",RRSP,Bought,XUS,"$377.46
+",9 shares at $41.94/share
+"April 13
+",TFSA,Bought,VAB,"$124.55
+",5 shares at $24.91/share
+"April 13
+",TFSA,Bought,XUS,"$377.46
+",9 shares at $41.94/share
+"April 13
+",TFSA,Bought,GOOG,"$2,058.54
+","2 shares at $1,029.27 USD/share"
+"April 13
+",TFSA,Sold,BAM.A,"$49.31
+",1 share at $49.31/share
+"April 13
+",TFSA,Sold,ZEF,"$129.12
+",8 shares at $16.14/share
+"April 14
+",RRSP,Sold,VIG,"$605.40
+",6 shares at $100.90 USD/share
+"April 14
+",RRSP,Bought,GOOG,"$2,058.54
+","2 shares at $1,029.27 USD/share"
+"April 14
+",RRSP,Sold,ZEF,"$96.84
+",6 shares at $16.14/share
+"April 14
+",RRSP,Sold,VAB,"$174.37
+",7 shares at $24.91/share
+"April 14
+",RRSP,Sold,BAM.A,"$394.48
+",8 shares at $49.31/share
+"April 14
+",RRSP,Bought,XUS,"$377.46
+",9 shares at $41.94/share
+"April 14
+",TFSA,Sold,VIG,"$403.60
+",4 shares at $100.90 USD/share
+"April 14
+",TFSA,Bought,GOOG,"$3,087.81
+","3 shares at $1,029.27 USD/share"
+"April 14
+",TFSA,Sold,BAM.A,"$0.00
+",0 shares at $49.31/share
+"April 14
+",TFSA,Sold,ZEF,"$112.98
+",7 shares at $16.14/share
+"April 14
+",TFSA,Bought,VAB,"$124.55
+",5 shares at $24.91/share
+"April 14
+",TFSA,Bought,XUS,"$377.46
+",9 shares at $41.94/share
+"April 15
+",TFSA,Bought,XUS,"$419.40
+",10 shares at $41.94/share
+"April 15
+",RRSP,Sold,VIG,"$0.00
+",0 shares at $100.90 USD/share
+"April 15
+",RRSP,Bought,GOOG,"$10,292.70
+","10 shares at $1,029.27 USD/share"
+"April 15
+",RRSP,Bought,ZEF,"$16.14
+",1 share at $16.14/share
+"April 15
+",RRSP,Bought,VAB,"$24.91
+",1 share at $24.91/share
+"April 15
+",RRSP,Sold,BAM.A,"$98.62
+",2 shares at $49.31/share
+"April 15
+",RRSP,Sold,XUS,"$419.40
+",10 shares at $41.94/share
+"April 15
+",TFSA,Bought,VIG,"$504.50
+",5 shares at $100.90 USD/share
+"April 15
+",TFSA,Sold,BAM.A,"$0.00
+",0 shares at $49.31/share
+"April 15
+",TFSA,Sold,VAB,"$99.64
+",4 shares at $24.91/share
+"April 15
+",TFSA,Sold,ZEF,"$145.26
+",9 shares at $16.14/share
+"April 15
+",TFSA,Sold,GOOG,"$5,146.35
+","5 shares at $1,029.27 USD/share"
+"April 16
+",RRSP,Bought,BAM.A,"$98.46
+",2 shares at $49.23/share
+"April 16
+",TFSA,Sold,VIG,"$816.96
+",8 shares at $102.12 USD/share
+"April 16
+",TFSA,Sold,VAB,"$24.88
+",1 share at $24.88/share
+"April 16
+",TFSA,Sold,XUS,"$42.18
+",1 share at $42.18/share
+"April 16
+",TFSA,Bought,GOOG,"$6,227.88
+","6 shares at $1,037.98 USD/share"
+"April 16
+",TFSA,Bought,ZEF,"$96.84
+",6 shares at $16.14/share
+"April 16
+",TFSA,Bought,BAM.A,"$295.38
+",6 shares at $49.23/share
+"April 16
+",RRSP,Sold,ZEF,"$96.84
+",6 shares at $16.14/share
+"April 16
+",RRSP,Sold,VAB,"$149.28
+",6 shares at $24.88/share
+"April 16
+",RRSP,Sold,XUS,"$253.08
+",6 shares at $42.18/share
+"April 16
+",RRSP,Bought,VIG,"$919.08
+",9 shares at $102.12 USD/share
+"April 16
+",RRSP,Bought,GOOG,"$3,113.94
+","3 shares at $1,037.98 USD/share"
+"April 17
+",TFSA,Bought,ZEF,"$48.15
+",3 shares at $16.05/share
+"April 17
+",TFSA,Bought,XUS,"$425.40
+",10 shares at $42.54/share
+"April 17
+",RRSP,Sold,VIG,"$205.72
+",2 shares at $102.86 USD/share
+"April 17
+",RRSP,Sold,GOOG,"$4,296.64
+","4 shares at $1,074.16 USD/share"
+"April 17
+",RRSP,Sold,VAB,"$49.88
+",2 shares at $24.94/share
+"April 17
+",RRSP,Sold,ZEF,"$64.20
+",4 shares at $16.05/share
+"April 17
+",RRSP,Sold,BAM.A,"$195.92
+",4 shares at $48.98/share
+"April 17
+",RRSP,Sold,XUS,"$255.24
+",6 shares at $42.54/share
+"April 17
+",TFSA,Sold,VIG,"$1,028.60
+",10 shares at $102.86 USD/share
+"April 17
+",TFSA,Sold,GOOG,"$6,444.96
+","6 shares at $1,074.16 USD/share"
+"April 17
+",TFSA,Sold,VAB,"$224.46
+",9 shares at $24.94/share
+"April 17
+",TFSA,Sold,BAM.A,"$293.88
+",6 shares at $48.98/share
+"April 18
+",RRSP,Bought,GOOG,"$10,720.80
+","10 shares at $1,072.08 USD/share"
+"April 18
+",RRSP,Sold,VIG,"$309.03
+",3 shares at $103.01 USD/share
+"April 18
+",TFSA,Sold,VIG,"$927.09
+",9 shares at $103.01 USD/share
+"April 18
+",TFSA,Bought,VAB,"$149.28
+",6 shares at $24.88/share
+"April 18
+",TFSA,Bought,GOOG,"$6,432.48
+","6 shares at $1,072.08 USD/share"
+"April 18
+",TFSA,Sold,BAM.A,"$0.00
+",0 shares at $49.51/share
+"April 18
+",TFSA,Sold,ZEF,"$96.72
+",6 shares at $16.12/share
+"April 18
+",TFSA,Sold,XUS,"$428.20
+",10 shares at $42.82/share
+"April 18
+",RRSP,Bought,XUS,"$42.82
+",1 share at $42.82/share
+"April 18
+",RRSP,Bought,VAB,"$149.28
+",6 shares at $24.88/share
+"April 18
+",RRSP,Sold,ZEF,"$80.60
+",5 shares at $16.12/share
+"April 18
+",RRSP,Sold,BAM.A,"$297.06
+",6 shares at $49.51/share
+"April 19
+",TFSA,Bought,ZEF,"$127.84
+",8 shares at $15.98/share
+"April 19
+",TFSA,Bought,XUS,"$384.12
+",9 shares at $42.68/share
+"April 19
+",TFSA,Sold,GOOG,"$6,526.20
+","6 shares at $1,087.70 USD/share"
+"April 19
+",TFSA,Sold,BAM.A,"$0.00
+",0 shares at $49.14/share
+"April 19
+",TFSA,Sold,VAB,"$49.62
+",2 shares at $24.81/share
+"April 19
+",TFSA,Bought,VIG,"$614.34
+",6 shares at $102.39 USD/share
+"April 19
+",RRSP,Bought,GOOG,"$10,877.00
+","10 shares at $1,087.70 USD/share"
+"April 19
+",RRSP,Sold,VIG,"$409.56
+",4 shares at $102.39 USD/share
+"April 19
+",RRSP,Bought,VAB,"$74.43
+",3 shares at $24.81/share
+"April 19
+",RRSP,Bought,ZEF,"$111.86
+",7 shares at $15.98/share
+"April 19
+",RRSP,Sold,XUS,"$170.72
+",4 shares at $42.68/share
+"April 19
+",RRSP,Sold,BAM.A,"$343.98
+",7 shares at $49.14/share
+"April 20
+",TFSA,Bought,XUS,"$298.27
+",7 shares at $42.61/share
+"April 20
+",TFSA,Bought,BAM.A,"$442.89
+",9 shares at $49.21/share
+"April 20
+",TFSA,Bought,GOOG,"$3,218.88
+","3 shares at $1,072.96 USD/share"
+"April 20
+",TFSA,Sold,ZEF,"$16.00
+",1 share at $16.00/share
+"April 20
+",TFSA,Sold,VAB,"$148.56
+",6 shares at $24.76/share
+"April 20
+",TFSA,Sold,VIG,"$608.82
+",6 shares at $101.47 USD/share
+"April 20
+",RRSP,Bought,VIG,"$913.23
+",9 shares at $101.47 USD/share
+"April 20
+",RRSP,Bought,VAB,"$24.76
+",1 share at $24.76/share
+"April 20
+",RRSP,Bought,BAM.A,"$393.68
+",8 shares at $49.21/share
+"April 20
+",RRSP,Sold,GOOG,"$5,364.80
+","5 shares at $1,072.96 USD/share"
+"April 20
+",RRSP,Sold,ZEF,"$112.00
+",7 shares at $16.00/share
+"April 20
+",RRSP,Sold,XUS,"$127.83
+",3 shares at $42.61/share
+"April 21
+",TFSA,Bought,ZEF,"$96.00
+",6 shares at $16.00/share
+"April 21
+",TFSA,Bought,GOOG,"$5,364.80
+","5 shares at $1,072.96 USD/share"
+"April 21
+",TFSA,Sold,VAB,"$123.80
+",5 shares at $24.76/share
+"April 21
+",TFSA,Sold,XUS,"$298.27
+",7 shares at $42.61/share
+"April 21
+",TFSA,Sold,BAM.A,"$393.68
+",8 shares at $49.21/share
+"April 21
+",TFSA,Sold,VIG,"$101.47
+",1 share at $101.47 USD/share
+"April 21
+",RRSP,Sold,ZEF,"$80.00
+",5 shares at $16.00/share
+"April 21
+",RRSP,Sold,VAB,"$99.04
+",4 shares at $24.76/share
+"April 21
+",RRSP,Sold,VIG,"$405.88
+",4 shares at $101.47 USD/share
+"April 21
+",RRSP,Sold,GOOG,"$3,218.88
+","3 shares at $1,072.96 USD/share"
+"April 21
+",RRSP,Bought,XUS,"$42.61
+",1 share at $42.61/share
+"April 21
+",RRSP,Bought,BAM.A,"$49.21
+",1 share at $49.21/share
+"April 22
+",TFSA,Bought,BAM.A,"$196.84
+",4 shares at $49.21/share
+"April 22
+",TFSA,Bought,XUS,"$340.88
+",8 shares at $42.61/share
+"April 22
+",TFSA,Sold,VAB,"$49.52
+",2 shares at $24.76/share
+"April 22
+",TFSA,Sold,ZEF,"$144.00
+",9 shares at $16.00/share
+"April 22
+",TFSA,Bought,VIG,"$202.94
+",2 shares at $101.47 USD/share
+"April 22
+",TFSA,Bought,GOOG,"$4,291.84
+","4 shares at $1,072.96 USD/share"
+"April 22
+",RRSP,Sold,GOOG,"$4,291.84
+","4 shares at $1,072.96 USD/share"
+"April 22
+",RRSP,Sold,ZEF,"$128.00
+",8 shares at $16.00/share
+"April 22
+",RRSP,Sold,BAM.A,"$196.84
+",4 shares at $49.21/share
+"April 22
+",RRSP,Sold,XUS,"$213.05
+",5 shares at $42.61/share
+"April 22
+",RRSP,Bought,VAB,"$198.08
+",8 shares at $24.76/share
+"April 22
+",RRSP,Bought,VIG,"$507.35
+",5 shares at $101.47 USD/share
+"April 23
+",TFSA,Bought,XUS,"$343.36
+",8 shares at $42.92/share
+"April 23
+",TFSA,Sold,GOOG,"$4,269.80
+","4 shares at $1,067.45 USD/share"
+"April 23
+",TFSA,Sold,VAB,"$99.16
+",4 shares at $24.79/share
+"April 23
+",TFSA,Sold,ZEF,"$128.08
+",8 shares at $16.01/share
+"April 23
+",TFSA,Sold,BAM.A,"$247.05
+",5 shares at $49.41/share
+"April 23
+",TFSA,Bought,VIG,"$711.13
+",7 shares at $101.59 USD/share
+"April 23
+",RRSP,Bought,VIG,"$304.77
+",3 shares at $101.59 USD/share
+"April 23
+",RRSP,Sold,GOOG,"$3,202.35
+","3 shares at $1,067.45 USD/share"
+"April 23
+",RRSP,Bought,XUS,"$42.92
+",1 share at $42.92/share
+"April 23
+",RRSP,Bought,ZEF,"$128.08
+",8 shares at $16.01/share
+"April 23
+",RRSP,Sold,BAM.A,"$98.82
+",2 shares at $49.41/share
+"April 23
+",RRSP,Sold,VAB,"$198.32
+",8 shares at $24.79/share
+"April 24
+",TFSA,Sold,XUS,"$253.74
+",6 shares at $42.29/share
+"April 24
+",TFSA,Bought,ZEF,"$15.99
+",1 share at $15.99/share
+"April 24
+",TFSA,Bought,VAB,"$323.82
+",3 shares at $107.94/share
+"April 24
+",TFSA,Bought,BAM.A,"$443.88
+",9 shares at $49.32/share
+"April 24
+",TFSA,Sold,VIG,"$400.24
+",4 shares at $100.06 USD/share
+"April 24
+",TFSA,Sold,GOOG,"$3,059.94
+","3 shares at $1,019.98 USD/share"
+"April 24
+",RRSP,Bought,ZEF,"$159.90
+",10 shares at $15.99/share
+"April 24
+",RRSP,Bought,VAB,"$215.88
+",2 shares at $107.94/share
+"April 24
+",RRSP,Bought,XUS,"$422.90
+",10 shares at $42.29/share
+"April 24
+",RRSP,Bought,BAM.A,"$493.20
+",10 shares at $49.32/share
+"April 24
+",RRSP,Bought,VIG,"$200.12
+",2 shares at $100.06 USD/share
+"April 24
+",RRSP,Bought,GOOG,"$10,199.80
+","10 shares at $1,019.98 USD/share"
+"April 25
+",RRSP,Sold,GOOG,"$229.80
+",4 shares at $57.45 USD/share
+"April 25
+",RRSP,Bought,ZEF,"$47.79
+",3 shares at $15.93/share
+"April 25
+",RRSP,Bought,BAM.A,"$629.84
+",8 shares at $78.73/share
+"April 25
+",TFSA,Sold,VAB,"$74.16
+",3 shares at $24.72/share
+"April 25
+",TFSA,Sold,ZEF,"$95.58
+",6 shares at $15.93/share
+"April 25
+",TFSA,Sold,BAM.A,"$236.19
+",3 shares at $78.73/share
+"April 25
+",TFSA,Sold,XUS,"$338.80
+",8 shares at $42.35/share
+"April 25
+",TFSA,Bought,GOOG,"$172.35
+",3 shares at $57.45 USD/share
+"April 25
+",TFSA,Bought,VIG,"$501.00
+",5 shares at $100.20 USD/share
+"April 25
+",RRSP,Sold,VAB,"$24.72
+",1 share at $24.72/share
+"April 25
+",RRSP,Sold,XUS,"$296.45
+",7 shares at $42.35/share
+"April 25
+",RRSP,Bought,VIG,"$400.80
+",4 shares at $100.20 USD/share
+"April 26
+",TFSA,Sold,BAM.A,"$302.64
+",6 shares at $50.44/share
+"April 26
+",TFSA,Bought,GOOG,"$5,200.20
+","5 shares at $1,040.04 USD/share"
+"April 26
+",TFSA,Bought,ZEF,"$158.60
+",10 shares at $15.86/share
+"April 26
+",TFSA,Bought,XUS,"$215.10
+",5 shares at $43.02/share
+"April 26
+",TFSA,Bought,VAB,"$247.90
+",10 shares at $24.79/share
+"April 26
+",TFSA,Sold,VIG,"$907.02
+",9 shares at $100.78 USD/share
+"April 26
+",RRSP,Bought,XUS,"$258.12
+",6 shares at $43.02/share
+"April 26
+",RRSP,Bought,VIG,"$403.12
+",4 shares at $100.78 USD/share
+"April 26
+",RRSP,Sold,GOOG,"$2,080.08
+","2 shares at $1,040.04 USD/share"
+"April 26
+",RRSP,Sold,ZEF,"$47.58
+",3 shares at $15.86/share
+"April 26
+",RRSP,Sold,BAM.A,"$100.88
+",2 shares at $50.44/share
+"April 26
+",RRSP,Sold,VAB,"$223.11
+",9 shares at $24.79/share
+"April 27
+",TFSA,Sold,ZEF,"$79.50
+",5 shares at $15.90/share
+"April 27
+",TFSA,Bought,XUS,"$172.24
+",4 shares at $43.06/share
+"April 27
+",TFSA,Bought,VAB,"$179.07
+",3 shares at $59.69/share
+"April 27
+",TFSA,Bought,BAM.A,"$254.00
+",5 shares at $50.80/share
+"April 27
+",TFSA,Sold,VIG,"$201.80
+",2 shares at $100.90 USD/share
+"April 27
+",TFSA,Sold,GOOG,"$10,300.50
+","10 shares at $1,030.05 USD/share"
+"April 27
+",RRSP,Bought,VAB,"$59.69
+",1 share at $59.69/share
+"April 27
+",RRSP,Bought,ZEF,"$63.60
+",4 shares at $15.90/share
+"April 27
+",RRSP,Sold,VIG,"$504.50
+",5 shares at $100.90 USD/share
+"April 27
+",RRSP,Sold,GOOG,"$7,210.35
+","7 shares at $1,030.05 USD/share"
+"April 27
+",RRSP,Sold,XUS,"$86.12
+",2 shares at $43.06/share
+"April 27
+",RRSP,Sold,BAM.A,"$101.60
+",2 shares at $50.80/share
+"April 28
+",RRSP,Sold,XUS,"$172.24
+",4 shares at $43.06/share
+"April 28
+",TFSA,Sold,ZEF,"$15.90
+",1 share at $15.90/share
+"April 28
+",TFSA,Bought,BAM.A,"$50.80
+",1 share at $50.80/share
+"April 28
+",TFSA,Bought,XUS,"$86.12
+",2 shares at $43.06/share
+"April 28
+",TFSA,Bought,VAB,"$119.38
+",2 shares at $59.69/share
+"April 28
+",TFSA,Bought,VIG,"$908.10
+",9 shares at $100.90 USD/share
+"April 28
+",TFSA,Bought,GOOG,"$1,030.05
+","1 share at $1,030.05 USD/share"
+"April 28
+",RRSP,Bought,VIG,"$605.40
+",6 shares at $100.90 USD/share
+"April 28
+",RRSP,Bought,GOOG,"$3,090.15
+","3 shares at $1,030.05 USD/share"
+"April 28
+",RRSP,Bought,ZEF,"$47.70
+",3 shares at $15.90/share
+"April 28
+",RRSP,Bought,BAM.A,"$355.60
+",7 shares at $50.80/share
+"April 28
+",RRSP,Bought,VAB,"$358.14
+",6 shares at $59.69/share
+"April 29
+",RRSP,Bought,GOOG,"$10,300.50
+","10 shares at $1,030.05 USD/share"
+"April 29
+",TFSA,Bought,BAM.A,"$101.60
+",2 shares at $50.80/share
+"April 29
+",TFSA,Bought,XUS,"$258.36
+",6 shares at $43.06/share
+"April 29
+",RRSP,Sold,VIG,"$1,009.00
+",10 shares at $100.90 USD/share
+"April 29
+",TFSA,Sold,ZEF,"$15.90
+",1 share at $15.90/share
+"April 29
+",TFSA,Sold,VAB,"$417.83
+",7 shares at $59.69/share
+"April 29
+",TFSA,Bought,VIG,"$807.20
+",8 shares at $100.90 USD/share
+"April 29
+",TFSA,Bought,GOOG,"$4,120.20
+","4 shares at $1,030.05 USD/share"
+"April 29
+",RRSP,Sold,BAM.A,"$254.00
+",5 shares at $50.80/share
+"April 29
+",RRSP,Sold,VAB,"$596.90
+",10 shares at $59.69/share
+"April 29
+",RRSP,Bought,ZEF,"$127.20
+",8 shares at $15.90/share
+"April 29
+",RRSP,Bought,XUS,"$387.54
+",9 shares at $43.06/share
+"April 30
+",TFSA,Sold,GOOG,"$6,103.98
+","6 shares at $1,017.33 USD/share"
+"April 30
+",TFSA,Sold,VAB,"$24.78
+",1 share at $24.78/share
+"April 30
+",TFSA,Sold,XUS,"$42.64
+",1 share at $42.64/share
+"April 30
+",TFSA,Sold,ZEF,"$127.52
+",8 shares at $15.94/share
+"April 30
+",TFSA,Sold,BAM.A,"$305.34
+",6 shares at $50.89/share
+"April 30
+",TFSA,Bought,VIG,"$500.55
+",5 shares at $100.11 USD/share
+"April 30
+",RRSP,Bought,ZEF,"$127.52
+",8 shares at $15.94/share
+"April 30
+",RRSP,Bought,XUS,"$341.12
+",8 shares at $42.64/share
+"April 30
+",RRSP,Sold,VIG,"$1,001.10
+",10 shares at $100.11 USD/share
+"April 30
+",RRSP,Sold,GOOG,"$8,138.64
+","8 shares at $1,017.33 USD/share"
+"April 30
+",RRSP,Sold,VAB,"$49.56
+",2 shares at $24.78/share
+"April 30
+",RRSP,Sold,BAM.A,"$508.90
+",10 shares at $50.89/share
+"May 1
+",TFSA,Sold,GOOG,"$2,074.62
+","2 shares at $1,037.31 USD/share"
+"May 1
+",RRSP,Bought,VIG,"$299.13
+",3 shares at $99.71 USD/share
+"May 1
+",RRSP,Bought,GOOG,"$6,223.86
+","6 shares at $1,037.31 USD/share"
+"May 1
+",RRSP,Bought,BAM.A,"$50.48
+",1 share at $50.48/share
+"May 1
+",TFSA,Bought,BAM.A,"$50.48
+",1 share at $50.48/share
+"May 1
+",TFSA,Sold,ZEF,"$110.81
+",7 shares at $15.83/share
+"May 1
+",TFSA,Sold,XUS,"$128.22
+",3 shares at $42.74/share
+"May 1
+",TFSA,Sold,VAB,"$172.83
+",7 shares at $24.69/share
+"May 1
+",RRSP,Sold,VAB,"$148.14
+",6 shares at $24.69/share
+"May 1
+",RRSP,Sold,ZEF,"$158.30
+",10 shares at $15.83/share
+"May 1
+",RRSP,Sold,XUS,"$256.44
+",6 shares at $42.74/share
+"May 1
+",TFSA,Bought,VIG,"$99.71
+",1 share at $99.71 USD/share
+"May 2
+",TFSA,Sold,GOOG,"$0.00
+","0 shares at $1,024.38 USD/share"
+"May 2
+",TFSA,Bought,VIG,"$691.32
+",7 shares at $98.76 USD/share
+"May 2
+",TFSA,Sold,BAM.A,"$150.96
+",3 shares at $50.32/share
+"May 2
+",TFSA,Sold,ZEF,"$157.40
+",10 shares at $15.74/share
+"May 2
+",RRSP,Sold,VIG,"$691.32
+",7 shares at $98.76 USD/share
+"May 2
+",TFSA,Bought,XUS,"$212.45
+",5 shares at $42.49/share
+"May 2
+",TFSA,Bought,VAB,"$222.12
+",9 shares at $24.68/share
+"May 2
+",RRSP,Bought,GOOG,"$10,243.80
+","10 shares at $1,024.38 USD/share"
+"May 2
+",RRSP,Bought,ZEF,"$31.48
+",2 shares at $15.74/share
+"May 2
+",RRSP,Bought,VAB,"$172.76
+",7 shares at $24.68/share
+"May 2
+",RRSP,Sold,BAM.A,"$100.64
+",2 shares at $50.32/share
+"May 2
+",RRSP,Sold,XUS,"$382.41
+",9 shares at $42.49/share
+"May 3
+",RRSP,Bought,ZEF,"$15.80
+",1 share at $15.80/share
+"May 3
+",RRSP,Bought,VAB,"$74.25
+",3 shares at $24.75/share
+"May 3
+",RRSP,Bought,BAM.A,"$101.48
+",2 shares at $50.74/share
+"May 3
+",RRSP,Bought,VIG,"$394.12
+",4 shares at $98.53 USD/share
+"May 3
+",RRSP,Bought,GOOG,"$8,189.76
+","8 shares at $1,023.72 USD/share"
+"May 3
+",TFSA,Sold,BAM.A,"$0.00
+",0 shares at $50.74/share
+"May 3
+",TFSA,Sold,XUS,"$84.60
+",2 shares at $42.30/share
+"May 3
+",RRSP,Sold,XUS,"$126.90
+",3 shares at $42.30/share
+"May 3
+",TFSA,Bought,VIG,"$689.71
+",7 shares at $98.53 USD/share
+"May 3
+",TFSA,Bought,GOOG,"$5,118.60
+","5 shares at $1,023.72 USD/share"
+"May 3
+",TFSA,Bought,VAB,"$74.25
+",3 shares at $24.75/share
+"May 3
+",TFSA,Bought,ZEF,"$94.80
+",6 shares at $15.80/share
+"May 4
+",TFSA,Sold,GOOG,"$3,144.63
+","3 shares at $1,048.21 USD/share"
+"May 4
+",RRSP,Bought,VIG,"$399.12
+",4 shares at $99.78 USD/share
+"May 4
+",RRSP,Sold,VAB,"$198.00
+",8 shares at $24.75/share
+"May 4
+",RRSP,Sold,GOOG,"$9,433.89
+","9 shares at $1,048.21 USD/share"
+"May 4
+",RRSP,Bought,BAM.A,"$51.18
+",1 share at $51.18/share
+"May 4
+",RRSP,Bought,ZEF,"$94.50
+",6 shares at $15.75/share
+"May 4
+",RRSP,Bought,XUS,"$300.30
+",7 shares at $42.90/share
+"May 4
+",TFSA,Bought,VIG,"$99.78
+",1 share at $99.78 USD/share
+"May 4
+",TFSA,Bought,ZEF,"$47.25
+",3 shares at $15.75/share
+"May 4
+",TFSA,Bought,VAB,"$148.50
+",6 shares at $24.75/share
+"May 4
+",TFSA,Bought,XUS,"$171.60
+",4 shares at $42.90/share
+"May 4
+",TFSA,Bought,BAM.A,"$511.80
+",10 shares at $51.18/share
+"May 5
+",TFSA,Sold,VIG,"$399.12
+",4 shares at $99.78 USD/share
+"May 5
+",RRSP,Bought,GOOG,"$5,241.05
+","5 shares at $1,048.21 USD/share"
+"May 5
+",RRSP,Sold,VAB,"$49.50
+",2 shares at $24.75/share
+"May 5
+",RRSP,Sold,ZEF,"$141.75
+",9 shares at $15.75/share
+"May 5
+",RRSP,Sold,VIG,"$299.34
+",3 shares at $99.78 USD/share
+"May 5
+",TFSA,Bought,GOOG,"$4,192.84
+","4 shares at $1,048.21 USD/share"
+"May 5
+",TFSA,Bought,ZEF,"$141.75
+",9 shares at $15.75/share
+"May 5
+",TFSA,Bought,BAM.A,"$153.54
+",3 shares at $51.18/share
+"May 5
+",TFSA,Sold,VAB,"$24.75
+",1 share at $24.75/share
+"May 5
+",TFSA,Sold,XUS,"$343.20
+",8 shares at $42.90/share
+"May 5
+",RRSP,Bought,BAM.A,"$51.18
+",1 share at $51.18/share
+"May 5
+",RRSP,Bought,XUS,"$257.40
+",6 shares at $42.90/share
+"May 6
+",TFSA,Sold,ZEF,"$141.75
+",9 shares at $15.75/share
+"May 6
+",TFSA,Sold,BAM.A,"$153.54
+",3 shares at $51.18/share
+"May 6
+",TFSA,Sold,XUS,"$171.60
+",4 shares at $42.90/share
+"May 6
+",TFSA,Sold,VAB,"$173.25
+",7 shares at $24.75/share
+"May 6
+",TFSA,Sold,VIG,"$698.46
+",7 shares at $99.78 USD/share
+"May 6
+",TFSA,Sold,GOOG,"$4,192.84
+","4 shares at $1,048.21 USD/share"
+"May 6
+",RRSP,Bought,VIG,"$997.80
+",10 shares at $99.78 USD/share
+"May 6
+",RRSP,Bought,GOOG,"$4,192.84
+","4 shares at $1,048.21 USD/share"
+"May 6
+",RRSP,Sold,ZEF,"$94.50
+",6 shares at $15.75/share
+"May 6
+",RRSP,Sold,VAB,"$198.00
+",8 shares at $24.75/share
+"May 6
+",RRSP,Bought,XUS,"$343.20
+",8 shares at $42.90/share
+"May 6
+",RRSP,Bought,BAM.A,"$409.44
+",8 shares at $51.18/share
+"May 7
+",RRSP,Sold,VIG,"$599.52
+",6 shares at $99.92 USD/share
+"May 7
+",RRSP,Bought,GOOG,"$6,328.74
+","6 shares at $1,054.79 USD/share"
+"May 7
+",RRSP,Bought,BAM.A,"$512.90
+",10 shares at $51.29/share
+"May 7
+",RRSP,Sold,ZEF,"$94.26
+",6 shares at $15.71/share
+"May 7
+",RRSP,Sold,XUS,"$129.39
+",3 shares at $43.13/share
+"May 7
+",RRSP,Sold,VAB,"$173.25
+",7 shares at $24.75/share
+"May 7
+",TFSA,Sold,GOOG,"$2,109.58
+","2 shares at $1,054.79 USD/share"
+"May 7
+",TFSA,Sold,ZEF,"$78.55
+",5 shares at $15.71/share
+"May 7
+",TFSA,Sold,XUS,"$129.39
+",3 shares at $43.13/share
+"May 7
+",TFSA,Sold,VAB,"$148.50
+",6 shares at $24.75/share
+"May 7
+",TFSA,Sold,BAM.A,"$512.90
+",10 shares at $51.29/share
+"May 7
+",TFSA,Bought,VIG,"$999.20
+",10 shares at $99.92 USD/share
+"May 8
+",RRSP,Sold,GOOG,"$1,053.91
+","1 share at $1,053.91 USD/share"
+"May 8
+",TFSA,Sold,GOOG,"$0.00
+","0 shares at $1,053.91 USD/share"
+"May 8
+",RRSP,Bought,BAM.A,"$102.62
+",2 shares at $51.31/share
+"May 8
+",RRSP,Bought,ZEF,"$109.34
+",7 shares at $15.62/share
+"May 8
+",RRSP,Bought,XUS,"$433.20
+",10 shares at $43.32/share
+"May 8
+",RRSP,Bought,VIG,"$1,000.20
+",10 shares at $100.02 USD/share
+"May 8
+",RRSP,Sold,VAB,"$247.40
+",10 shares at $24.74/share
+"May 8
+",TFSA,Bought,VIG,"$700.14
+",7 shares at $100.02 USD/share
+"May 8
+",TFSA,Bought,VAB,"$24.74
+",1 share at $24.74/share
+"May 8
+",TFSA,Bought,ZEF,"$31.24
+",2 shares at $15.62/share
+"May 8
+",TFSA,Sold,BAM.A,"$0.00
+",0 shares at $51.31/share
+"May 8
+",TFSA,Sold,XUS,"$216.60
+",5 shares at $43.32/share
+"May 9
+",TFSA,Bought,VIG,"$503.40
+",5 shares at $100.68 USD/share
+"May 9
+",TFSA,Bought,GOOG,"$2,165.52
+","2 shares at $1,082.76 USD/share"
+"May 9
+",RRSP,Sold,GOOG,"$10,827.60
+","10 shares at $1,082.76 USD/share"
+"May 9
+",RRSP,Sold,ZEF,"$140.40
+",9 shares at $15.60/share
+"May 9
+",RRSP,Sold,BAM.A,"$308.46
+",6 shares at $51.41/share
+"May 9
+",RRSP,Sold,XUS,"$347.52
+",8 shares at $43.44/share
+"May 9
+",TFSA,Bought,ZEF,"$78.00
+",5 shares at $15.60/share
+"May 9
+",TFSA,Bought,VAB,"$222.12
+",9 shares at $24.68/share
+"May 9
+",TFSA,Bought,BAM.A,"$257.05
+",5 shares at $51.41/share
+"May 9
+",RRSP,Bought,VAB,"$24.68
+",1 share at $24.68/share
+"May 9
+",RRSP,Bought,VIG,"$302.04
+",3 shares at $100.68 USD/share
+"May 9
+",TFSA,Sold,XUS,"$217.20
+",5 shares at $43.44/share
+"May 10
+",TFSA,Bought,VIG,"$507.20
+",5 shares at $101.44 USD/share
+"May 10
+",TFSA,Sold,ZEF,"$31.50
+",2 shares at $15.75/share
+"May 10
+",TFSA,Sold,BAM.A,"$258.05
+",5 shares at $51.61/share
+"May 10
+",TFSA,Bought,VAB,"$197.60
+",8 shares at $24.70/share
+"May 10
+",TFSA,Bought,XUS,"$217.50
+",5 shares at $43.50/share
+"May 10
+",TFSA,Sold,GOOG,"$2,195.14
+","2 shares at $1,097.57 USD/share"
+"May 10
+",RRSP,Bought,ZEF,"$15.75
+",1 share at $15.75/share
+"May 10
+",RRSP,Bought,XUS,"$217.50
+",5 shares at $43.50/share
+"May 10
+",RRSP,Bought,BAM.A,"$361.27
+",7 shares at $51.61/share
+"May 10
+",RRSP,Bought,VIG,"$304.32
+",3 shares at $101.44 USD/share
+"May 10
+",RRSP,Bought,GOOG,"$7,682.99
+","7 shares at $1,097.57 USD/share"
+"May 10
+",RRSP,Sold,VAB,"$197.60
+",8 shares at $24.70/share
+"May 11
+",TFSA,Sold,GOOG,"$0.00
+","0 shares at $1,098.26 USD/share"
+"May 11
+",RRSP,Bought,ZEF,"$110.53
+",7 shares at $15.79/share
+"May 11
+",RRSP,Bought,VIG,"$814.80
+",8 shares at $101.85 USD/share
+"May 11
+",RRSP,Bought,GOOG,"$2,196.52
+","2 shares at $1,098.26 USD/share"
+"May 11
+",TFSA,Bought,ZEF,"$15.79
+",1 share at $15.79/share
+"May 11
+",TFSA,Bought,VAB,"$247.40
+",10 shares at $24.74/share
+"May 11
+",TFSA,Bought,XUS,"$262.20
+",6 shares at $43.70/share
+"May 11
+",TFSA,Bought,BAM.A,"$311.16
+",6 shares at $51.86/share
+"May 11
+",TFSA,Bought,VIG,"$509.25
+",5 shares at $101.85 USD/share
+"May 11
+",RRSP,Sold,VAB,"$148.44
+",6 shares at $24.74/share
+"May 11
+",RRSP,Sold,XUS,"$393.30
+",9 shares at $43.70/share
+"May 11
+",RRSP,Sold,BAM.A,"$414.88
+",8 shares at $51.86/share
+"May 12
+",TFSA,Bought,XUS,"$305.90
+",7 shares at $43.70/share
+"May 12
+",TFSA,Sold,VAB,"$74.22
+",3 shares at $24.74/share
+"May 12
+",TFSA,Sold,ZEF,"$110.53
+",7 shares at $15.79/share
+"May 12
+",TFSA,Sold,BAM.A,"$311.16
+",6 shares at $51.86/share
+"May 12
+",TFSA,Bought,VIG,"$305.55
+",3 shares at $101.85 USD/share
+"May 12
+",TFSA,Bought,GOOG,"$6,589.56
+","6 shares at $1,098.26 USD/share"
+"May 12
+",RRSP,Sold,VIG,"$101.85
+",1 share at $101.85 USD/share
+"May 12
+",RRSP,Bought,VAB,"$123.70
+",5 shares at $24.74/share
+"May 12
+",RRSP,Bought,BAM.A,"$363.02
+",7 shares at $51.86/share
+"May 12
+",RRSP,Bought,GOOG,"$6,589.56
+","6 shares at $1,098.26 USD/share"
+"May 12
+",RRSP,Sold,ZEF,"$47.37
+",3 shares at $15.79/share
+"May 12
+",RRSP,Sold,XUS,"$131.10
+",3 shares at $43.70/share
+"May 13
+",RRSP,Sold,GOOG,"$5,491.30
+","5 shares at $1,098.26 USD/share"
+"May 13
+",RRSP,Bought,VIG,"$712.95
+",7 shares at $101.85 USD/share
+"May 13
+",RRSP,Bought,BAM.A,"$466.74
+",9 shares at $51.86/share
+"May 13
+",TFSA,Sold,ZEF,"$126.32
+",8 shares at $15.79/share
+"May 13
+",TFSA,Sold,XUS,"$262.20
+",6 shares at $43.70/share
+"May 13
+",RRSP,Sold,ZEF,"$31.58
+",2 shares at $15.79/share
+"May 13
+",RRSP,Sold,VAB,"$98.96
+",4 shares at $24.74/share
+"May 13
+",RRSP,Sold,XUS,"$305.90
+",7 shares at $43.70/share
+"May 13
+",TFSA,Sold,VIG,"$407.40
+",4 shares at $101.85 USD/share
+"May 13
+",TFSA,Sold,GOOG,"$4,393.04
+","4 shares at $1,098.26 USD/share"
+"May 13
+",TFSA,Bought,VAB,"$49.48
+",2 shares at $24.74/share
+"May 13
+",TFSA,Bought,BAM.A,"$51.86
+",1 share at $51.86/share
+"May 14
+",TFSA,Bought,ZEF,"$125.84
+",8 shares at $15.73/share
+"May 14
+",TFSA,Bought,BAM.A,"$313.80
+",6 shares at $52.30/share
+"May 14
+",TFSA,Bought,GOOG,"$9,901.80
+","9 shares at $1,100.20 USD/share"
+"May 14
+",RRSP,Bought,XUS,"$438.00
+",10 shares at $43.80/share
+"May 14
+",RRSP,Bought,GOOG,"$6,601.20
+","6 shares at $1,100.20 USD/share"
+"May 14
+",RRSP,Sold,ZEF,"$47.19
+",3 shares at $15.73/share
+"May 14
+",RRSP,Sold,BAM.A,"$52.30
+",1 share at $52.30/share
+"May 14
+",RRSP,Sold,VAB,"$246.80
+",10 shares at $24.68/share
+"May 14
+",RRSP,Sold,VIG,"$1,018.40
+",10 shares at $101.84 USD/share
+"May 14
+",TFSA,Sold,VAB,"$148.08
+",6 shares at $24.68/share
+"May 14
+",TFSA,Sold,XUS,"$262.80
+",6 shares at $43.80/share
+"May 14
+",TFSA,Sold,VIG,"$611.04
+",6 shares at $101.84 USD/share
+"May 15
+",RRSP,Sold,BAM.A,"$52.45
+",1 share at $52.45/share
+"May 15
+",RRSP,Sold,XUS,"$973.80
+",9 shares at $108.20/share
+"May 15
+",RRSP,Bought,GOOG,"$3,237.69
+","3 shares at $1,079.23 USD/share"
+"May 15
+",RRSP,Bought,VAB,"$49.12
+",2 shares at $24.56/share
+"May 15
+",RRSP,Bought,ZEF,"$124.88
+",8 shares at $15.61/share
+"May 15
+",TFSA,Bought,GOOG,"$8,633.84
+","8 shares at $1,079.23 USD/share"
+"May 15
+",TFSA,Sold,ZEF,"$31.22
+",2 shares at $15.61/share
+"May 15
+",TFSA,Sold,VAB,"$171.92
+",7 shares at $24.56/share
+"May 15
+",RRSP,Sold,VIG,"$810.24
+",8 shares at $101.28 USD/share
+"May 15
+",TFSA,Sold,VIG,"$810.24
+",8 shares at $101.28 USD/share
+"May 15
+",TFSA,Bought,BAM.A,"$209.80
+",4 shares at $52.45/share
+"May 15
+",TFSA,Bought,XUS,"$865.60
+",8 shares at $108.20/share
+"May 16
+",RRSP,Bought,VIG,"$712.81
+",7 shares at $101.83 USD/share
+"May 16
+",TFSA,Bought,BAM.A,"$362.39
+",7 shares at $51.77/share
+"May 16
+",RRSP,Sold,GOOG,"$1,081.77
+","1 share at $1,081.77 USD/share"
+"May 16
+",RRSP,Sold,BAM.A,"$103.54
+",2 shares at $51.77/share
+"May 16
+",RRSP,Sold,ZEF,"$141.39
+",9 shares at $15.71/share
+"May 16
+",RRSP,Bought,VAB,"$196.48
+",8 shares at $24.56/share
+"May 16
+",RRSP,Bought,XUS,"$305.41
+",7 shares at $43.63/share
+"May 16
+",TFSA,Sold,VIG,"$407.32
+",4 shares at $101.83 USD/share
+"May 16
+",TFSA,Sold,ZEF,"$15.71
+",1 share at $15.71/share
+"May 16
+",TFSA,Sold,XUS,"$130.89
+",3 shares at $43.63/share
+"May 16
+",TFSA,Sold,VAB,"$171.92
+",7 shares at $24.56/share
+"May 16
+",TFSA,Bought,GOOG,"$6,490.62
+","6 shares at $1,081.77 USD/share"
+"May 17
+",RRSP,Sold,BAM.A,"$361.27
+",7 shares at $51.61/share
+"May 17
+",TFSA,Bought,VAB,"$73.62
+",3 shares at $24.54/share
+"May 17
+",RRSP,Sold,VIG,"$203.72
+",2 shares at $101.86 USD/share
+"May 17
+",RRSP,Bought,GOOG,"$10,785.90
+","10 shares at $1,078.59 USD/share"
+"May 17
+",TFSA,Sold,BAM.A,"$103.22
+",2 shares at $51.61/share
+"May 17
+",TFSA,Sold,ZEF,"$140.31
+",9 shares at $15.59/share
+"May 17
+",TFSA,Sold,XUS,"$349.20
+",8 shares at $43.65/share
+"May 17
+",RRSP,Bought,VAB,"$49.08
+",2 shares at $24.54/share
+"May 17
+",RRSP,Bought,XUS,"$87.30
+",2 shares at $43.65/share
+"May 17
+",RRSP,Bought,ZEF,"$109.13
+",7 shares at $15.59/share
+"May 17
+",TFSA,Sold,VIG,"$916.74
+",9 shares at $101.86 USD/share
+"May 17
+",TFSA,Sold,GOOG,"$9,707.31
+","9 shares at $1,078.59 USD/share"
+"May 18
+",RRSP,Bought,ZEF,"$109.20
+",7 shares at $15.60/share
+"May 18
+",RRSP,Bought,BAM.A,"$311.82
+",6 shares at $51.97/share
+"May 18
+",RRSP,Bought,XUS,"$438.40
+",10 shares at $43.84/share
+"May 18
+",TFSA,Bought,VAB,"$24.57
+",1 share at $24.57/share
+"May 18
+",TFSA,Bought,BAM.A,"$519.70
+",10 shares at $51.97/share
+"May 18
+",TFSA,Sold,VIG,"$815.28
+",8 shares at $101.91 USD/share
+"May 18
+",TFSA,Sold,GOOG,"$3,199.08
+","3 shares at $1,066.36 USD/share"
+"May 18
+",TFSA,Sold,ZEF,"$140.40
+",9 shares at $15.60/share
+"May 18
+",TFSA,Sold,XUS,"$306.88
+",7 shares at $43.84/share
+"May 18
+",RRSP,Bought,VIG,"$101.91
+",1 share at $101.91 USD/share
+"May 18
+",RRSP,Bought,GOOG,"$1,066.36
+","1 share at $1,066.36 USD/share"
+"May 18
+",RRSP,Sold,VAB,"$171.99
+",7 shares at $24.57/share
+"May 19
+",RRSP,Bought,VIG,"$1,019.10
+",10 shares at $101.91 USD/share
+"May 19
+",RRSP,Bought,GOOG,"$7,464.52
+","7 shares at $1,066.36 USD/share"
+"May 19
+",RRSP,Bought,ZEF,"$109.20
+",7 shares at $15.60/share
+"May 19
+",RRSP,Bought,VAB,"$147.42
+",6 shares at $24.57/share
+"May 19
+",TFSA,Sold,VIG,"$407.64
+",4 shares at $101.91 USD/share
+"May 19
+",TFSA,Sold,GOOG,"$2,132.72
+","2 shares at $1,066.36 USD/share"
+"May 19
+",TFSA,Bought,ZEF,"$109.20
+",7 shares at $15.60/share
+"May 19
+",TFSA,Bought,VAB,"$122.85
+",5 shares at $24.57/share
+"May 19
+",TFSA,Bought,BAM.A,"$311.82
+",6 shares at $51.97/share
+"May 19
+",TFSA,Sold,XUS,"$87.68
+",2 shares at $43.84/share
+"May 19
+",RRSP,Sold,XUS,"$175.36
+",4 shares at $43.84/share
+"May 19
+",RRSP,Sold,BAM.A,"$415.76
+",8 shares at $51.97/share
+"May 20
+",RRSP,Sold,XUS,"$175.36
+",4 shares at $43.84/share
+"May 20
+",RRSP,Sold,GOOG,"$5,331.80
+","5 shares at $1,066.36 USD/share"
+"May 20
+",TFSA,Sold,VAB,"$24.57
+",1 share at $24.57/share
+"May 20
+",TFSA,Sold,ZEF,"$124.80
+",8 shares at $15.60/share
+"May 20
+",TFSA,Sold,XUS,"$306.88
+",7 shares at $43.84/share
+"May 20
+",TFSA,Bought,BAM.A,"$51.97
+",1 share at $51.97/share
+"May 20
+",RRSP,Bought,VIG,"$101.91
+",1 share at $101.91 USD/share
+"May 20
+",TFSA,Bought,VIG,"$1,019.10
+",10 shares at $101.91 USD/share
+"May 20
+",TFSA,Bought,GOOG,"$2,132.72
+","2 shares at $1,066.36 USD/share"
+"May 20
+",RRSP,Bought,ZEF,"$93.60
+",6 shares at $15.60/share
+"May 20
+",RRSP,Bought,VAB,"$196.56
+",8 shares at $24.57/share
+"May 20
+",RRSP,Bought,BAM.A,"$467.73
+",9 shares at $51.97/share
+"May 21
+",RRSP,Sold,VIG,"$411.04
+",4 shares at $102.76 USD/share
+"May 21
+",RRSP,Bought,GOOG,"$1,079.58
+","1 share at $1,079.58 USD/share"
+"May 21
+",RRSP,Sold,VAB,"$245.70
+",10 shares at $24.57/share
+"May 21
+",RRSP,Sold,BAM.A,"$415.76
+",8 shares at $51.97/share
+"May 21
+",RRSP,Bought,ZEF,"$15.60
+",1 share at $15.60/share
+"May 21
+",RRSP,Bought,XUS,"$175.36
+",4 shares at $43.84/share
+"May 21
+",TFSA,Bought,VIG,"$102.76
+",1 share at $102.76 USD/share
+"May 21
+",TFSA,Sold,VAB,"$73.71
+",3 shares at $24.57/share
+"May 21
+",TFSA,Sold,BAM.A,"$467.73
+",9 shares at $51.97/share
+"May 21
+",TFSA,Sold,GOOG,"$5,397.90
+","5 shares at $1,079.58 USD/share"
+"May 21
+",TFSA,Bought,ZEF,"$156.00
+",10 shares at $15.60/share
+"May 21
+",TFSA,Bought,XUS,"$394.56
+",9 shares at $43.84/share
+"May 22
+",TFSA,Sold,GOOG,"$2,139.46
+","2 shares at $1,069.73 USD/share"
+"May 22
+",TFSA,Bought,ZEF,"$15.67
+",1 share at $15.67/share
+"May 22
+",TFSA,Sold,XUS,"$43.78
+",1 share at $43.78/share
+"May 22
+",TFSA,Sold,VAB,"$122.95
+",5 shares at $24.59/share
+"May 22
+",TFSA,Sold,BAM.A,"$520.40
+",10 shares at $52.04/share
+"May 22
+",RRSP,Bought,ZEF,"$47.01
+",3 shares at $15.67/share
+"May 22
+",RRSP,Sold,VIG,"$102.13
+",1 share at $102.13 USD/share
+"May 22
+",RRSP,Sold,GOOG,"$9,627.57
+","9 shares at $1,069.73 USD/share"
+"May 22
+",TFSA,Bought,VIG,"$102.13
+",1 share at $102.13 USD/share
+"May 22
+",RRSP,Sold,VAB,"$98.36
+",4 shares at $24.59/share
+"May 22
+",RRSP,Sold,BAM.A,"$208.16
+",4 shares at $52.04/share
+"May 22
+",RRSP,Sold,XUS,"$437.80
+",10 shares at $43.78/share
+"May 23
+",RRSP,Bought,VAB,"$74.04
+",3 shares at $24.68/share
+"May 23
+",TFSA,Bought,VAB,"$222.12
+",9 shares at $24.68/share
+"May 23
+",TFSA,Bought,BAM.A,"$418.96
+",8 shares at $52.37/share
+"May 23
+",RRSP,Sold,VIG,"$820.72
+",8 shares at $102.59 USD/share
+"May 23
+",RRSP,Sold,GOOG,"$5,398.45
+","5 shares at $1,079.69 USD/share"
+"May 23
+",TFSA,Bought,VIG,"$615.54
+",6 shares at $102.59 USD/share
+"May 23
+",TFSA,Sold,ZEF,"$31.44
+",2 shares at $15.72/share
+"May 23
+",TFSA,Sold,XUS,"$87.94
+",2 shares at $43.97/share
+"May 23
+",TFSA,Sold,GOOG,"$6,478.14
+","6 shares at $1,079.69 USD/share"
+"May 23
+",RRSP,Sold,XUS,"$43.97
+",1 share at $43.97/share
+"May 23
+",RRSP,Sold,BAM.A,"$104.74
+",2 shares at $52.37/share
+"May 23
+",RRSP,Sold,ZEF,"$141.48
+",9 shares at $15.72/share
+"May 24
+",RRSP,Bought,GOOG,"$3,237.72
+","3 shares at $1,079.24 USD/share"
+"May 24
+",TFSA,Sold,VAB,"$49.50
+",2 shares at $24.75/share
+"May 24
+",TFSA,Sold,BAM.A,"$156.39
+",3 shares at $52.13/share
+"May 24
+",TFSA,Bought,VIG,"$102.83
+",1 share at $102.83 USD/share
+"May 24
+",TFSA,Bought,GOOG,"$2,158.48
+","2 shares at $1,079.24 USD/share"
+"May 24
+",RRSP,Sold,BAM.A,"$156.39
+",3 shares at $52.13/share
+"May 24
+",RRSP,Sold,XUS,"$220.50
+",5 shares at $44.10/share
+"May 24
+",RRSP,Sold,VIG,"$616.98
+",6 shares at $102.83 USD/share
+"May 24
+",TFSA,Bought,XUS,"$44.10
+",1 share at $44.10/share
+"May 24
+",TFSA,Bought,ZEF,"$63.16
+",4 shares at $15.79/share
+"May 24
+",RRSP,Bought,VAB,"$99.00
+",4 shares at $24.75/share
+"May 24
+",RRSP,Bought,ZEF,"$142.11
+",9 shares at $15.79/share
+"May 25
+",RRSP,Sold,VIG,"$513.55
+",5 shares at $102.71 USD/share
+"May 25
+",RRSP,Bought,GOOG,"$8,605.28
+","8 shares at $1,075.66 USD/share"
+"May 25
+",TFSA,Sold,VAB,"$223.11
+",9 shares at $24.79/share
+"May 25
+",RRSP,Bought,VAB,"$123.95
+",5 shares at $24.79/share
+"May 25
+",RRSP,Sold,ZEF,"$110.67
+",7 shares at $15.81/share
+"May 25
+",RRSP,Sold,XUS,"$265.86
+",6 shares at $44.31/share
+"May 25
+",RRSP,Sold,BAM.A,"$366.52
+",7 shares at $52.36/share
+"May 25
+",TFSA,Sold,VIG,"$821.68
+",8 shares at $102.71 USD/share
+"May 25
+",TFSA,Sold,GOOG,"$2,151.32
+","2 shares at $1,075.66 USD/share"
+"May 25
+",TFSA,Bought,ZEF,"$126.48
+",8 shares at $15.81/share
+"May 25
+",TFSA,Bought,XUS,"$132.93
+",3 shares at $44.31/share
+"May 25
+",TFSA,Bought,BAM.A,"$366.52
+",7 shares at $52.36/share
+"May 26
+",TFSA,Bought,GOOG,"$10,756.60
+","10 shares at $1,075.66 USD/share"
+"May 26
+",TFSA,Bought,XUS,"$44.31
+",1 share at $44.31/share
+"May 26
+",TFSA,Bought,VAB,"$74.37
+",3 shares at $24.79/share
+"May 26
+",TFSA,Bought,ZEF,"$126.48
+",8 shares at $15.81/share
+"May 26
+",TFSA,Bought,BAM.A,"$418.88
+",8 shares at $52.36/share
+"May 26
+",RRSP,Bought,ZEF,"$126.48
+",8 shares at $15.81/share
+"May 26
+",RRSP,Bought,BAM.A,"$523.60
+",10 shares at $52.36/share
+"May 26
+",RRSP,Sold,VAB,"$24.79
+",1 share at $24.79/share
+"May 26
+",RRSP,Sold,XUS,"$221.55
+",5 shares at $44.31/share
+"May 26
+",TFSA,Sold,VIG,"$1,027.10
+",10 shares at $102.71 USD/share
+"May 26
+",RRSP,Bought,VIG,"$308.13
+",3 shares at $102.71 USD/share
+"May 26
+",RRSP,Bought,GOOG,"$7,529.62
+","7 shares at $1,075.66 USD/share"
+"May 27
+",RRSP,Sold,VIG,"$205.42
+",2 shares at $102.71 USD/share
+"May 27
+",RRSP,Sold,GOOG,"$9,680.94
+","9 shares at $1,075.66 USD/share"
+"May 27
+",RRSP,Bought,VAB,"$173.53
+",7 shares at $24.79/share
+"May 27
+",TFSA,Bought,GOOG,"$1,075.66
+","1 share at $1,075.66 USD/share"
+"May 27
+",TFSA,Sold,BAM.A,"$471.24
+",9 shares at $52.36/share
+"May 27
+",TFSA,Sold,VIG,"$924.39
+",9 shares at $102.71 USD/share
+"May 27
+",RRSP,Sold,BAM.A,"$52.36
+",1 share at $52.36/share
+"May 27
+",RRSP,Sold,ZEF,"$126.48
+",8 shares at $15.81/share
+"May 27
+",RRSP,Sold,XUS,"$221.55
+",5 shares at $44.31/share
+"May 27
+",TFSA,Bought,XUS,"$44.31
+",1 share at $44.31/share
+"May 27
+",TFSA,Bought,ZEF,"$63.24
+",4 shares at $15.81/share
+"May 27
+",TFSA,Bought,VAB,"$123.95
+",5 shares at $24.79/share
+"May 28
+",RRSP,Sold,VIG,"$616.26
+",6 shares at $102.71 USD/share
+"May 28
+",RRSP,Sold,GOOG,"$9,680.94
+","9 shares at $1,075.66 USD/share"
+"May 28
+",TFSA,Bought,BAM.A,"$105.06
+",2 shares at $52.53/share
+"May 28
+",TFSA,Bought,ZEF,"$110.18
+",7 shares at $15.74/share
+"May 28
+",RRSP,Bought,ZEF,"$94.44
+",6 shares at $15.74/share
+"May 28
+",RRSP,Bought,BAM.A,"$315.18
+",6 shares at $52.53/share
+"May 28
+",RRSP,Bought,XUS,"$355.68
+",8 shares at $44.46/share
+"May 28
+",TFSA,Bought,VIG,"$924.39
+",9 shares at $102.71 USD/share
+"May 28
+",RRSP,Sold,VAB,"$74.64
+",3 shares at $24.88/share
+"May 28
+",TFSA,Sold,VAB,"$174.16
+",7 shares at $24.88/share
+"May 28
+",TFSA,Sold,XUS,"$266.76
+",6 shares at $44.46/share
+"May 28
+",TFSA,Sold,GOOG,"$6,453.96
+","6 shares at $1,075.66 USD/share"
+"May 29
+",RRSP,Sold,VIG,"$812.80
+",8 shares at $101.60 USD/share
+"May 29
+",TFSA,Sold,ZEF,"$94.38
+",6 shares at $15.73/share
+"May 29
+",TFSA,Sold,VAB,"$225.54
+",9 shares at $25.06/share
+"May 29
+",RRSP,Bought,GOOG,"$10,603.20
+","10 shares at $1,060.32 USD/share"
+"May 29
+",TFSA,Bought,XUS,"$131.73
+",3 shares at $43.91/share
+"May 29
+",TFSA,Bought,BAM.A,"$155.07
+",3 shares at $51.69/share
+"May 29
+",RRSP,Sold,VAB,"$25.06
+",1 share at $25.06/share
+"May 29
+",RRSP,Sold,ZEF,"$47.19
+",3 shares at $15.73/share
+"May 29
+",RRSP,Sold,BAM.A,"$103.38
+",2 shares at $51.69/share
+"May 29
+",RRSP,Sold,XUS,"$131.73
+",3 shares at $43.91/share
+"May 29
+",TFSA,Bought,VIG,"$203.20
+",2 shares at $101.60 USD/share
+"May 29
+",TFSA,Bought,GOOG,"$3,180.96
+","3 shares at $1,060.32 USD/share"
+"May 30
+",TFSA,Sold,VAB,"$25.06
+",1 share at $25.06/share
+"May 30
+",TFSA,Sold,ZEF,"$78.65
+",5 shares at $15.73/share
+"May 30
+",TFSA,Bought,XUS,"$395.19
+",9 shares at $43.91/share
+"May 30
+",TFSA,Bought,BAM.A,"$413.52
+",8 shares at $51.69/share
+"May 30
+",RRSP,Bought,VIG,"$609.60
+",6 shares at $101.60 USD/share
+"May 30
+",RRSP,Bought,GOOG,"$2,120.64
+","2 shares at $1,060.32 USD/share"
+"May 30
+",TFSA,Bought,VIG,"$406.40
+",4 shares at $101.60 USD/share
+"May 30
+",TFSA,Bought,GOOG,"$1,060.32
+","1 share at $1,060.32 USD/share"
+"May 30
+",RRSP,Bought,XUS,"$43.91
+",1 share at $43.91/share
+"May 30
+",RRSP,Bought,BAM.A,"$206.76
+",4 shares at $51.69/share
+"May 30
+",RRSP,Sold,ZEF,"$78.65
+",5 shares at $15.73/share
+"May 30
+",RRSP,Sold,VAB,"$125.30
+",5 shares at $25.06/share
