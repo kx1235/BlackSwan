@@ -79,16 +79,33 @@ def list_positions(id_: str, dates: List[date]) -> (Dict[date, List[float]], Lis
     return position_percentages, symbols, totals
 
 
+def get_latest_deposit() -> Dict:
+    """
+    Return the latest deposit info in a dictionary
+
+    'date' points to date object
+    'amount' points to int
+
+    Currently returns dummy data because get deposits does not seem to work
+    """
+    info = {'date': date(2018, month=6, day=20), 'amount': 1000}
+    # params = {'start_date': '2017-01-01', 'end_date': '2018-12-12', 'limit': '250'}
+    # data = data_getter.get_data('deposits', parameters=params)
+    # print(data)
+    return info
+
+
 if __name__ == "__main__":
     data_getter.setup()  # You need this just to set up the data_getter
     dates = get_dates(date(2018, month=2, day=12), date(2018, month=4, day=23))  # This is how you enter the dates
     accounts = get_accounts()  # Get the list of accounts
-    for account in accounts:
-        print("### %s ###" % account)  # Print the account name
-        pp, s, t = list_positions(account, dates)  # pp is the dict of data to list of percentages
-        # s is list of corresponding symbols
-        # t is the list of totals of porfolio value
-
-        print(pp)
-        print(s)
-        print(t)
+    # for account in accounts:
+        # print("### %s ###" % account)  # Print the account name
+        # pp, s, t = list_positions(account, dates)  # pp is the dict of data to list of percentages
+        # # s is list of corresponding symbols
+        # # t is the list of totals of portfolio value
+        #
+        # print(pp)
+        # print(s)
+        # print(t)
+    get_latest_deposit()

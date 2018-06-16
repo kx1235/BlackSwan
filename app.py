@@ -10,25 +10,34 @@ from datetime import date
 from data import data_getter
 from data.data_getter import list_positions, get_dates
 
+
 dates = get_dates(date(2018, month=3, day=12), date(2018, month=4, day=23))
 
-account = 'rrsp-50dttgfe'
-rrsp = list_positions(account, dates)
+account1 = 'rrsp-50dttgfe'
+rrsp = list_positions(account1, dates)
 amount_rrsp, symbol_rrsp, total_rrsp = rrsp
 
-account = 'tfsa-arbu_-o3'
-tfsa = list_positions(account, dates)
+account2 = 'tfsa-arbu_-o3'
+tfsa = list_positions(account2, dates)
 amount_tfsa, symbol_tfsa, total_tfsa = tfsa
 
-account = 'ca-hisa-lciuw77c'
-hisa = list_positions(account, dates)
+account3 = 'ca-hisa-lciuw77c'
+hisa = list_positions(account3, dates)
 amount_hisa, symbol_hisa, total_hisa = hisa
 
+x1=[dates[0]]
+x2=[dates[0]]
+x3=[dates[0]]
+
+y1=[total_tfsa[x1[0]]]
+y2=[total_rrsp[x2[0]]]
+y3=[total_hisa[x3[0]]]
 
 
 app = dash.Dash()
-
 df = pd.read_csv("https://raw.githubusercontent.com/plotly/datasets/master/finance-charts-apple.csv")
+
+
 
 slider = dcc.Slider(
     id='slider',
@@ -120,22 +129,22 @@ fig3 = go.Layout(
 
 
 trace0 = go.Scatter(
-    x=[dates],
-    y=[total_tfsa[dates[0]]],
+    x=x1,
+    y=y1,
                 name = "TFSA",
                 line = dict(color = '#17BECF'),
                 opacity = 0.8)
 
 trace1 = go.Scatter(
-    x=[dates],
-    y=[total_rrsp[dates[0]]],
+    x=x2,
+    y=y2,
                 name = "RRSP",
                 line = dict(color = '#FFFFFF'),
                 opacity = 0.8)
 
 trace2 = go.Scatter(
-    x=[dates],
-    y=[total_hisa[dates[0]]],
+    x=x3,
+    y=y3,
                 name = "Smart Saving",
                 line = dict(color = '#F8B041'),
                 opacity = 0.8)
@@ -145,7 +154,7 @@ portfolio_value = {
                         "layout":dict(
                             title = "Portfolio value",
                             showlegend= False,
-                            width = 200,
+                            width = 300,
                             titlefont= dict(color='#dbdbdb'),
                             margin=go.Margin(
                                 l=50,
@@ -219,8 +228,9 @@ app.layout = html.Div([
         html.Div([
                 dcc.Graph(
                     id = 's1',
-                    style={'margin-left': 0, 'margin-bottom': 150},
+                    style={'margin-left': 0, 'margin-bottom': 150,'height':600},
                     figure= portfolio_value,
+                    animate=False
                 )
             ], className="five columns"),
 
@@ -264,7 +274,7 @@ def update_g1(clicks):
 @app.callback(
     Output('g2', 'figure'),
     [Input('button', 'n_clicks')])
-def update_g1(clicks):
+def update_g2(clicks):
     print('g1 triggered')
     new_figure = {
         'data': [{
@@ -284,7 +294,7 @@ def update_g1(clicks):
 @app.callback(
     Output('g3', 'figure'),
     [Input('button', 'n_clicks')])
-def update_g1(clicks):
+def update_g3(clicks):
     print('g1 triggered')
     new_figure = {
         'data': [{
@@ -301,12 +311,78 @@ def update_g1(clicks):
     return new_figure
 
 
+@app.callback(
+    Output('s1','figure'),
+    [Input('button','n_clicks')])
+def update_s1(clicks):
+    x1.append(dates[clicks])
+    x2.append(dates[clicks])
+    x3.append(dates[clicks])
 
+    y1.append(total_tfsa[x1[clicks]])
+    y2.append(total_rrsp[x2[clicks]])
+    y3.append(total_hisa[x3[clicks]])
 
+    trace_tfsa=go.Scatter(
+        x=x1,
+        y=y1,
+        name = "TFSA",
+        line = dict(color = '#17BECF'),
+        opacity = 0.8)
+
+    trace_rrsp = go.Scatter(
+        x=x2,
+        y=y2,
+        name="RRSP",
+        line=dict(color='#FFFFFF'),
+        opacity=0.8)
+
+    trace_hisa = go.Scatter(
+        x=x3,
+        y=y3,
+        name="Smart Saving",
+        line=dict(color='#F8B041'),
+        opacity=0.8)
+
+    return {
+                        'data': [trace_tfsa,trace_rrsp, trace_hisa],
+                        "layout":dict(
+                            title = "Portfolio value",
+                            showlegend= False,
+                            width = 300,
+                            titlefont= dict(color='#dbdbdb'),
+                            margin=go.Margin(
+                                l=50,
+                                r=40,
+                                b=150,
+                                t=100,
+                                pad=7
+                            ),
+                            xaxis = dict(
+                                range=x1,
+                                showgrid= True,
+                                gridcolor = '#898989',
+                                linecolor='#dbdbdb',
+                                tickcolor='#dbdbdb',
+                                tickfont = dict(color='#dbdbdb'),
+
+                            ),
+                            yaxis = dict(
+                                showgrid= True,
+                                gridcolor = '#898989',
+                                linecolor='#dbdbdb',
+                                tickcolor='#dbdbdb',
+                                tickfont = dict(color='#dbdbdb'),
+                            ),
+                            paper_bgcolor='#333333',
+                            plot_bgcolor='#333333'
+                        ),
+                    }
 
 
 
 
 
 if __name__ == '__main__':
+
     app.run_server(debug=True)
