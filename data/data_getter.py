@@ -100,12 +100,12 @@ if __name__ == "__main__":
     dates = get_dates(date(2018, month=2, day=12), date(2018, month=4, day=23))  # This is how you enter the dates
     accounts = get_accounts()  # Get the list of accounts
     # for account in accounts:
-        # print("### %s ###" % account)  # Print the account name
-        # pp, s, t = list_positions(account, dates)  # pp is the dict of data to list of percentages
-        # # s is list of corresponding symbols
-        # # t is the list of totals of portfolio value
-        #
-        # print(pp)
-        # print(s)
-        # print(t)
+    # print("### %s ###" % account)  # Print the account name
+    # pp, s, t = list_positions(account, dates)  # pp is the dict of data to list of percentages
+    # # s is list of corresponding symbols
+    # # t is the list of totals of portfolio value
+    #
+    # print(pp)
+    # print(s)
+    # print(t)
     get_latest_deposit()

@@ -10,31 +10,29 @@ import requests
 import urllib.parse as urlparse
 from urllib.parse import urlencode
 import json
+from selenium import webdriver
+import time
 
 creds = {
     "client_id": "f8f8763b60e6e2a73d3e5c2b455b95d9eefee96e072dd5c9f1fd63144e166703",
-    "redirect_uri": "https://localhost:3000/auth",
+    "redirect_uri": "http://localhost:3000/auth",
     "response_type": "code",
     "state": "random",
     "scope": "read write",
     "client_secret": "5bb7db765ea8906ffa308c351e70cc4682bf420262c99fe1030a642ac4c37acb",
-    "grant_type": "authorization_code",
-    "access_token": "c3afe4a903b19601ac44fa423d840a7e768e0373c2dfd82b9c4b8f6849dad2d9"
+    "grant_type": "authorization_code"
 }
 
 
 class Controller:
-    """Read and write data using the Wealthsimple API
-    """
+    """Read and write data using the Wealthsimple API"""
     credentials: dict
     links: dict
     data: str
     first_name: str
 
     def __init__(self):
-        """
-        Constructor to create the controller
-        """
+        """Constructor to create the controller"""
         self.credentials = creds
         self.links = {}
         self.data = None
@@ -95,8 +93,7 @@ class Controller:
         return access_token
 
     def get_data(self, endpoint: str, parameters=None) -> str:
-        """Get data from the Wealthsimple account
-        """
+        """Get data from the Wealthsimple account"""
         if 'access_token' not in self.credentials:
             # Obtain access token if it has not done yet
             self.request_access()
@@ -115,8 +112,7 @@ class Controller:
         return formatted_data
 
     def is_authenticated(self) -> bool:
-        """Return if the controller has been authenticated
-        """
+        """Return if the controller has been authenticated"""
         return 'access_token' in self.credentials
 
     def has_data(self) -> bool:
@@ -125,8 +121,7 @@ class Controller:
         return self.data is not None
 
     def get_first_name(self):
-        """Get the first name of this client
-        """
+        """Get the first name of this client"""
         url = 'https://api.sandbox.wealthsimple.com/v1/%s' % 'people'
         headers = {'Authorization': 'Bearer %s' % self.credentials['access_token']}
         response = requests.get(url, headers=headers)
@@ -134,9 +129,10 @@ class Controller:
         self.first_name = data.get('results')[0].get('full_legal_name').get('first_name')
 
 
+# Instance of Controller
 data_getter = Controller()
+
 
 if __name__ == "__main__":
     controller = Controller()
-    endpoint = input("Enter endpoint")
-    controller.get_data(endpoint)
+    controller.setup()

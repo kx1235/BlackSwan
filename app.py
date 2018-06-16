@@ -10,18 +10,19 @@ from datetime import date
 from data import data_getter
 from data.data_getter import list_positions, get_dates
 
+
 dates = get_dates(date(2018, month=3, day=12), date(2018, month=4, day=23))
 
-account = 'rrsp-50dttgfe'
-rrsp = list_positions(account, dates)
+account1 = 'rrsp-50dttgfe'
+rrsp = list_positions(account1, dates)
 amount_rrsp, symbol_rrsp, total_rrsp = rrsp
 
-account = 'tfsa-arbu_-o3'
-tfsa = list_positions(account, dates)
+account2 = 'tfsa-arbu_-o3'
+tfsa = list_positions(account2, dates)
 amount_tfsa, symbol_tfsa, total_tfsa = tfsa
 
-account = 'ca-hisa-lciuw77c'
-hisa = list_positions(account, dates)
+account3 = 'ca-hisa-lciuw77c'
+hisa = list_positions(account3, dates)
 amount_hisa, symbol_hisa, total_hisa = hisa
 
 x1=[dates[0]]
@@ -34,7 +35,6 @@ y3=[total_hisa[x3[0]]]
 
 
 app = dash.Dash()
-
 df = pd.read_csv("https://raw.githubusercontent.com/plotly/datasets/master/finance-charts-apple.csv")
 
 
@@ -129,22 +129,22 @@ fig3 = go.Layout(
 
 
 trace0 = go.Scatter(
-                x=df.Date,
-                y=df['AAPL.High'],
+    x=x1,
+    y=y1,
                 name = "TFSA",
                 line = dict(color = '#17BECF'),
                 opacity = 0.8)
 
 trace1 = go.Scatter(
-                x=df.Date,
-                y=df['AAPL.Low'],
+    x=x2,
+    y=y2,
                 name = "RRSP",
                 line = dict(color = '#FFFFFF'),
                 opacity = 0.8)
 
 trace2 = go.Scatter(
-                x=df.Date,
-                y=df['AAPL.Close'],
+    x=x3,
+    y=y3,
                 name = "Smart Saving",
                 line = dict(color = '#F8B041'),
                 opacity = 0.8)
@@ -164,7 +164,7 @@ portfolio_value = {
                                 pad=7
                             ),
                             xaxis = dict(
-                                range = ['2016-07-01','2016-12-31'],
+                                range=dates,
                                 showgrid= True,
                                 gridcolor = '#898989',
                                 linecolor='#dbdbdb',
@@ -230,6 +230,7 @@ app.layout = html.Div([
                     id = 's1',
                     style={'margin-left': 0, 'margin-bottom': 150,'height':600},
                     figure= portfolio_value,
+                    animate=False
                 )
             ], className="five columns"),
 
@@ -273,7 +274,7 @@ def update_g1(clicks):
 @app.callback(
     Output('g2', 'figure'),
     [Input('button', 'n_clicks')])
-def update_g1(clicks):
+def update_g2(clicks):
     print('g1 triggered')
     new_figure = {
         'data': [{
@@ -293,7 +294,7 @@ def update_g1(clicks):
 @app.callback(
     Output('g3', 'figure'),
     [Input('button', 'n_clicks')])
-def update_g1(clicks):
+def update_g3(clicks):
     print('g1 triggered')
     new_figure = {
         'data': [{
@@ -336,6 +337,12 @@ def update_s1(clicks):
         line=dict(color='#FFFFFF'),
         opacity=0.8)
 
+    trace_hisa = go.Scatter(
+        x=x3,
+        y=y3,
+        name="Smart Saving",
+        line=dict(color='#F8B041'),
+        opacity=0.8)
 
     return {
                         'data': [trace_tfsa,trace_rrsp, trace_hisa],
