@@ -120,22 +120,22 @@ fig3 = go.Layout(
 
 
 trace0 = go.Scatter(
-                x=df.Date,
-                y=df['AAPL.High'],
+    x=[dates],
+    y=[total_tfsa[dates[0]]],
                 name = "TFSA",
                 line = dict(color = '#17BECF'),
                 opacity = 0.8)
 
 trace1 = go.Scatter(
-                x=df.Date,
-                y=df['AAPL.Low'],
+    x=[dates],
+    y=[total_rrsp[dates[0]]],
                 name = "RRSP",
                 line = dict(color = '#FFFFFF'),
                 opacity = 0.8)
 
 trace2 = go.Scatter(
-                x=df.Date,
-                y=df['AAPL.Close'],
+    x=[dates],
+    y=[total_hisa[dates[0]]],
                 name = "Smart Saving",
                 line = dict(color = '#F8B041'),
                 opacity = 0.8)
@@ -155,7 +155,7 @@ portfolio_value = {
                                 pad=7
                             ),
                             xaxis = dict(
-                                range = ['2016-07-01','2016-12-31'],
+                                range=dates,
                                 showgrid= True,
                                 gridcolor = '#898989',
                                 linecolor='#dbdbdb',
