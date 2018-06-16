@@ -25,19 +25,17 @@ account3 = 'ca-hisa-lciuw77c'
 hisa = list_positions(account3, dates)
 amount_hisa, symbol_hisa, total_hisa = hisa
 
-x1=[dates[0]]
-x2=[dates[0]]
-x3=[dates[0]]
+x1 = [dates[0]]
+x2 = [dates[0]]
+x3 = [dates[0]]
 
-y1=[total_tfsa[x1[0]]]
-y2=[total_rrsp[x2[0]]]
-y3=[total_hisa[x3[0]]]
+y1 = [total_tfsa[x1[0]]]
+y2 = [total_rrsp[x2[0]]]
+y3 = [total_hisa[x3[0]]]
 
 
 app = dash.Dash()
 df = pd.read_csv("https://raw.githubusercontent.com/plotly/datasets/master/finance-charts-apple.csv")
-
-
 
 slider = dcc.Slider(
     id='slider',
@@ -154,7 +152,7 @@ portfolio_value = {
                         "layout":dict(
                             title = "Portfolio value",
                             showlegend= False,
-                            width = 300,
+                            width=300,
                             titlefont= dict(color='#dbdbdb'),
                             margin=go.Margin(
                                 l=50,
@@ -228,7 +226,7 @@ app.layout = html.Div([
         html.Div([
                 dcc.Graph(
                     id = 's1',
-                    style={'margin-left': 0, 'margin-bottom': 150,'height':600},
+                    style={'margin-left': 0, 'margin-bottom': 150, 'height': 600},
                     figure= portfolio_value,
                     animate=False
                 )
@@ -312,8 +310,8 @@ def update_g3(clicks):
 
 
 @app.callback(
-    Output('s1','figure'),
-    [Input('button','n_clicks')])
+    Output('s1', 'figure'),
+    [Input('button', 'n_clicks')])
 def update_s1(clicks):
     x1.append(dates[clicks])
     x2.append(dates[clicks])
@@ -323,12 +321,12 @@ def update_s1(clicks):
     y2.append(total_rrsp[x2[clicks]])
     y3.append(total_hisa[x3[clicks]])
 
-    trace_tfsa=go.Scatter(
+    trace_tfsa = go.Scatter(
         x=x1,
         y=y1,
-        name = "TFSA",
-        line = dict(color = '#17BECF'),
-        opacity = 0.8)
+        name="TFSA",
+        line=dict(color='#17BECF'),
+        opacity=0.8)
 
     trace_rrsp = go.Scatter(
         x=x2,
@@ -345,44 +343,43 @@ def update_s1(clicks):
         opacity=0.8)
 
     return {
-                        'data': [trace_tfsa,trace_rrsp, trace_hisa],
-                        "layout":dict(
-                            title = "Portfolio value",
-                            showlegend= False,
-                            width = 300,
-                            titlefont= dict(color='#dbdbdb'),
-                            margin=go.Margin(
-                                l=50,
-                                r=40,
-                                b=150,
-                                t=100,
-                                pad=7
-                            ),
-                            xaxis = dict(
-                                range=x1,
-                                showgrid= True,
-                                gridcolor = '#898989',
-                                linecolor='#dbdbdb',
-                                tickcolor='#dbdbdb',
-                                tickfont = dict(color='#dbdbdb'),
+        'data': [trace_tfsa, trace_rrsp, trace_hisa],
+        "layout": dict(
+            title="Portfolio value",
+            showlegend=False,
+            width=300,
+            titlefont=dict(color='#dbdbdb'),
+            margin=go.Margin(
+                l=50,
+                r=40,
+                b=150,
+                t=100,
+                pad=7
+            ),
+            xaxis=dict(
+                range=x1,
+                showgrid=True,
+                gridcolor='#898989',
+                linecolor='#dbdbdb',
+                tickcolor='#dbdbdb',
+                tickfont=dict(color='#dbdbdb'),
 
-                            ),
-                            yaxis = dict(
-                                showgrid= True,
-                                gridcolor = '#898989',
-                                linecolor='#dbdbdb',
-                                tickcolor='#dbdbdb',
-                                tickfont = dict(color='#dbdbdb'),
-                            ),
-                            paper_bgcolor='#333333',
-                            plot_bgcolor='#333333'
-                        ),
-                    }
+            ),
+            yaxis=dict(
+                showgrid=True,
+                gridcolor='#898989',
+                linecolor='#dbdbdb',
+                tickcolor='#dbdbdb',
+                tickfont=dict(color='#dbdbdb'),
+            ),
+            paper_bgcolor='#333333',
+            plot_bgcolor='#333333'
+        ),
+    }
 
 
 
 
 
 if __name__ == '__main__':
-
     app.run_server(debug=True)

@@ -12,3 +12,5 @@ percent, symbol, total = a
 print(percent[dates[1]])
 
 print(symbol)
+
+print(dates[0])
