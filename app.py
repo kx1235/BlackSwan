@@ -184,6 +184,49 @@ portfolio_value = {
                         ),
                     }
 
+barGraph = go.Bar(
+    x=['A', 'B', 'C'],
+    y=[100000, 200000, 250000],
+    text=['No deposit', 'With $100/month deposit', 'With $200/month deposit'],
+    marker=dict(
+        color='rgb(158,202,225)',
+        line=dict(
+            color='rgb(8,48,107)',
+            width=1.5,
+        )
+    ),
+    opacity=0.6
+)
+
+barLayout = go.Layout(
+    autosize=False,
+    width=570,
+    height=500,
+    margin=go.Margin(
+        l=100,
+        r=0,
+        b=100,
+        t=100,
+        pad=7
+    ),
+    xaxis=dict(
+        title='June 6, 2018',
+        titlefont=dict(color='#dbdbdb'),
+        linecolor='#dbdbdb',
+        tickcolor='#dbdbdb',
+        tickfont=dict(color='#dbdbdb'),
+    ),
+
+    yaxis=dict(
+        linecolor='#dbdbdb',
+        tickcolor='#dbdbdb',
+        tickfont=dict(color='#dbdbdb'),
+    ),
+
+    paper_bgcolor='#333333',
+    plot_bgcolor='#333333'
+)
+
 app = dash.Dash()
 app.layout = html.Div([
 
@@ -236,8 +279,64 @@ app.layout = html.Div([
 
     ], className="row"),
 
+
     html.Div(slider),
     html.Div(nextbut),
+
+    html.Div([
+        html.Div([
+
+            html.Div([
+                html.Label('Select your account'),
+                dcc.Dropdown(
+                    options=[
+                        {'label': 'TFSA', 'value': 'TFSA'},
+                        {'label': 'RRSP', 'value': 'RRSP'},
+                        {'label': 'Smart Savings', 'value': 'SS'}
+                    ],
+                    value='TFSA'
+                ),
+
+            ]),
+            html.Div([
+                dcc.Graph(
+                    id='bar1',
+                    figure={
+                        'data': [barGraph],
+                        'layout': barLayout
+                    },
+                )
+            ]),
+
+        ], className="five columns"),
+
+        html.Div([
+            html.Div([
+                html.H4("Time since last deposit:", style={'color': '#ffffff', 'margin': 20})
+            ], className="six columns"),
+
+            html.Div([
+                html.H4("23 days", style={'color': '#ffffff', 'margin': 20})
+            ], className="six columns"),
+
+        ], className="five columns"),
+
+        html.Div([
+            html.Div([
+                html.H4("What you missed out on:", style={'color': '#ffffff', 'margin': 20})
+            ], className="six columns"),
+
+            html.Div([
+                html.H4("$5000", style={'color': '#ffffff', 'margin': 20})
+            ], className="six columns"),
+
+        ], className="five columns"),
+
+    ], className="row"),
+
+
+
+
 ], style={'backgroundColor': '#333333'}, )
 
 app.css.append_css({"external_url": "https://codepen.io/chriddyp/pen/bWLwgP.css"})
