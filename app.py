@@ -10,8 +10,10 @@ from datetime import date
 from data import data_getter
 from data.data_getter import list_positions, get_dates
 
+date_beg = date(2018, month=3, day=12)
+date_end = date(2018, month=4, day=23)
 
-dates = get_dates(date(2018, month=3, day=12), date(2018, month=4, day=23))
+dates = get_dates(date_beg, date_end)
 
 account1 = 'rrsp-50dttgfe'
 rrsp = list_positions(account1, dates)
@@ -184,10 +186,50 @@ portfolio_value = {
                         ),
                     }
 
-barGraph = go.Bar(
-    x=['A', 'B', 'C'],
-    y=[100000, 200000, 250000],
-    text=['No deposit', 'With $100/month deposit', 'With $200/month deposit'],
+tfsa_last = dates[3]
+rrsp_last = dates[2]
+hisa_last = dates[4]
+
+days_tfsa = date_end - tfsa_last
+days_rrsp = date_end - rrsp_last
+days_hisa = date_end - hisa_last
+
+y_tfsa = int(total_tfsa[dates[9]])
+y_rrsp = int(total_rrsp[dates[9]])
+y_hisa = int(total_hisa[dates[9]])
+
+barGraph_tfsa = go.Bar(
+    x=['Current Value', 'Monthly Contribution of $500', 'Monthly Contribution + No Withdrawals'],
+    y=[y_tfsa, (y_tfsa * 1.5), (y_tfsa * 1.9)],
+    text=['Current Value', 'Monthly Contribution of $500', 'Monthly Contribution + No Withdrawals'],
+    marker=dict(
+        color='rgb(158,202,225)',
+        line=dict(
+            color='rgb(8,48,107)',
+            width=1.5,
+        )
+    ),
+    opacity=0.6
+)
+
+barGraph_rrsp = go.Bar(
+    x=['Current Value', 'Monthly Contribution of $500', 'Monthly Contribution + No Withdrawals'],
+    y=[y_rrsp, y_rrsp * 1.3, y_rrsp * 1.6],
+    text=['Current Value', 'Monthly Contribution of $500', 'Monthly Contribution + No Withdrawals'],
+    marker=dict(
+        color='rgb(158,202,225)',
+        line=dict(
+            color='rgb(8,48,107)',
+            width=1.5,
+        )
+    ),
+    opacity=0.6
+)
+
+barGraph_hisa = go.Bar(
+    x=['Current Value', 'Monthly Contribution of $500', 'Monthly Contribution + No Withdrawals'],
+    y=[y_hisa, y_hisa * 1.1, y_hisa * 1.3],
+    text=['Current Value', 'Monthly Contribution of $500', 'Monthly Contribution + No Withdrawals'],
     marker=dict(
         color='rgb(158,202,225)',
         line=dict(
@@ -210,7 +252,7 @@ barLayout = go.Layout(
         pad=7
     ),
     xaxis=dict(
-        title='June 6, 2018',
+        title=str(date_end),
         titlefont=dict(color='#dbdbdb'),
         linecolor='#dbdbdb',
         tickcolor='#dbdbdb',
@@ -240,7 +282,14 @@ app.layout = html.Div([
             dcc.Graph(
                 id='g1',
                 figure={
-                    'data':[chart1],
+                    'data': [{
+                        "values": amount_tfsa[dates[0]],
+                        "labels": symbol_tfsa,
+                        "domain": {"x": [0, .48]},
+                        "hoverinfo": "label+percent",
+                        "hole": .4,
+                        "type": "pie"
+                    }],
                     'layout': fig1,
                 }
             )
@@ -251,7 +300,14 @@ app.layout = html.Div([
                 id='g2',
                 style={'margin-left': 60},
                 figure={
-                    'data': [chart1],
+                    'data': [{
+                        "values": amount_rrsp[dates[0]],
+                        "labels": symbol_rrsp,
+                        "domain": {"x": [0, .48]},
+                        "hoverinfo": "label+percent",
+                        "hole": .4,
+                        "type": "pie"
+                    }],
                     'layout':fig2,
                 }
             )
@@ -262,7 +318,14 @@ app.layout = html.Div([
                 id='g3',
                 style={'margin-left': 70},
                 figure={
-                    'data': [chart1],
+                    'data': [{
+                        "values": amount_hisa[dates[0]],
+                        "labels": symbol_hisa,
+                        "domain": {"x": [0, .48]},
+                        "hoverinfo": "label+percent",
+                        "hole": .4,
+                        "type": "pie"
+                    }],
                     'layout': fig3,
                 }
             )
@@ -289,6 +352,7 @@ app.layout = html.Div([
             html.Div([
                 html.Label('Select your account'),
                 dcc.Dropdown(
+                    id='drop',
                     options=[
                         {'label': 'TFSA', 'value': 'TFSA'},
                         {'label': 'RRSP', 'value': 'RRSP'},
@@ -302,7 +366,7 @@ app.layout = html.Div([
                 dcc.Graph(
                     id='bar1',
                     figure={
-                        'data': [barGraph],
+                        'data': [barGraph_tfsa],
                         'layout': barLayout
                     },
                 )
@@ -315,10 +379,10 @@ app.layout = html.Div([
                 html.H4("Time since last deposit:", style={'color': '#ffffff', 'margin': 20})
             ], className="six columns"),
 
-            html.Div([
-                html.H4("23 days", style={'color': '#ffffff', 'margin': 20})
-            ], className="six columns"),
-
+            html.Div(
+                id='dayssince',
+                children=html.H4('{}'.format(days_tfsa), style={'color': '#ffffff', 'margin': 20}),
+                className="six columns"),
         ], className="five columns"),
 
         html.Div([
@@ -326,9 +390,11 @@ app.layout = html.Div([
                 html.H4("What you missed out on:", style={'color': '#ffffff', 'margin': 20})
             ], className="six columns"),
 
-            html.Div([
-                html.H4("$5000", style={'color': '#ffffff', 'margin': 20})
-            ], className="six columns"),
+            html.Div(
+                id='missed',
+                children=html.H4('${}'.format(round((y_tfsa * 1.9) - y_tfsa), 2),
+                                 style={'color': '#ffffff', 'margin': 20})
+                , className="six columns"),
 
         ], className="five columns"),
 
@@ -478,6 +544,50 @@ def update_s1(clicks):
                         ),
                     }
 
+
+@app.callback(
+    Output('bar1', 'figure'),
+    [Input('drop', 'value')])
+def update_bar(val):
+    if val == 'TFSA':
+        return {
+            'data': [barGraph_tfsa],
+            'layout': barLayout
+        }
+    elif val == 'RRSP':
+        return {
+            'data': [barGraph_rrsp],
+            'layout': barLayout
+        }
+    elif val == 'SS':
+        return {
+            'data': [barGraph_hisa],
+            'layout': barLayout
+        }
+
+
+@app.callback(
+    Output('dayssince', 'children'),
+    [Input('drop', 'value')])
+def update_days(val):
+    if val == 'TFSA':
+        return html.H4('{}'.format(days_tfsa), style={'color': '#ffffff', 'margin': 20})
+    elif val == 'RRSP':
+        return html.H4('{}'.format(days_rrsp), style={'color': '#ffffff', 'margin': 20})
+    elif val == 'SS':
+        return html.H4('{}'.format(days_hisa), style={'color': '#ffffff', 'margin': 20})
+
+
+@app.callback(
+    Output('missed', 'children'),
+    [Input('drop', 'value')])
+def update_miss(val):
+    if val == 'TFSA':
+        return html.H4('${}'.format(round((y_tfsa * 1.9) - y_tfsa), 2), style={'color': '#ffffff', 'margin': 20})
+    elif val == 'RRSP':
+        return html.H4('${}'.format(round((y_rrsp * 1.6) - y_rrsp), 2), style={'color': '#ffffff', 'margin': 20})
+    elif val == 'SS':
+        return html.H4('${}'.format(round((y_hisa * 1.3) - y_hisa), 2), style={'color': '#ffffff', 'margin': 20})
 
 
 
