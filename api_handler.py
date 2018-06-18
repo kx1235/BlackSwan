@@ -6,12 +6,11 @@ Created by Bill Ang Li
 Jun. 7th, 2018
 """
 
-import requests
+import json
 import urllib.parse as urlparse
 from urllib.parse import urlencode
-import json
-from selenium import webdriver
-import time
+
+import requests
 
 creds = {
     "client_id": "f8f8763b60e6e2a73d3e5c2b455b95d9eefee96e072dd5c9f1fd63144e166703",
@@ -20,8 +19,7 @@ creds = {
     "state": "random",
     "scope": "read write",
     "client_secret": "5bb7db765ea8906ffa308c351e70cc4682bf420262c99fe1030a642ac4c37acb",
-    "grant_type": "authorization_code",
-    "access_token": "7cef1443d58bc5c8e2fc0e5d654c5dd328cfaa6881982bd2df708f37d56261a5"
+    "grant_type": "authorization_code"
 }
 
 
@@ -132,7 +130,6 @@ class Controller:
 
 # Instance of Controller
 data_getter = Controller()
-
 
 if __name__ == "__main__":
     controller = Controller()

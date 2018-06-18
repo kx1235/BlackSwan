@@ -1,4 +1,23 @@
+@font-face {
+    font-family: Akkurat;
+    src: url("fonts/Akkurat Regular.otf");
+}
+
+@font-face {
+    font-family: Akkurat;
+    src: url("fonts/Akkurat Regular.otf");
+}
+
+@font-face {
+    font-family: Akkurat;
+    src: url("fonts/Akkurat Regular.otf");
+}
+
+@font-face {
+    font-family: Akkurat;
+    src: url("fonts/Akkurat Regular.otf");
+}
+
 h1 {
     color: red;
-    font: "Comic Sans MS", cursive, sans-serif;
 }
