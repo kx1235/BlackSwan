@@ -1,5 +1,5 @@
 import dash
-from dash.dependencies import Input, Output
+from dash.dependencies import Input, Output, State
 import dash_core_components as dcc
 import dash_html_components as html
 import plotly.graph_objs as go
@@ -7,7 +7,7 @@ import pandas as pd
 
 from datetime import date
 from data_getter import list_positions, get_dates
-
+from postDeposit import *
 
 date_beg = date(2018, month=3, day=12)
 date_end = date(2018, month=4, day=23)
@@ -63,56 +63,56 @@ slider = dcc.Slider(
 nextbut = html.Button('Next', id='button')
 
 fig1 = go.Layout(
-        showlegend=False,
-        autosize=False,
-        width=500,
-        height=450,
+    showlegend=False,
+    autosize=False,
+    width=470,
+    height=450,
         margin=go.Margin(
             l=40,
-            r=50,
-            b=100,
+            r=0,
+            b=80,
             t=50,
             pad=1
         ),
-        paper_bgcolor='#1D1D1D'
-                      '',
-        plot_bgcolor='#1D1D1D'
-                     ''
+    paper_bgcolor='#1D1D1D'
+                  '',
+    plot_bgcolor='#1D1D1D'
+                 ''
     )
 
 fig2 = go.Layout(
         showlegend=False,
         autosize=False,
-        width=450,
-        height=450,
+    width=470,
+    height=450,
         margin=go.Margin(
             l=0,
-            r=50,
-            b=100,
+            r=40,
+            b=80,
             t=50,
             pad=1
         ),
-        paper_bgcolor='#1D1D1D'
-                      '',
-        plot_bgcolor='#1D1D1D'
-                     '')
+    paper_bgcolor='#1D1D1D'
+                  '',
+    plot_bgcolor='#1D1D1D'
+                 '')
 
 fig3 = go.Layout(
         showlegend=False,
         autosize=False,
-        width=450,
-        height=450,
+    width=470,
+    height=450,
         margin=go.Margin(
             l=0,
             r=40,
-            b=100,
+            b=80,
             t=50,
             pad=7
         ),
-        paper_bgcolor='#1D1D1D'
-                      '',
-        plot_bgcolor='#1D1D1D'
-                     ''
+    paper_bgcolor='#1D1D1D'
+                  '',
+    plot_bgcolor='#1D1D1D'
+                 ''
     )
 
 
@@ -121,7 +121,7 @@ trace0 = go.Scatter(
     x=x1,
     y=y1,
                 name = "TFSA",
-                line = dict(color = '#FFFFFF'),
+    line=dict(color='#FFFFFF'),
                 opacity = 0.8)
 
 trace1 = go.Scatter(
@@ -134,8 +134,8 @@ trace1 = go.Scatter(
 trace2 = go.Scatter(
     x=x3,
     y=y3,
-                name = "Smart Saving",
-                line = dict(color = '#FFFFFF'),
+    name="Smart Savings",
+    line=dict(color='#FFFFFF'),
                 opacity = 0.8)
 
 portfolio_value = {
@@ -169,7 +169,7 @@ portfolio_value = {
                                 tickfont = dict(color='#dbdbdb'),
                             ),
                             paper_bgcolor='#1D1D1D'
-                            '',
+                                          '',
                             plot_bgcolor='#1D1D1D'
                         ),
                     }
@@ -191,13 +191,9 @@ barGraph_tfsa = go.Bar(
     y=[y_tfsa, (y_tfsa * 1.5), (y_tfsa * 1.9)],
     text=['Current Value', 'Monthly Deposit of $500', 'Monthly Deposit + No Withdrawals'],
     marker=dict(
-        color='rgb(158,202,225)',
-        line=dict(
-            color='rgb(8,48,107)',
-            width=1.5,
-        )
-    ),
-    opacity=0.6
+        color=['rgb(46,126,78)', 'rgb(49,164,82)',
+               'rgb(51,214,66)']),
+    opacity=1
 )
 
 barGraph_rrsp = go.Bar(
@@ -205,13 +201,9 @@ barGraph_rrsp = go.Bar(
     y=[y_rrsp, y_rrsp * 1.3, y_rrsp * 1.6],
     text=['Current Value', 'Monthly Deposit of $500', 'Monthly Deposit + No Withdrawals'],
     marker=dict(
-        color='rgb(162,73,161)',
-        line=dict(
-            color='rgb(8,48,107)',
-            width=1.5,
-        )
-    ),
-    opacity=0.6
+        color=['rgb(242,72,241)', 'rgb(243,164,242)',
+               'rgb(232,26,152)']),
+    opacity=1
 )
 
 barGraph_hisa = go.Bar(
@@ -219,9 +211,9 @@ barGraph_hisa = go.Bar(
     y=[y_hisa, y_hisa * 1.1, y_hisa * 1.3],
     text=['Current Value', 'Monthly Deposit of $500', 'Monthly Deposit + No Withdrawals'],
     marker=dict(
-        color=['rgb(242,72,241)', 'rgba(222,45,38,0.8)',
-               'rgba(204,204,204,1)']),
-    opacity=0.6
+        color=['rgb(47,129,183)','rgb(66,118,161)',
+                'rgb(62,204,203)']),
+    opacity=1
 )
 
 barLayout = go.Layout(
@@ -253,13 +245,39 @@ barLayout = go.Layout(
     plot_bgcolor='#1D1D1D'
 )
 
+#####################DEPOSIT FEATURE#####################
+
+input_amount = dcc.Input(id='amount-input', placeholder='$0.00', value='', type='number',)
+drop_bank = dcc.Dropdown(
+    id='drop_bank',
+    options=[
+        {'label': 'RBC****533', 'value': rbc533_id},
+        {'label': 'RBC****453', 'value': rbc453_id},
+        {'label': 'BMO****121', 'value': bmo121_id}
+    ],
+    value=rbc453_id)
+
+radio_currency = dcc.RadioItems(
+    id='currency',
+    options=[
+        {'label': 'CAD', 'value': 'CAD'},
+        {'label': 'USD', 'value': 'USD'},
+    ],
+    value='CAD'
+)
+
+##########################################################
+
+
+
+
 app = dash.Dash()
 app.layout = html.Div([
 
     html.Div([
-        html.H1("BLACK SWAN", style={'color':'#444ECC', 'margin': 20}),
-        html.H2("See what we've been up to", style={'color':'#444ECC', 'margin': 20}),
-    ], style={'backgroundColor':'#1D1D1D'}, className='rows'),
+        html.H1("BLACK SWAN", style={'color': '#444ECC', 'margin': 20}),
+        html.H2("See what we've been up to", style={'color': '#444ECC', 'margin': 20}),
+    ], style={'backgroundColor': '#1D1D1D'}, className='rows'),
 
     html.Div([
         html.Div([
@@ -270,28 +288,28 @@ app.layout = html.Div([
                         "values": amount_tfsa[dates[0]],
                         "labels": symbol_tfsa,
                         'marker': {'colors':
-                                [ 'rgb(35, 104, 63)',
-                                  'rgb(41, 165, 79)',
-                                  'rgb(41, 127, 76)',
-                                  'rgb(82, 214, 129)',
-                                  'rgb(41, 127, 76)'
-                                  'rgb(13, 211, 94)'
-                                  'rgb(41, 165, 79)'
-                                  'rgb(0, 173, 124)',
-                                  'rgb(37, 216, 54)',
-                                  'rgb(41, 165, 79)'
-                                  'rgb(19, 142, 31)',
-                                  'rgb(13, 211, 94)'
-                                  'rgb(108, 168, 61)',
-                                  'rgb(221, 199, 74)',
-                                ]},
+                                       ['rgb(35, 104, 63)',
+                                        'rgb(41, 165, 79)',
+                                        'rgb(41, 127, 76)',
+                                        'rgb(82, 214, 129)',
+                                        'rgb(41, 127, 76)'
+                                        'rgb(13, 211, 94)'
+                                        'rgb(41, 165, 79)'
+                                        'rgb(0, 173, 124)',
+                                        'rgb(37, 216, 54)',
+                                        'rgb(41, 165, 79)'
+                                        'rgb(19, 142, 31)',
+                                        'rgb(13, 211, 94)'
+                                        'rgb(108, 168, 61)',
+                                        'rgb(221, 199, 74)',
+                                        ]},
                         "domain": {"x": [0, .48]},
                         "text": symbol_tfsa,
                         "textfont": dict(color='#DDDDDD'),
                         "hoverinfo": "none",
                         "hole": .4,
                         "type": "pie"
-                    }, go.Pie(marker= dict(colors='colors'))],
+                    }, go.Pie(marker=dict(colors='colors'))],
                     'layout': fig1,
                 }
             )
@@ -306,23 +324,23 @@ app.layout = html.Div([
                         "values": amount_rrsp[dates[0]],
                         "labels": symbol_rrsp,
                         'marker': {'colors':
-                                ['rgb(234, 5, 153)',
-                                 'rgb(154, 15, 152)',
-                                  'rgb(57, 6, 90)',
-                                  'rgb(244, 61, 244)',
-                                  'rgb(244, 162, 244)',
-                                 'rgb(106, 5, 114)',
-                                 'rgb(234, 6, 234)',
-                                  'rgb(163, 70, 163)',
-                                  'rgb(170, 67, 170)'
-                                 ]},
+                                       ['rgb(234, 5, 153)',
+                                        'rgb(154, 15, 152)',
+                                        'rgb(57, 6, 90)',
+                                        'rgb(244, 61, 244)',
+                                        'rgb(244, 162, 244)',
+                                        'rgb(106, 5, 114)',
+                                        'rgb(234, 6, 234)',
+                                        'rgb(163, 70, 163)',
+                                        'rgb(170, 67, 170)'
+                                        ]},
                         "domain": {"x": [0, .48]},
                         "text": symbol_rrsp,
                         "textfont": dict(color='#DDDDDD'),
                         "hoverinfo": "none",
                         "hole": .4,
                         "type": "pie"
-                    }, go.Pie(marker= dict(colors='colors'))],
+                    }, go.Pie(marker=dict(colors='colors'))],
                     'layout':fig2,
                 }
             )
@@ -337,21 +355,21 @@ app.layout = html.Div([
                         "values": amount_hisa[dates[0]],
                         "labels": symbol_hisa,
                         'marker': {'colors':
-                                ['rgb(44, 62, 80)',
-                                  'rgb(41, 128, 185)',
-                                  'rgb(51, 204, 204)',
-                                  'rgb(64, 118, 163)',
-                                 'rgb(234, 155, 191)',
-                                  'rgb(124, 82, 124)',
-                                  'rgb(87, 87, 147)'
-                                 ]},
+                                       ['rgb(44, 62, 80)',
+                                        'rgb(41, 128, 185)',
+                                        'rgb(51, 204, 204)',
+                                        'rgb(64, 118, 163)',
+                                        'rgb(234, 155, 191)',
+                                        'rgb(124, 82, 124)',
+                                        'rgb(87, 87, 147)'
+                                        ]},
                         "domain": {"x": [0, .48]},
                         "text": symbol_hisa,
                         "textfont": dict(color='#caccce'),
                         "hoverinfo": "none",
                         "hole": .4,
                         "type": "pie"
-                    }, go.Pie(marker= dict(colors='DDDDDD'))],
+                    }, go.Pie(marker=dict(colors='DDDDDD'))],
                     'layout': fig3,
                 }
             ),
@@ -360,7 +378,7 @@ app.layout = html.Div([
         html.Div([
                 dcc.Graph(
                     id = 's1',
-                    style={'margin-left': 0, 'margin-bottom': 50,'height':350},
+                    style={'margin-left': 0, 'margin-bottom': 50, 'height': 350},
                     figure= portfolio_value,
                     animate=False
                 )
@@ -370,11 +388,11 @@ app.layout = html.Div([
 
     html.Div([
         html.Div(slider),
-    ], style={"margin-left":40, "margin-right":40, }),
+    ], style={"margin-left": 40, "margin-right": 40, }),
 
     html.Div([
         html.Div(nextbut),
-    ], style={"margin-top": 30, "margin-left": 40, "margin-bottom":30 ,"backgroundColor": "#444ECC", "width": 94}),
+    ], style={"margin-top": 30, "margin-left": 40, "margin-bottom": 100, "backgroundColor": "#F8B041", "width": 94}),
 
     html.Div([
         html.Div([
@@ -385,11 +403,11 @@ app.layout = html.Div([
                     options=[
                         {'label': 'TFSA', 'value': 'TFSA'},
                         {'label': 'RRSP', 'value': 'RRSP'},
-                        {'label': 'Smart Savings', 'value': 'SS'}
+                        {'label': 'Smart Savings', 'value': 'Smart Savings'}
                     ],
                     value='TFSA',
                 ),
-            ], style={"margin-left":20}),
+            ], style={"margin-left": 20}),
             html.Div([
                 dcc.Graph(
                     id='bar1',
@@ -404,36 +422,47 @@ app.layout = html.Div([
 
         html.Div([
             html.Div([
-                html.H4("Time since last deposit:", style={'color': '#ffffff', 'margin-left': 20})
+                html.H4("Time since last deposit:", style={'color': '#F8B041', 'margin-left': 60})
             ], className="six columns"),
 
             html.Div(
                 id='dayssince',
-                children=html.H4('{}'.format(days_tfsa), style={'color': '#ffffff', 'margin-left': 100}),
+                children=html.H4('{}'.format(days_tfsa), style={'color': '#ffffff', 'margin-left': 30}),
                 className="six columns"),
         ], className="five columns"),
 
         html.Div([
             html.Div([
-                html.H4("What you missed out on:", style={'color': '#ffffff', 'margin-left': 20})
+                html.H4("What you missed out on:", style={'color': '#F8B041', 'margin-left': 60})
             ], className="six columns"),
 
             html.Div(
                 id='missed',
                 children=html.H4('${}'.format(round((y_tfsa * 1.9) - y_tfsa), 2),
-                                 style={'color': '#ffffff', 'margin-left': 100})
+                                 style={'color': '#ffffff', 'margin-left': 40 })
                 , className="six columns"),
         ], className="five columns"),
 
         html.Div([
+            html.Div(html.H4("Make a deposit"), style={'color':'#F8B041', 'margin-left': 60}),
+            html.Div([
+                html.Div(input_amount),
+            ], style={'margin-top':20, 'margin-left': 60}),
+            html.Div([
+                html.Div(drop_bank),
+            ], style={'margin-top:':20, 'margin-left': 60}),
+            html.Div([
+                html.Div(radio_currency),
+            ], style={'color': "#FFFFFF", 'margin-top': 20, 'margin-left': 60}),
+            html.Div(html.H5(id='deposit-sentence'), style={'color':'#FFFFFF','margin-left': 60}),
+            html.Div(html.H5(id='deposit-result'), style={'color':"#f9db43", 'margin-left': 60}),
             html.Div([
                 html.Button('Deposit now', id="deposit")
-            ], className="six columns", style={"margin-top": 40, 'margin-left': 20, 'backgroundColor':'#F8B041', "width": 151})
+            ], style={"margin-top": 40, 'margin-bottom': 50, 'margin-left': 60, 'backgroundColor': '#F8B041', "width": 151})
 
         ], className="five columns")
 
     ], className="row"),
-
 ], style={'backgroundColor': '#1D1D1D', 'margin': 0}, )
 
 app.css.append_css({"external_url": "https://codepen.io/chriddyp/pen/bWLwgP.css"})
@@ -458,21 +487,21 @@ def update_g1(clicks):
             "values": amount_rrsp[dates[clicks]],
             "labels": symbol_rrsp,
             'marker': {'colors':
-                                [ 'rgb(35, 104, 63)',
-                                  'rgb(41, 165, 79)',
-                                  'rgb(41, 127, 76)',
-                                  'rgb(82, 214, 129)',
-                                  'rgb(41, 127, 76)'
-                                  'rgb(13, 211, 94)'
-                                  'rgb(41, 165, 79)'
-                                  'rgb(0, 173, 124)',
-                                  'rgb(37, 216, 54)',
-                                  'rgb(41, 165, 79)'
-                                  'rgb(19, 142, 31)',
-                                  'rgb(13, 211, 94)'
-                                  'rgb(108, 168, 61)',
-                                  'rgb(221, 199, 74)',
-                                ]},
+                           ['rgb(35, 104, 63)',
+                            'rgb(41, 165, 79)',
+                            'rgb(41, 127, 76)',
+                            'rgb(82, 214, 129)',
+                            'rgb(41, 127, 76)'
+                            'rgb(13, 211, 94)'
+                            'rgb(41, 165, 79)'
+                            'rgb(0, 173, 124)',
+                            'rgb(37, 216, 54)',
+                            'rgb(41, 165, 79)'
+                            'rgb(19, 142, 31)',
+                            'rgb(13, 211, 94)'
+                            'rgb(108, 168, 61)',
+                            'rgb(221, 199, 74)',
+                            ]},
             "domain": {"x": [0, .48]},
             "text": symbol_rrsp,
             "textfont": dict(color='#DDDDDD'),
@@ -566,7 +595,7 @@ def update_s1(clicks):
         x=x1,
         y=y1,
         name = "TFSA",
-        line = dict(color = '#58D584'),
+        line=dict(color='#58D584'),
         opacity = 0.8)
 
     trace_rrsp = go.Scatter(
@@ -579,7 +608,7 @@ def update_s1(clicks):
     trace_hisa = go.Scatter(
         x=x3,
         y=y3,
-        name="Smart Saving",
+        name="Smart Savings",
         line=dict(color='#3ECCCB'),
         opacity=0.8)
 
@@ -588,7 +617,7 @@ def update_s1(clicks):
                         "layout":dict(
                             title = "Portfolio value",
                             showlegend= False,
-                            width = 550,
+                            width=550,
                             titlefont= dict(color='#dbdbdb'),
                             margin=go.Margin(
                                 l=50,
@@ -633,7 +662,7 @@ def update_bar(val):
             'data': [barGraph_rrsp],
             'layout': barLayout
         }
-    elif val == 'SS':
+    elif val == 'Smart Savings':
         return {
             'data': [barGraph_hisa],
             'layout': barLayout
@@ -648,7 +677,7 @@ def update_days(val):
         return html.H4('{}'.format(days_tfsa), style={'color': '#ffffff', 'margin': 40})
     elif val == 'RRSP':
         return html.H4('{}'.format(days_rrsp), style={'color': '#ffffff', 'margin': 40})
-    elif val == 'SS':
+    elif val == 'Smart Savings':
         return html.H4('{}'.format(days_hisa), style={'color': '#ffffff', 'margin': 40})
 
 
@@ -660,11 +689,44 @@ def update_miss(val):
         return html.H4('${}'.format(round((y_tfsa * 1.9) - y_tfsa), 2), style={'color': '#ffffff', 'margin': 40})
     elif val == 'RRSP':
         return html.H4('${}'.format(round((y_rrsp * 1.6) - y_rrsp), 2), style={'color': '#ffffff', 'margin': 40})
-    elif val == 'SS':
+    elif val == 'Smart Savings':
         return html.H4('${}'.format(round((y_hisa * 1.3) - y_hisa), 2), style={'color': '#ffffff', 'margin': 40})
 
 
+@app.callback(
+    Output('deposit-result', 'children'),
+    [Input('deposit', 'n_clicks')],
+    [State('amount-input', 'value'), State('drop_bank', 'value'), State('currency', 'value'), State('drop', 'value')]
+)
+def update_result(clicks, amount, bank, currency, account):
+    print(amount)
+    print(currency)
+    print(account)
+    print(bank)
+    print(get_personid())
+    if account == 'TFSA':
+        account_id = 'tfsa-arbu_-o3'
+    if account == 'RRSP':
+        account_id = 'rrsp-50dttgfe'
+    if account == 'Smart Savings':
+        account_id = 'ca-hisa-lciuw77c'
+    deposit_request(amount, currency, bank, account_id, get_personid())
+    if clicks > 0:
+        return 'Success! Check your WealthSimple account for deposit pending status'
 
+
+@app.callback(
+    Output('deposit-sentence', 'children'),
+    [Input('amount-input', 'value'), Input('drop_bank', 'value'), Input('currency', 'value'), Input('drop', 'value')]
+)
+def update_sentence(amount, bank, currency, account):
+    if bank == rbc453_id:
+        label = 'RBC****453'
+    elif bank == rbc533_id:
+        label = 'RBC****531'
+    elif bank == bmo121_id:
+        label = 'BMO****121'
+    return 'Deposit ${} {} from {} into your {} account?'.format(amount, currency, label, account)
 
 if __name__ == '__main__':
 
