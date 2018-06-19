@@ -19,8 +19,7 @@ creds = {
     "state": "random",
     "scope": "read write",
     "client_secret": "5bb7db765ea8906ffa308c351e70cc4682bf420262c99fe1030a642ac4c37acb",
-    "grant_type": "authorization_code",
-    "access_token": '015d06d1c3d4425ba77e88ba88fb7c7d4e983a4067d83b6aee5359f3f012dff9'
+    "grant_type": "authorization_code"
 }
 
 

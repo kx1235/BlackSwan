@@ -1,7 +1,9 @@
 from flask import render_template, request, redirect
 
 from api_handler import data_getter
+import app as app_class
 from app import app
+from data.data_getter import list_positions
 
 server = app.server
 data_getter.request_access()
@@ -9,7 +11,7 @@ data_getter.request_access()
 
 @server.route('/')
 def index():
-    return redirect('/dash')
+    return render_template("home.html", controller=data_getter)
 
 
 @server.route('/get_code', methods=['POST'])
@@ -29,12 +31,18 @@ def get_data():
 @server.route('/auth')
 def auth():
     """Get the authorization code from URL"""
+    # Get authentication token
     code = request.args.get('code')
     data_getter.credentials['code'] = code
     data_getter.token_exchange()
     data_getter.get_first_name()  # TODO: Remove this
     # return render_template("auth.html", controller=data_getter, code=code)  # Auth page
     # return render_template("home.html", controller=data_getter)  # Get endpoints page
+
+    # Refresh data somewhere
+    print("updating")
+    app_class.data.update()
+
     return redirect('/dash')
 
 
