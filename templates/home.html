@@ -1,5 +1,39 @@
 <!DOCTYPE html>
-<title>Black Swan</title>
+<style>
+body{
+  background-color: #1D1D1D
+}
+
+#title {
+  text-align: center;
+  margin-top: 250px;
+  color: #F8B041;
+  font-family: 'Roboto', sans-serif;
+}
+
+#enter button{
+  text-align: center;
+  background-color: transparent;
+  border: 2px solid #fff;
+  border-radius: 250px;
+  color: white;
+  display: block;
+  font-size: 14px;
+  letter-spacing: 1px;
+  margin: 50px auto;
+  height: 41px;
+  width: 10%;
+}
+#enter button:hover{
+  cursor: pointer;
+}
+</style>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <title>Black Swan</title>
+</head>
+
+<body>
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
 
 <!--{% if controller.is_authenticated() %}-->
@@ -20,9 +54,16 @@
 <!--<h1>Black Swan</h1>-->
 <!--<p>Get the code by following this <a href="{{ controller.links['request_access'] }}">link</a></p>-->
 <!--{% endif %}-->
+<div id="title">
+  <h1>Black Swan Dashboard<h1>
+</div>
 
-<h1>Black Swan</h1>
+<div id="enter">
+  <button type="button" onclick="location.href='https://google.com'">Log in</button>
+</div>
 <p>Click the this <a href="{{ controller.links['request_access'] }}">link</a> to get set up</p>
 <!--<form>-->
 <!--<input type="button" value="Get started!" onclick="{{ controller.links['request_access'] }}">-->
 <!--</form>-->
+</body>
+</html>
