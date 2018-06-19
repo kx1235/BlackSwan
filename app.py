@@ -205,7 +205,7 @@ barGraph_rrsp = go.Bar(
     y=[y_rrsp, y_rrsp * 1.3, y_rrsp * 1.6],
     text=['Current Value', 'Monthly Deposit of $500', 'Monthly Deposit + No Withdrawals'],
     marker=dict(
-        color='rgb(158,202,225)',
+        color='rgb(162,73,161)',
         line=dict(
             color='rgb(8,48,107)',
             width=1.5,
@@ -219,12 +219,8 @@ barGraph_hisa = go.Bar(
     y=[y_hisa, y_hisa * 1.1, y_hisa * 1.3],
     text=['Current Value', 'Monthly Deposit of $500', 'Monthly Deposit + No Withdrawals'],
     marker=dict(
-        color='rgb(158,202,225)',
-        line=dict(
-            color='rgb(8,48,107)',
-            width=1.5,
-        )
-    ),
+        color=['rgb(242,72,241)', 'rgba(222,45,38,0.8)',
+               'rgba(204,204,204,1)']),
     opacity=0.6
 )
 
@@ -378,13 +374,12 @@ app.layout = html.Div([
 
     html.Div([
         html.Div(nextbut),
-    ], style={"margin-top": 30, "margin-left": 40}),
+    ], style={"margin-top": 30, "margin-left": 40, "margin-bottom":30 ,"backgroundColor": "#444ECC", "width": 94}),
 
     html.Div([
         html.Div([
 
             html.Div([
-                html.Label('Select your account'),
                 dcc.Dropdown(
                     id='drop',
                     options=[
@@ -428,17 +423,16 @@ app.layout = html.Div([
                 children=html.H4('${}'.format(round((y_tfsa * 1.9) - y_tfsa), 2),
                                  style={'color': '#ffffff', 'margin-left': 100})
                 , className="six columns"),
-
         ], className="five columns"),
 
         html.Div([
-            html.Button('Deposit now', id="deposit")
-        ], className="five columns", style={"margin-top": 40, 'margin-left': 20, 'backgroundColor':'#FC8237'})
+            html.Div([
+                html.Button('Deposit now', id="deposit")
+            ], className="six columns", style={"margin-top": 40, 'margin-left': 20, 'backgroundColor':'#F8B041', "width": 151})
+
+        ], className="five columns")
 
     ], className="row"),
-
-
-
 
 ], style={'backgroundColor': '#1D1D1D', 'margin': 0}, )
 
