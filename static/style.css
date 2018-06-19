@@ -1,4 +1,24 @@
+@font-face {
+    font-family: Akkurat;
+    src: url("fonts/Akkurat Regular.otf");
+}
+
+@font-face {
+    font-family: CaslonGraD;
+    src: url("fonts/CaslonGraD.ttf");
+}
+
+@font-face {
+    font-family: FuturaBT-Book;
+    src: url("fonts/FuturaBT-Book.otf");
+}
+
+@font-face {
+    font-family: FuturaBT-Heavy;
+    src: url("fonts/FuturaBT-Heavy.otf");
+}
+
 h1 {
     color: red;
-    font: "Comic Sans MS", cursive, sans-serif;
+    font-family: CaslonGraD;
 }
