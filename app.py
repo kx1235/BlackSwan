@@ -12,6 +12,7 @@ from data.data_getter import list_positions, get_dates
 from postDeposit import *
 
 
+
 date_beg = date(2018, month=3, day=12)
 date_end = date(2018, month=4, day=23)
 
@@ -66,14 +67,14 @@ slider = dcc.Slider(
 nextbut = html.Button('Next', id='button')
 
 fig1 = go.Layout(
-        showlegend=False,
-        autosize=False,
-    width=500,
+    showlegend=False,
+    autosize=False,
+    width=470,
     height=450,
         margin=go.Margin(
             l=40,
-            r=50,
-            b=100,
+            r=0,
+            b=80,
             t=50,
             pad=1
         ),
@@ -86,12 +87,12 @@ fig1 = go.Layout(
 fig2 = go.Layout(
         showlegend=False,
         autosize=False,
-    width=450,
+    width=470,
     height=450,
         margin=go.Margin(
             l=0,
-            r=50,
-            b=100,
+            r=40,
+            b=80,
             t=50,
             pad=1
         ),
@@ -103,12 +104,12 @@ fig2 = go.Layout(
 fig3 = go.Layout(
         showlegend=False,
         autosize=False,
-    width=450,
+    width=470,
     height=450,
         margin=go.Margin(
             l=0,
             r=40,
-            b=100,
+            b=80,
             t=50,
             pad=7
         ),
@@ -194,13 +195,9 @@ barGraph_tfsa = go.Bar(
     y=[y_tfsa, (y_tfsa * 1.5), (y_tfsa * 1.9)],
     text=['Current Value', 'Monthly Deposit of $500', 'Monthly Deposit + No Withdrawals'],
     marker=dict(
-        color='rgb(158,202,225)',
-        line=dict(
-            color='rgb(8,48,107)',
-            width=1.5,
-        )
-    ),
-    opacity=0.6
+        color=['rgb(46,126,78)', 'rgb(49,164,82)',
+               'rgb(51,214,66)']),
+    opacity=1
 )
 
 barGraph_rrsp = go.Bar(
@@ -208,13 +205,9 @@ barGraph_rrsp = go.Bar(
     y=[y_rrsp, y_rrsp * 1.3, y_rrsp * 1.6],
     text=['Current Value', 'Monthly Deposit of $500', 'Monthly Deposit + No Withdrawals'],
     marker=dict(
-        color='rgb(162,73,161)',
-        line=dict(
-            color='rgb(8,48,107)',
-            width=1.5,
-        )
-    ),
-    opacity=0.6
+        color=['rgb(242,72,241)', 'rgb(243,164,242)',
+               'rgb(232,26,152)']),
+    opacity=1
 )
 
 barGraph_hisa = go.Bar(
@@ -222,9 +215,9 @@ barGraph_hisa = go.Bar(
     y=[y_hisa, y_hisa * 1.1, y_hisa * 1.3],
     text=['Current Value', 'Monthly Deposit of $500', 'Monthly Deposit + No Withdrawals'],
     marker=dict(
-        color=['rgb(242,72,241)', 'rgba(222,45,38,0.8)',
-               'rgba(204,204,204,1)']),
-    opacity=0.6
+        color=['rgb(47,129,183)', 'rgb(66,118,161)',
+               'rgb(62,204,203)']),
+    opacity=1
 )
 
 barLayout = go.Layout(
@@ -258,7 +251,7 @@ barLayout = go.Layout(
 
 #####################DEPOSIT FEATURE#####################
 
-input_amount = dcc.Input(id='amount-input', placeholder='$0.00', value='', type='number')
+input_amount = dcc.Input(id='amount-input', placeholder='$0.00', value='', type='number', )
 drop_bank = dcc.Dropdown(
     id='drop_bank',
     options=[
@@ -403,7 +396,7 @@ app.layout = html.Div([
 
     html.Div([
         html.Div(nextbut),
-    ], style={"margin-top": 30, "margin-left": 40, "margin-bottom": 30, "backgroundColor": "#444ECC", "width": 94}),
+    ], style={"margin-top": 30, "margin-left": 40, "margin-bottom": 100, "backgroundColor": "#F8B041", "width": 94}),
 
     html.Div([
         html.Div([
@@ -433,38 +426,44 @@ app.layout = html.Div([
 
         html.Div([
             html.Div([
-                html.H4("Time since last deposit:", style={'color': '#ffffff', 'margin-left': 20})
+                html.H4("Time since last deposit:", style={'color': '#F8B041', 'margin-left': 60})
             ], className="six columns"),
 
             html.Div(
                 id='dayssince',
-                children=html.H4('{}'.format(days_tfsa), style={'color': '#ffffff', 'margin-left': 100}),
+                children=html.H4('{}'.format(days_tfsa), style={'color': '#ffffff', 'margin-left': 30}),
                 className="six columns"),
         ], className="five columns"),
 
         html.Div([
             html.Div([
-                html.H4("What you missed out on:", style={'color': '#ffffff', 'margin-left': 20})
+                html.H4("What you missed out on:", style={'color': '#F8B041', 'margin-left': 60})
             ], className="six columns"),
 
             html.Div(
                 id='missed',
                 children=html.H4('${}'.format(round((y_tfsa * 1.9) - y_tfsa), 2),
-                                 style={'color': '#ffffff', 'margin-left': 100})
+                                 style={'color': '#ffffff', 'margin-left': 40})
                 , className="six columns"),
         ], className="five columns"),
 
         html.Div([
-            html.Div(html.H4("Make a deposit")),
-            html.Div(input_amount),
-            html.Div(drop_bank),
-            html.Div(radio_currency),
-            html.Div(html.H5(id='deposit-sentence')),
-            html.Div(html.H5(id='deposit-result')),
+            html.Div(html.H4("Make a deposit"), style={'color': '#F8B041', 'margin-left': 100}),
+            html.Div([
+                html.Div(input_amount),
+            ], style={'margin-top': 20, 'margin-left': 100}),
+            html.Div([
+                html.Div(drop_bank),
+            ], style={'margin-top:': 20, 'margin-left': 100}),
+            html.Div([
+                html.Div(radio_currency),
+            ], style={'color': "#FFFFFF", 'margin-top': 20, 'margin-left': 100}),
+            html.Div(html.H5(id='deposit-sentence'), style={'color': '#FFFFFF', 'margin-left': 100}),
+            html.Div(html.H5(id='deposit-result'), style={'color': "#f9db43", 'margin-left': 100}),
             html.Div([
                 html.Button('Deposit now', id="deposit")
-            ], className="six columns",
-                style={"margin-top": 40, 'margin-left': 20, 'backgroundColor': '#F8B041', "width": 151})
+            ], style={"margin-top": 40, 'margin-bottom': 50, 'margin-left': 100, 'backgroundColor': '#F8B041',
+                      "width": 151})
 
         ], className="five columns")
 
@@ -729,7 +728,7 @@ def update_sentence(amount, bank, currency, account):
     if bank == rbc453_id:
         label = 'RBC****453'
     elif bank == rbc533_id:
-        label = 'RBC****531'
+        label = 'RBC****533'
     elif bank == bmo121_id:
         label = 'BMO****121'
     return 'Deposit ${} {} from {} into your {} account?'.format(amount, currency, label, account)
