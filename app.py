@@ -137,7 +137,7 @@ trace1 = go.Scatter(
 trace2 = go.Scatter(
     x=x3,
     y=y3,
-                name = "Smart Saving",
+    name="Smart Savings",
     line=dict(color='#FFFFFF'),
                 opacity = 0.8)
 
@@ -414,7 +414,7 @@ app.layout = html.Div([
                     options=[
                         {'label': 'TFSA', 'value': 'TFSA'},
                         {'label': 'RRSP', 'value': 'RRSP'},
-                        {'label': 'Smart Savings', 'value': 'SS'}
+                        {'label': 'Smart Savings', 'value': 'Smart Savings'}
                     ],
                     value='TFSA',
                 ),
@@ -614,7 +614,7 @@ def update_s1(clicks):
     trace_hisa = go.Scatter(
         x=x3,
         y=y3,
-        name="Smart Saving",
+        name="Smart Savings",
         line=dict(color='#3ECCCB'),
         opacity=0.8)
 
@@ -668,7 +668,7 @@ def update_bar(val):
             'data': [barGraph_rrsp],
             'layout': barLayout
         }
-    elif val == 'SS':
+    elif val == 'Smart Savings':
         return {
             'data': [barGraph_hisa],
             'layout': barLayout
@@ -683,7 +683,7 @@ def update_days(val):
         return html.H4('{}'.format(days_tfsa), style={'color': '#ffffff', 'margin': 40})
     elif val == 'RRSP':
         return html.H4('{}'.format(days_rrsp), style={'color': '#ffffff', 'margin': 40})
-    elif val == 'SS':
+    elif val == 'Smart Savings':
         return html.H4('{}'.format(days_hisa), style={'color': '#ffffff', 'margin': 40})
 
 
@@ -695,7 +695,7 @@ def update_miss(val):
         return html.H4('${}'.format(round((y_tfsa * 1.9) - y_tfsa), 2), style={'color': '#ffffff', 'margin': 40})
     elif val == 'RRSP':
         return html.H4('${}'.format(round((y_rrsp * 1.6) - y_rrsp), 2), style={'color': '#ffffff', 'margin': 40})
-    elif val == 'SS':
+    elif val == 'Smart Savings':
         return html.H4('${}'.format(round((y_hisa * 1.3) - y_hisa), 2), style={'color': '#ffffff', 'margin': 40})
 
 
@@ -714,7 +714,7 @@ def update_result(clicks, amount, bank, currency, account):
         account_id = 'tfsa-arbu_-o3'
     if account == 'RRSP':
         account_id = 'rrsp-50dttgfe'
-    if account == 'SS':
+    if account == 'Smart Savings':
         account_id = 'ca-hisa-lciuw77c'
     deposit_request(amount, currency, bank, account_id, get_personid())
     if clicks > 0:
