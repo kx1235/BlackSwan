@@ -10,6 +10,7 @@ def get_account():
     count = j['total_count']
     account_list = []
     #for every object in results, append the account id to account_list
+    # print(ids)
     for account in ids:
          account_list.append((account['id']))
 
