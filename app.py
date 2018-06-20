@@ -2,12 +2,132 @@ import dash
 from dash.dependencies import Input, Output, State
 import dash_core_components as dcc
 import dash_html_components as html
+import plotly.plotly as py
 import plotly.graph_objs as go
 import pandas as pd
 
 from datetime import date
-from data_getter import list_positions, get_dates
+import data_getter
+from data_getter import list_positions, get_dates, get_first_name
 from postDeposit import *
+
+
+
+class Data:
+    def __init__(self, accounts, dates):
+        self.updated = False
+
+        self.accounts = accounts
+        self.dates = dates
+
+        self.rrsp = {dates[0]: []}, [], {dates[0]: 0}
+        self.tfsa = {dates[0]: []}, [], {dates[0]: 0}
+        self.hisa = {dates[0]: []}, [], {dates[0]: 0}
+
+        self.y_rrsp = 0
+        self.y_tfsa = 0
+        self.y_hisa = 0
+
+        self.y_rrsp_data = [self.y_rrsp, self.y_rrsp * 1.3, self.y_rrsp * 1.6]
+        self.y_tfsa_data = [self.y_tfsa, (self.y_tfsa * 1.5), (self.y_tfsa * 1.9)]
+        self.y_hisa_data = [self.y_hisa, self.y_hisa * 1.1, self.y_hisa * 1.3]
+
+        # Create bar graphs
+        self.barGraph_rrsp = go.Bar(
+            x=['Current Value', 'Monthly Deposit of $500', 'Monthly Deposit + No Withdrawals'],
+            y=self.y_rrsp_data,
+            text=['Current Value', 'Monthly Deposit of $500', 'Monthly Deposit + No Withdrawals'],
+            marker=dict(
+                color=['rgb(242,72,241)', 'rgb(243,164,242)',
+                       'rgb(232,26,152)']),
+            opacity=1
+        )
+
+        self.barGraph_tfsa = go.Bar(
+            x=['Current Value', 'Monthly Deposit of $500', 'Monthly Deposit + No Withdrawals'],
+            y=self.y_tfsa_data,
+            text=['Current Value', 'Monthly Deposit of $500', 'Monthly Deposit + No Withdrawals'],
+            marker=dict(
+                color=['rgb(46,126,78)', 'rgb(49,164,82)',
+                       'rgb(51,214,66)']),
+            opacity=1
+        )
+
+        self.barGraph_hisa = go.Bar(
+            x=['Current Value', 'Monthly Deposit of $500', 'Monthly Deposit + No Withdrawals'],
+            y=self.y_hisa_data,
+            text=['Current Value', 'Monthly Deposit of $500', 'Monthly Deposit + No Withdrawals'],
+            marker=dict(
+                color=['rgb(47,129,183)', 'rgb(66,118,161)',
+                       'rgb(62,204,203)']),
+            opacity=1
+        )
+
+    def update(self):
+        self.updated = False
+
+        rrsp = list_positions(account1, dates)
+        tfsa = list_positions(account2, dates)
+        hisa = list_positions(account3, dates)
+
+        # Deep copy
+        for date in rrsp[0]:
+            if date == self.dates[0]:
+                for item in rrsp[0][date]:
+                    self.rrsp[0][date].append(item)
+            else:
+                self.rrsp[0][date] = rrsp[0][date]
+        for date in tfsa[0]:
+            if date == self.dates[0]:
+                for item in tfsa[0][date]:
+                    self.tfsa[0][date].append(item)
+            else:
+                self.tfsa[0][date] = tfsa[0][date]
+        for date in hisa[0]:
+            if date == self.dates[0]:
+                for item in hisa[0][date]:
+                    self.hisa[0][date].append(item)
+            else:
+                self.hisa[0][date] = hisa[0][date]
+
+        for symbol in rrsp[1]:
+            self.rrsp[1].append(symbol)
+        for symbol in tfsa[1]:
+            self.tfsa[1].append(symbol)
+        for symbol in hisa[1]:
+            self.hisa[1].append(symbol)
+
+        for date in rrsp[2]:
+            self.rrsp[2][date] = rrsp[2][date]
+        for date in tfsa[2]:
+            self.tfsa[2][date] = tfsa[2][date]
+        for date in hisa[2]:
+            self.hisa[2][date] = hisa[2][date]
+
+        self.y_rrsp = int(self.rrsp[2][dates[9]])
+        self.y_tfsa = int(self.tfsa[2][dates[9]])
+        self.y_hisa = int(self.hisa[2][dates[9]])
+
+        self.y_rrsp_data.extend([self.y_rrsp, self.y_rrsp * 1.3, self.y_rrsp * 1.6])
+        self.y_tfsa_data.extend([self.y_tfsa, (self.y_tfsa * 1.5), (self.y_tfsa * 1.9)])
+        self.y_hisa_data.extend([self.y_hisa, self.y_hisa * 1.1, self.y_hisa * 1.3])
+
+        self.y_rrsp_data.pop(0)
+        self.y_rrsp_data.pop(0)
+        self.y_rrsp_data.pop(0)
+        self.y_tfsa_data.pop(0)
+        self.y_tfsa_data.pop(0)
+        self.y_tfsa_data.pop(0)
+        self.y_hisa_data.pop(0)
+        self.y_hisa_data.pop(0)
+        self.y_hisa_data.pop(0)
+'''
+    def get_first_name(self):
+        if self.updated:
+            return self.get_first_name()
+        else:
+            return '''
+
 
 date_beg = date(2018, month=3, day=12)
 date_end = date(2018, month=4, day=23)
@@ -15,16 +135,14 @@ date_end = date(2018, month=4, day=23)
 dates = get_dates(date_beg, date_end)
 
 account1 = 'rrsp-50dttgfe'
-rrsp = list_positions(account1, dates)
-amount_rrsp, symbol_rrsp, total_rrsp = rrsp
-
 account2 = 'tfsa-arbu_-o3'
-tfsa = list_positions(account2, dates)
-amount_tfsa, symbol_tfsa, total_tfsa = tfsa
-
 account3 = 'ca-hisa-lciuw77c'
-hisa = list_positions(account3, dates)
-amount_hisa, symbol_hisa, total_hisa = hisa
+
+data = Data([account1, account2, account3], dates)
+
+amount_rrsp, symbol_rrsp, total_rrsp = data.rrsp
+amount_tfsa, symbol_tfsa, total_tfsa = data.tfsa
+amount_hisa, symbol_hisa, total_hisa = data.hisa
 
 x1=[dates[0]]
 x2=[dates[0]]
@@ -34,8 +152,7 @@ y1=[total_tfsa[x1[0]]]
 y2=[total_rrsp[x2[0]]]
 y3=[total_hisa[x3[0]]]
 
-
-app = dash.Dash()
+app = dash.Dash(url_base_pathname='/dash')
 df = pd.read_csv("https://raw.githubusercontent.com/plotly/datasets/master/finance-charts-apple.csv")
 
 
@@ -182,40 +299,6 @@ days_tfsa = date_end - tfsa_last
 days_rrsp = date_end - rrsp_last
 days_hisa = date_end - hisa_last
 
-y_tfsa = int(total_tfsa[dates[9]])
-y_rrsp = int(total_rrsp[dates[9]])
-y_hisa = int(total_hisa[dates[9]])
-
-barGraph_tfsa = go.Bar(
-    x=['Current Value', 'Monthly Deposit of $500', 'Monthly Deposit + No Withdrawals'],
-    y=[y_tfsa, (y_tfsa * 1.5), (y_tfsa * 1.9)],
-    text=['Current Value', 'Monthly Deposit of $500', 'Monthly Deposit + No Withdrawals'],
-    marker=dict(
-        color=['rgb(46,126,78)', 'rgb(49,164,82)',
-               'rgb(51,214,66)']),
-    opacity=1
-)
-
-barGraph_rrsp = go.Bar(
-    x=['Current Value', 'Monthly Deposit of $500', 'Monthly Deposit + No Withdrawals'],
-    y=[y_rrsp, y_rrsp * 1.3, y_rrsp * 1.6],
-    text=['Current Value', 'Monthly Deposit of $500', 'Monthly Deposit + No Withdrawals'],
-    marker=dict(
-        color=['rgb(242,72,241)', 'rgb(243,164,242)',
-               'rgb(232,26,152)']),
-    opacity=1
-)
-
-barGraph_hisa = go.Bar(
-    x=['Current Value', 'Monthly Deposit of $500', 'Monthly Deposit + No Withdrawals'],
-    y=[y_hisa, y_hisa * 1.1, y_hisa * 1.3],
-    text=['Current Value', 'Monthly Deposit of $500', 'Monthly Deposit + No Withdrawals'],
-    marker=dict(
-        color=['rgb(47,129,183)','rgb(66,118,161)',
-                'rgb(62,204,203)']),
-    opacity=1
-)
-
 barLayout = go.Layout(
     autosize=False,
     width=570,
@@ -270,13 +353,11 @@ radio_currency = dcc.RadioItems(
 
 
 
-
-app = dash.Dash()
 app.layout = html.Div([
 
     html.Div([
-        html.H1("BLACK SWAN", style={'color': '#444ECC', 'margin': 20}),
-        html.H2("See what we've been up to", style={'color': '#444ECC', 'margin': 20}),
+        html.H1("BLACK SWAN", style={'color': '#F8B041', 'margin': 20}),
+        html.H2("See what we've been up to", style={'color': '#F8B041', 'margin': 20}),
     ], style={'backgroundColor': '#1D1D1D'}, className='rows'),
 
     html.Div([
@@ -392,7 +473,7 @@ app.layout = html.Div([
 
     html.Div([
         html.Div(nextbut),
-    ], style={"margin-top": 30, "margin-left": 40, "margin-bottom": 100, "backgroundColor": "#F8B041", "width": 94}),
+    ], style={"margin-top": 30, "margin-left": 40, "margin-bottom": 100, "backgroundColor": "#F8B041", "width": 95}),
 
     html.Div([
         html.Div([
@@ -412,7 +493,7 @@ app.layout = html.Div([
                 dcc.Graph(
                     id='bar1',
                     figure={
-                        'data': [barGraph_tfsa],
+                        'data': [data.barGraph_tfsa],
                         'layout': barLayout
                     },
                 )
@@ -422,43 +503,45 @@ app.layout = html.Div([
 
         html.Div([
             html.Div([
-                html.H4("Time since last deposit:", style={'color': '#F8B041', 'margin-left': 60})
+                html.H4("Time since last deposit:", style={'color': '#F8B041', 'margin-left': 100})
             ], className="six columns"),
 
             html.Div(
                 id='dayssince',
-                children=html.H4('{}'.format(days_tfsa), style={'color': '#ffffff', 'margin-left': 30}),
+                children=html.H4('{}'.format(days_tfsa), style={'color': '#ffffff', 'margin-left': 30, }),
                 className="six columns"),
         ], className="five columns"),
 
         html.Div([
             html.Div([
-                html.H4("What you missed out on:", style={'color': '#F8B041', 'margin-left': 60})
+                html.H4("What you missed out on:", style={'color': '#F8B041', 'margin-left': 100})
             ], className="six columns"),
 
             html.Div(
                 id='missed',
-                children=html.H4('${}'.format(round((y_tfsa * 1.9) - y_tfsa), 2),
-                                 style={'color': '#ffffff', 'margin-left': 40 })
+                children=html.H4('${}'.format(round((data.y_tfsa * 1.9) - data.y_tfsa), 2),
+                                 style={'color': '#ffffff', 'margin-left': 40})
                 , className="six columns"),
         ], className="five columns"),
 
         html.Div([
-            html.Div(html.H4("Make a deposit"), style={'color':'#F8B041', 'margin-left': 60}),
+            html.Div(html.H4("Make a deposit"), style={'color': '#F8B041', 'margin-left': 100,}),
             html.Div([
                 html.Div(input_amount),
-            ], style={'margin-top':20, 'margin-left': 60}),
+            ], style={'margin-top': 20, 'margin-left': 100}),
+            html.Div(html.H6("---"), style={'color':"#1D1D1D", 'font':dict(size=8)}),
             html.Div([
                 html.Div(drop_bank),
-            ], style={'margin-top:':20, 'margin-left': 60}),
+            ], style={'margin-top:': 10, 'margin-left': 100}),
             html.Div([
                 html.Div(radio_currency),
-            ], style={'color': "#FFFFFF", 'margin-top': 20, 'margin-left': 60}),
-            html.Div(html.H5(id='deposit-sentence'), style={'color':'#FFFFFF','margin-left': 60}),
-            html.Div(html.H5(id='deposit-result'), style={'color':"#f9db43", 'margin-left': 60}),
+            ], style={'color': "#FFFFFF", 'margin-top': 20, 'margin-left': 100}),
+            html.Div(html.H5(id='deposit-sentence'), style={'color': '#FFFFFF', 'margin-left': 100}),
+            html.Div(html.H5(id='deposit-result'), style={'color': "#f9db43", 'margin-left': 100}),
             html.Div([
                 html.Button('Deposit now', id="deposit")
-            ], style={"margin-top": 40, 'margin-bottom': 50, 'margin-left': 60, 'backgroundColor': '#F8B041', "width": 151})
+            ], style={"margin-top": 40, 'margin-bottom': 50, 'margin-left': 100, 'backgroundColor': '#F8B041',
+                      "width": 151})
 
         ], className="five columns")
 
@@ -654,17 +737,17 @@ def update_s1(clicks):
 def update_bar(val):
     if val == 'TFSA':
         return {
-            'data': [barGraph_tfsa],
+            'data': [data.barGraph_tfsa],
             'layout': barLayout
         }
     elif val == 'RRSP':
         return {
-            'data': [barGraph_rrsp],
+            'data': [data.barGraph_rrsp],
             'layout': barLayout
         }
     elif val == 'Smart Savings':
         return {
-            'data': [barGraph_hisa],
+            'data': [data.barGraph_hisa],
             'layout': barLayout
         }
 
@@ -686,11 +769,11 @@ def update_days(val):
     [Input('drop', 'value')])
 def update_miss(val):
     if val == 'TFSA':
-        return html.H4('${}'.format(round((y_tfsa * 1.9) - y_tfsa), 2), style={'color': '#ffffff', 'margin': 40})
+        return html.H4('${}'.format(round((data.y_tfsa * 1.9) - data.y_tfsa), 2), style={'color': '#ffffff', 'margin': 40})
     elif val == 'RRSP':
-        return html.H4('${}'.format(round((y_rrsp * 1.6) - y_rrsp), 2), style={'color': '#ffffff', 'margin': 40})
+        return html.H4('${}'.format(round((data.y_rrsp * 1.6) - data.y_rrsp), 2), style={'color': '#ffffff', 'margin': 40})
     elif val == 'Smart Savings':
-        return html.H4('${}'.format(round((y_hisa * 1.3) - y_hisa), 2), style={'color': '#ffffff', 'margin': 40})
+        return html.H4('${}'.format(round((data.y_hisa * 1.3) - data.y_hisa), 2), style={'color': '#ffffff', 'margin': 40})
 
 
 @app.callback(
@@ -723,7 +806,7 @@ def update_sentence(amount, bank, currency, account):
     if bank == rbc453_id:
         label = 'RBC****453'
     elif bank == rbc533_id:
-        label = 'RBC****531'
+        label = 'RBC****533'
     elif bank == bmo121_id:
         label = 'BMO****121'
     return 'Deposit ${} {} from {} into your {} account?'.format(amount, currency, label, account)
