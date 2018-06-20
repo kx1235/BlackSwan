@@ -12,6 +12,7 @@ from data.data_getter import list_positions, get_dates
 from postDeposit import *
 
 
+
 class Data:
     def __init__(self, accounts, dates):
         self.accounts = accounts
@@ -25,6 +26,41 @@ class Data:
         self.y_tfsa = 0
         self.y_hisa = 0
 
+        self.y_rrsp_data = [self.y_rrsp, self.y_rrsp * 1.3, self.y_rrsp * 1.6]
+        self.y_tfsa_data = [self.y_tfsa, (self.y_tfsa * 1.5), (self.y_tfsa * 1.9)]
+        self.y_hisa_data = [self.y_hisa, self.y_hisa * 1.1, self.y_hisa * 1.3]
+
+        # Create bar graphs
+        self.barGraph_rrsp = go.Bar(
+            x=['Current Value', 'Monthly Deposit of $500', 'Monthly Deposit + No Withdrawals'],
+            y=self.y_rrsp_data,
+            text=['Current Value', 'Monthly Deposit of $500', 'Monthly Deposit + No Withdrawals'],
+            marker=dict(
+                color=['rgb(242,72,241)', 'rgb(243,164,242)',
+                       'rgb(232,26,152)']),
+            opacity=1
+        )
+
+        self.barGraph_tfsa = go.Bar(
+            x=['Current Value', 'Monthly Deposit of $500', 'Monthly Deposit + No Withdrawals'],
+            y=self.y_tfsa_data,
+            text=['Current Value', 'Monthly Deposit of $500', 'Monthly Deposit + No Withdrawals'],
+            marker=dict(
+                color=['rgb(46,126,78)', 'rgb(49,164,82)',
+                       'rgb(51,214,66)']),
+            opacity=1
+        )
+
+        self.barGraph_hisa = go.Bar(
+            x=['Current Value', 'Monthly Deposit of $500', 'Monthly Deposit + No Withdrawals'],
+            y=self.y_hisa_data,
+            text=['Current Value', 'Monthly Deposit of $500', 'Monthly Deposit + No Withdrawals'],
+            marker=dict(
+                color=['rgb(47,129,183)', 'rgb(66,118,161)',
+                       'rgb(62,204,203)']),
+            opacity=1
+        )
+
     def update(self):
         rrsp = list_positions(account1, dates)
         tfsa = list_positions(account2, dates)
@@ -32,11 +68,23 @@ class Data:
 
         # Deep copy
         for date in rrsp[0]:
-            self.rrsp[0][date] = rrsp[0][date]
+            if date == self.dates[0]:
+                for item in rrsp[0][date]:
+                    self.rrsp[0][date].append(item)
+            else:
+                self.rrsp[0][date] = rrsp[0][date]
         for date in tfsa[0]:
-            self.tfsa[0][date] = tfsa[0][date]
+            if date == self.dates[0]:
+                for item in tfsa[0][date]:
+                    self.tfsa[0][date].append(item)
+            else:
+                self.tfsa[0][date] = tfsa[0][date]
         for date in hisa[0]:
-            self.hisa[0][date] = hisa[0][date]
+            if date == self.dates[0]:
+                for item in hisa[0][date]:
+                    self.hisa[0][date].append(item)
+            else:
+                self.hisa[0][date] = hisa[0][date]
 
         for symbol in rrsp[1]:
             self.rrsp[1].append(symbol)
@@ -56,6 +104,19 @@ class Data:
         self.y_tfsa = int(self.tfsa[2][dates[9]])
         self.y_hisa = int(self.hisa[2][dates[9]])
 
+        self.y_rrsp_data.extend([self.y_rrsp, self.y_rrsp * 1.3, self.y_rrsp * 1.6])
+        self.y_tfsa_data.extend([self.y_tfsa, (self.y_tfsa * 1.5), (self.y_tfsa * 1.9)])
+        self.y_hisa_data.extend([self.y_hisa, self.y_hisa * 1.1, self.y_hisa * 1.3])
+
+        self.y_rrsp_data.pop(0)
+        self.y_rrsp_data.pop(0)
+        self.y_rrsp_data.pop(0)
+        self.y_tfsa_data.pop(0)
+        self.y_tfsa_data.pop(0)
+        self.y_tfsa_data.pop(0)
+        self.y_hisa_data.pop(0)
+        self.y_hisa_data.pop(0)
+        self.y_hisa_data.pop(0)
 
 
 date_beg = date(2018, month=3, day=12)
@@ -228,37 +289,6 @@ days_tfsa = date_end - tfsa_last
 days_rrsp = date_end - rrsp_last
 days_hisa = date_end - hisa_last
 
-
-barGraph_tfsa = go.Bar(
-    x=['Current Value', 'Monthly Deposit of $500', 'Monthly Deposit + No Withdrawals'],
-    y=[data.y_tfsa, (data.y_tfsa * 1.5), (data.y_tfsa * 1.9)],
-    text=['Current Value', 'Monthly Deposit of $500', 'Monthly Deposit + No Withdrawals'],
-    marker=dict(
-        color=['rgb(46,126,78)', 'rgb(49,164,82)',
-               'rgb(51,214,66)']),
-    opacity=1
-)
-
-barGraph_rrsp = go.Bar(
-    x=['Current Value', 'Monthly Deposit of $500', 'Monthly Deposit + No Withdrawals'],
-    y=[data.y_rrsp, data.y_rrsp * 1.3, data.y_rrsp * 1.6],
-    text=['Current Value', 'Monthly Deposit of $500', 'Monthly Deposit + No Withdrawals'],
-    marker=dict(
-        color=['rgb(242,72,241)', 'rgb(243,164,242)',
-               'rgb(232,26,152)']),
-    opacity=1
-)
-
-barGraph_hisa = go.Bar(
-    x=['Current Value', 'Monthly Deposit of $500', 'Monthly Deposit + No Withdrawals'],
-    y=[data.y_hisa, data.y_hisa * 1.1, data.y_hisa * 1.3],
-    text=['Current Value', 'Monthly Deposit of $500', 'Monthly Deposit + No Withdrawals'],
-    marker=dict(
-        color=['rgb(47,129,183)', 'rgb(66,118,161)',
-               'rgb(62,204,203)']),
-    opacity=1
-)
-
 barLayout = go.Layout(
     autosize=False,
     width=570,
@@ -313,8 +343,6 @@ radio_currency = dcc.RadioItems(
 
 
 
-
-app = dash.Dash()
 app.layout = html.Div([
 
     html.Div([
@@ -455,7 +483,7 @@ app.layout = html.Div([
                 dcc.Graph(
                     id='bar1',
                     figure={
-                        'data': [barGraph_tfsa],
+                        'data': [data.barGraph_tfsa],
                         'layout': barLayout
                     },
                 )
@@ -698,17 +726,17 @@ def update_s1(clicks):
 def update_bar(val):
     if val == 'TFSA':
         return {
-            'data': [barGraph_tfsa],
+            'data': [data.barGraph_tfsa],
             'layout': barLayout
         }
     elif val == 'RRSP':
         return {
-            'data': [barGraph_rrsp],
+            'data': [data.barGraph_rrsp],
             'layout': barLayout
         }
     elif val == 'Smart Savings':
         return {
-            'data': [barGraph_hisa],
+            'data': [data.barGraph_hisa],
             'layout': barLayout
         }
 
@@ -730,11 +758,11 @@ def update_days(val):
     [Input('drop', 'value')])
 def update_miss(val):
     if val == 'TFSA':
-        return html.H4('${}'.format(round((y_tfsa * 1.9) - y_tfsa), 2), style={'color': '#ffffff', 'margin': 40})
+        return html.H4('${}'.format(round((data.y_tfsa * 1.9) - data.y_tfsa), 2), style={'color': '#ffffff', 'margin': 40})
     elif val == 'RRSP':
-        return html.H4('${}'.format(round((y_rrsp * 1.6) - y_rrsp), 2), style={'color': '#ffffff', 'margin': 40})
+        return html.H4('${}'.format(round((data.y_rrsp * 1.6) - data.y_rrsp), 2), style={'color': '#ffffff', 'margin': 40})
     elif val == 'Smart Savings':
-        return html.H4('${}'.format(round((y_hisa * 1.3) - y_hisa), 2), style={'color': '#ffffff', 'margin': 40})
+        return html.H4('${}'.format(round((data.y_hisa * 1.3) - data.y_hisa), 2), style={'color': '#ffffff', 'margin': 40})
 
 
 @app.callback(
