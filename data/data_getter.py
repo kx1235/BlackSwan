@@ -2,7 +2,7 @@ from api_handler import data_getter
 from datetime import date, timedelta
 from typing import List, Dict
 import json
-
+from postDeposit import get_personid
 
 def get_dates(start: date, end: date, num_dates=10) -> List[date]:
     """
@@ -95,10 +95,10 @@ def get_latest_deposit() -> Dict:
     return info
 
 
-def get_first_name() -> str:
-    """Return the first name of the user"""
-    return data_getter.get_first_name()
-
+def get_person_name():
+    j = json.loads(data_getter.get_data('people/' + get_personid()))
+    name = j['full_legal_name']['first_name']
+    return name
 
 if __name__ == "__main__":
     data_getter.setup()  # You need this just to set up the data_getter

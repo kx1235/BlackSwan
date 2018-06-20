@@ -152,6 +152,9 @@ y1=[total_tfsa[x1[0]]]
 y2=[total_rrsp[x2[0]]]
 y3=[total_hisa[x3[0]]]
 
+person_name = data.get_first_name()
+title = "Welcome back " + person_name
+
 app = dash.Dash(url_base_pathname='/dash')
 df = pd.read_csv("https://raw.githubusercontent.com/plotly/datasets/master/finance-charts-apple.csv")
 
@@ -356,7 +359,7 @@ radio_currency = dcc.RadioItems(
 app.layout = html.Div([
 
     html.Div([
-        html.H1("BLACK SWAN", style={'color': '#444ECC', 'margin': 20}),
+        html.H1(, style = {'color': '#444ECC', 'margin': 20}),
         html.H2("See what we've been up to", style={'color': '#444ECC', 'margin': 20}),
     ], style={'backgroundColor': '#1D1D1D'}, className='rows'),
 
