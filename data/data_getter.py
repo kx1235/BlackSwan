@@ -95,11 +95,6 @@ def get_latest_deposit() -> Dict:
     return info
 
 
-def get_person_name():
-    j = json.loads(data_getter.get_data('people/' + get_personid()))
-    name = j['full_legal_name']['first_name']
-    return name
-
 if __name__ == "__main__":
     data_getter.setup()  # You need this just to set up the data_getter
     dates = get_dates(date(2018, month=2, day=12), date(2018, month=4, day=23))  # This is how you enter the dates

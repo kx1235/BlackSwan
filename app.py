@@ -8,15 +8,13 @@ import pandas as pd
 
 from datetime import date
 from data import data_getter
-from data.data_getter import list_positions, get_dates, get_first_name
+from data.data_getter import list_positions, get_dates
 from postDeposit import *
 
 
 
 class Data:
     def __init__(self, accounts, dates):
-        self.updated = False
-
         self.accounts = accounts
         self.dates = dates
 
@@ -64,8 +62,6 @@ class Data:
         )
 
     def update(self):
-        self.updated = False
-
         rrsp = list_positions(account1, dates)
         tfsa = list_positions(account2, dates)
         hisa = list_positions(account3, dates)
@@ -122,12 +118,6 @@ class Data:
         self.y_hisa_data.pop(0)
         self.y_hisa_data.pop(0)
 
-    def get_first_name(self):
-        if self.updated:
-            return self.get_first_name()
-        else:
-            return ''
-
 
 date_beg = date(2018, month=3, day=12)
 date_end = date(2018, month=4, day=23)
@@ -151,9 +141,6 @@ x3=[dates[0]]
 y1=[total_tfsa[x1[0]]]
 y2=[total_rrsp[x2[0]]]
 y3=[total_hisa[x3[0]]]
-
-person_name = data.get_first_name()
-title = "Welcome back " + person_name
 
 app = dash.Dash(url_base_pathname='/dash')
 df = pd.read_csv("https://raw.githubusercontent.com/plotly/datasets/master/finance-charts-apple.csv")
@@ -359,7 +346,7 @@ radio_currency = dcc.RadioItems(
 app.layout = html.Div([
 
     html.Div([
-        html.H1(, style = {'color': '#444ECC', 'margin': 20}),
+        html.H1("BLACK SWAN", style={'color': '#444ECC', 'margin': 20}),
         html.H2("See what we've been up to", style={'color': '#444ECC', 'margin': 20}),
     ], style={'backgroundColor': '#1D1D1D'}, className='rows'),
 
