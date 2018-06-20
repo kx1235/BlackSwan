@@ -1,5 +1,64 @@
 <!DOCTYPE html>
+<html>
 <style>
+#loader,
+#loader:before,
+#loader:after {
+  border-radius: 50%;
+  width: 2.5em;
+  height: 2.5em;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation: load7 1.8s infinite ease-in-out;
+  animation: load7 1.8s infinite ease-in-out;
+}
+#loader {
+  color: #ffffff;
+  font-size: 10px;
+  margin: 80px auto;
+  position: relative;
+  text-indent: -9999em;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+#loader:before,
+#loader:after {
+  content: '';
+  position: absolute;
+  top: 0;
+}
+#loader:before {
+  left: -3.5em;
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+#loader:after {
+  left: 3.5em;
+}
+@-webkit-keyframes load7 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 2.5em 0 -1.3em;
+  }
+  40% {
+    box-shadow: 0 2.5em 0 0;
+  }
+}
+@keyframes load7 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 2.5em 0 -1.3em;
+  }
+  40% {
+    box-shadow: 0 2.5em 0 0;
+  }
+}
+
 body{
   background-color: #1D1D1D
 }
@@ -11,7 +70,7 @@ body{
   font-family: 'Roboto', sans-serif;
 }
 
-#enter button{
+#login button{
   text-align: center;
   background-color: transparent;
   border: 2px solid #fff;
@@ -24,46 +83,66 @@ body{
   height: 41px;
   width: 10%;
 }
-#enter button:hover{
+#login button:hover{
   cursor: pointer;
 }
+
 </style>
+
 <head>
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <title>Black Swan</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script>
+
+  $(document).ready(function(){
+     var myVar;
+     $('#loader').hide();
+   $( "#login" ).click(function() {
+    	myFunction(this);
+  });
+
+   function myFunction(div) {
+   $("#loader").toggle();
+
+   $(div).toggle();
+   }
+  });
+  </script>
 </head>
 
 <body>
-<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+  <!--{% if controller.is_authenticated() %}-->
+  <!--<h1>Hello, {{ controller.first_name }}!</h1>-->
+  <!--<p>Here you can pick what type of data you want to view and I will get it for you.</p>-->
+  <!--<form action="{{ url_for('get_data') }}" method="post">-->
+  <!--Endpoint: <br>-->
+  <!--<input type="text" name="endpoint">-->
+  <!--<input type="submit" value="Search">-->
+  <!--</form>-->
 
-<!--{% if controller.is_authenticated() %}-->
-<!--<h1>Hello, {{ controller.first_name }}!</h1>-->
-<!--<p>Here you can pick what type of data you want to view and I will get it for you.</p>-->
-<!--<form action="{{ url_for('get_data') }}" method="post">-->
-<!--Endpoint: <br>-->
-<!--<input type="text" name="endpoint">-->
-<!--<input type="submit" value="Search">-->
-<!--</form>-->
+  <!--{% if controller.has_data() %}-->
+  <!--<div class="data">-->
+  <!--<pre>{{ controller.data }}</pre>-->
+  <!--</div>-->
+  <!--{% endif %}-->
+  <!--{% else %}-->
+  <!--<h1>Black Swan</h1>-->
+  <!--<p>Get the code by following this <a href="{{ controller.links['request_access'] }}">link</a></p>-->
+  <!--{% endif %}-->
 
-<!--{% if controller.has_data() %}-->
-<!--<div class="data">-->
-<!--<pre>{{ controller.data }}</pre>-->
-<!--</div>-->
-<!--{% endif %}-->
-<!--{% else %}-->
-<!--<h1>Black Swan</h1>-->
-<!--<p>Get the code by following this <a href="{{ controller.links['request_access'] }}">link</a></p>-->
-<!--{% endif %}-->
-<div id="title">
-  <h1>Black Swan Dashboard<h1>
-</div>
+  <div id="title">
+    <h1>Black Swan Dashboard<h1>
+  </div>
 
-<div id="enter">
-  <button type="button" onclick="location.href='https://google.com'">Log in</button>
-</div>
-<p>Click the this <a href="{{ controller.links['request_access'] }}">link</a> to get set up</p>
-<!--<form>-->
-<!--<input type="button" value="Get started!" onclick="{{ controller.links['request_access'] }}">-->
-<!--</form>-->
+  <a id="login" href="https://google.com"><button>Log in</button></a>
+  <div id="loader"></div>
+
+  <p>Click the this <a href="{{ controller.links['request_access'] }}">link</a> to get set up</p>
+  <!--<form>-->
+  <!--<input type="button" value="Get started!" onclick="{{ controller.links['request_access'] }}">-->
+  <!--</form>-->
+
+
 </body>
 </html>
