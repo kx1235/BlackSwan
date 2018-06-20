@@ -40,7 +40,6 @@ def auth():
     # return render_template("home.html", controller=data_getter)  # Get endpoints page
 
     # Refresh data somewhere
-    print("updating")
     app_class.data.update()
 
     return redirect('/dash')

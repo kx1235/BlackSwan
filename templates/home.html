@@ -132,17 +132,10 @@ body{
   <!--{% endif %}-->
 
   <div id="title">
-    <h1>Black Swan Dashboard<h1>
+    <h1>Black Swan Dashboard</h1>
   </div>
 
-  <a id="login" href="https://google.com"><button>Log in</button></a>
+  <a id="login" href="{{ controller.links['request_access'] }}"><button>Log in</button></a>
   <div id="loader"></div>
-
-  <p>Click the this <a href="{{ controller.links['request_access'] }}">link</a> to get set up</p>
-  <!--<form>-->
-  <!--<input type="button" value="Get started!" onclick="{{ controller.links['request_access'] }}">-->
-  <!--</form>-->
-
-
 </body>
 </html>
