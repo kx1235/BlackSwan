@@ -8,13 +8,15 @@ import pandas as pd
 
 from datetime import date
 from data import data_getter
-from data.data_getter import list_positions, get_dates
+from data.data_getter import list_positions, get_dates, get_first_name
 from postDeposit import *
 
 
 
 class Data:
     def __init__(self, accounts, dates):
+        self.updated = False
+
         self.accounts = accounts
         self.dates = dates
 
@@ -62,6 +64,8 @@ class Data:
         )
 
     def update(self):
+        self.updated = False
+
         rrsp = list_positions(account1, dates)
         tfsa = list_positions(account2, dates)
         hisa = list_positions(account3, dates)
@@ -117,6 +121,12 @@ class Data:
         self.y_hisa_data.pop(0)
         self.y_hisa_data.pop(0)
         self.y_hisa_data.pop(0)
+
+    def get_first_name(self):
+        if self.updated:
+            return self.get_first_name()
+        else:
+            return ''
 
 
 date_beg = date(2018, month=3, day=12)

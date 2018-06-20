@@ -95,6 +95,11 @@ def get_latest_deposit() -> Dict:
     return info
 
 
+def get_first_name() -> str:
+    """Return the first name of the user"""
+    return data_getter.get_first_name()
+
+
 if __name__ == "__main__":
     data_getter.setup()  # You need this just to set up the data_getter
     dates = get_dates(date(2018, month=2, day=12), date(2018, month=4, day=23))  # This is how you enter the dates
