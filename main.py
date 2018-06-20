@@ -30,10 +30,17 @@ def get_data():
 
 @server.route('/auth')
 def auth():
-    """Get the authorization code from URL"""
-    # Get authentication token
+    """Loading screen while data is being downloaded"""
+    # Get code WS
     code = request.args.get('code')
     data_getter.credentials['code'] = code
+
+    return render_template("home_loading.html")
+
+@server.route('/load_data')
+def load_data():
+    """Get the authorization code from URL"""
+    # Get authentication token
     data_getter.token_exchange()
     data_getter.get_first_name()  # TODO: Remove this
     # return render_template("auth.html", controller=data_getter, code=code)  # Auth page
