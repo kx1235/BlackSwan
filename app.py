@@ -758,11 +758,14 @@ def update_days(val):
     [Input('drop', 'value')])
 def update_miss(val):
     if val == 'TFSA':
-        return html.H4('${}'.format(round((data.y_tfsa * 1.9) - data.y_tfsa), 2), style={'color': '#ffffff', 'margin': 40})
+        return html.H4('${}'.format(round((data.y_tfsa * 1.9) - data.y_tfsa), 2),
+                       style={'color': '#ffffff', 'margin': 40})
     elif val == 'RRSP':
-        return html.H4('${}'.format(round((data.y_rrsp * 1.6) - data.y_rrsp), 2), style={'color': '#ffffff', 'margin': 40})
+        return html.H4('${}'.format(round((data.y_rrsp * 1.6) - data.y_rrsp), 2),
+                       style={'color': '#ffffff', 'margin': 40})
     elif val == 'Smart Savings':
-        return html.H4('${}'.format(round((data.y_hisa * 1.3) - data.y_hisa), 2), style={'color': '#ffffff', 'margin': 40})
+        return html.H4('${}'.format(round((data.y_hisa * 1.3) - data.y_hisa), 2),
+                       style={'color': '#ffffff', 'margin': 40})
 
 
 @app.callback(

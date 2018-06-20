@@ -87,6 +87,7 @@ body{
   cursor: pointer;
 }
 
+
 </style>
 
 <head>
@@ -108,34 +109,37 @@ body{
    $(div).toggle();
    }
   });
+
   </script>
 </head>
 
 <body>
-  <!--{% if controller.is_authenticated() %}-->
-  <!--<h1>Hello, {{ controller.first_name }}!</h1>-->
-  <!--<p>Here you can pick what type of data you want to view and I will get it for you.</p>-->
-  <!--<form action="{{ url_for('get_data') }}" method="post">-->
-  <!--Endpoint: <br>-->
-  <!--<input type="text" name="endpoint">-->
-  <!--<input type="submit" value="Search">-->
-  <!--</form>-->
+<!--{% if controller.is_authenticated() %}-->
+<!--<h1>Hello, {{ controller.first_name }}!</h1>-->
+<!--<p>Here you can pick what type of data you want to view and I will get it for you.</p>-->
+<!--<form action="{{ url_for('get_data') }}" method="post">-->
+<!--Endpoint: <br>-->
+<!--<input type="text" name="endpoint">-->
+<!--<input type="submit" value="Search">-->
+<!--</form>-->
 
-  <!--{% if controller.has_data() %}-->
-  <!--<div class="data">-->
-  <!--<pre>{{ controller.data }}</pre>-->
-  <!--</div>-->
-  <!--{% endif %}-->
-  <!--{% else %}-->
-  <!--<h1>Black Swan</h1>-->
-  <!--<p>Get the code by following this <a href="{{ controller.links['request_access'] }}">link</a></p>-->
-  <!--{% endif %}-->
+<!--{% if controller.has_data() %}-->
+<!--<div class="data">-->
+<!--<pre>{{ controller.data }}</pre>-->
+<!--</div>-->
+<!--{% endif %}-->
+<!--{% else %}-->
+<!--<h1>Black Swan</h1>-->
+<!--<p>Get the code by following this <a href="{{ controller.links['request_access'] }}">link</a></p>-->
+<!--{% endif %}-->
 
-  <div id="title">
+<div id="title">
     <h1>Black Swan Dashboard</h1>
-  </div>
+</div>
 
-  <a id="login" href="{{ controller.links['request_access'] }}"><button>Log in</button></a>
-  <div id="loader"></div>
+<a id="login" href="{{ controller.links['request_access'] }}">
+    <button>Log in</button>
+</a>
+<div id="loader"></div>
 </body>
 </html>
