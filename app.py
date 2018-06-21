@@ -17,9 +17,9 @@ class Data:
         self.accounts = accounts
         self.dates = dates
 
-        self.rrsp = {dates[0]: []}, [], {dates[0]: 0}
-        self.tfsa = {dates[0]: []}, [], {dates[0]: 0}
-        self.hisa = {dates[0]: []}, [], {dates[0]: 0}
+        self.rrsp = {dates[0]: []}, [], {}
+        self.tfsa = {dates[0]: []}, [], {}
+        self.hisa = {dates[0]: []}, [], {}
 
         self.y_rrsp = 0
         self.y_tfsa = 0
@@ -137,9 +137,9 @@ x1=[dates[0]]
 x2=[dates[0]]
 x3=[dates[0]]
 
-y1=[total_tfsa[x1[0]]]
-y2=[total_rrsp[x2[0]]]
-y3=[total_hisa[x3[0]]]
+y1=[]
+y2=[]
+y3=[]
 
 app = dash.Dash(url_base_pathname='/dash')
 
