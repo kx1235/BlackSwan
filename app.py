@@ -118,7 +118,7 @@ class Data:
         self.y_hisa_data.pop(0)
 
 
-date_beg = date(2018, month=3, day=12)
+date_beg = date(2018, month=3, day=16)
 date_end = date(2018, month=4, day=23)
 
 dates = get_dates(date_beg, date_end)
@@ -165,7 +165,7 @@ slider = dcc.Slider(
     },
 )
 
-nextbut = html.Button('Next', id='button', n_clicks=0)
+nextbut = html.Button('Next', id='button')
 
 fig1 = go.Layout(
     showlegend=False,
