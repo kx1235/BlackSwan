@@ -290,8 +290,8 @@ days_hisa = date_end - hisa_last
 
 barLayout = go.Layout(
     autosize=False,
-    width=570,
-    height=500,
+    width=670,
+    height=700,
     margin=go.Margin(
         l=100,
         r=150,
@@ -345,7 +345,7 @@ radio_currency = dcc.RadioItems(
 app.layout = html.Div([
 
     html.Div([
-        html.H1("Welcome back Addison", style={'color': '#F8B041', 'margin': 20, }, ),
+        html.H1("Welcome back Addison,", style={'color': '#F8B041', 'margin': 20}, ),
         html.H2("Here's what changed", style={'color': '#F8B041', 'margin': 20}),
     ], style={'backgroundColor': '#1D1D1D'}, className='rows'),
 
@@ -492,18 +492,18 @@ app.layout = html.Div([
 
         html.Div([
             html.Div([
-                html.H4("Time since last deposit:", style={'color': '#F8B041', 'margin-left': 100})
+                html.H5("Time since last deposit:", style={'color': '#F8B041', 'margin-left': 100})
             ], className="six columns"),
 
             html.Div(
                 id='dayssince',
                 children=html.H4('{}'.format(days_tfsa), style={'color': '#ffffff', 'margin-left': 30, }),
-                className="six columns", style={"margin-top": 5}),
-        ], className="five columns"),
+                className="six columns"),
+        ], style={"margin-bottom": 10}, className="five columns"),
 
         html.Div([
             html.Div([
-                html.H4("What you missed out on:", style={'color': '#F8B041', 'margin-left': 100})
+                html.H5("What you missed out on:", style={'color': '#F8B041', 'margin-left': 100})
             ], className="six columns"),
 
             html.Div(
@@ -511,30 +511,32 @@ app.layout = html.Div([
                 children=html.H4('${}'.format(round((data.y_tfsa * 1.9) - data.y_tfsa), 2),
                                  style={'color': '#ffffff', 'margin-left': 40})
                 , className="six columns", style={"margin-top": 5}),
-        ], className="five columns"),
+        ], style={"margin-bottom": 5}, className="five columns"),
 
         html.Div([
-            html.Div(html.H4("Make a deposit"), style={'color': '#F8B041', 'margin-left': 100}),
+            html.Div(html.H4("Make a deposit"), style={'color': '#F8B041', 'margin-left': 10}),
             html.Div([
                 html.Div(input_amount),
-            ], style={'margin-top': 20, 'margin-left': 100}),
+            ], style={'margin-top': 20, 'margin-left': 10}),
             html.Div([
                 html.Div(drop_bank),
-            ], style={'margin-top': 20, 'margin-left': 100}),
+            ], style={'margin-top': 20, 'margin-left': 10}),
             html.Div([
                 html.Div(radio_currency),
-            ], style={'color': "#FFFFFF", 'margin-top': 20, 'margin-left': 100}),
-            html.Div(html.H5(id='deposit-sentence'), style={'color': '#FFFFFF', 'margin-left': 100}),
-            html.Div(html.H5(id='deposit-result'), style={'color': "#f9db43", 'margin-left': 100}),
+            ], style={'color': "#FFFFFF", 'margin-top': 20, 'margin-left': 10}),
+            html.Div(html.H5(id='deposit-sentence'), style={'color': '#FFFFFF', 'margin-left': 10}),
+            html.Div(html.H5(id='deposit-result'), style={'color': "#f9db43", 'margin-left': 10}),
             html.Div([
                 html.Button('Deposit now', id="deposit")
-            ], style={"margin-top": 40, 'margin-bottom': 50, 'margin-left': 100, 'backgroundColor': '#F8B041',
+            ], style={"margin-top": 40, 'margin-bottom': 50, 'margin-left': 10, 'backgroundColor': '#F8B041',
                       "width": 151})
 
-        ], className="five columns")
+        ], style={'backgroundColor': '0E0E0E', 'margin-top': 20, 'margin-left': 150, 'margin-bottom': 10,
+                  'box-shadow': '0 0 5px 5px #181818', 'border-radius': '15px', 'padding-left': '10px',
+                  'padding-right': '10px'}, className="five columns")
 
     ], className="row"),
-], style={'backgroundColor': '#1D1D1D', 'margin': 0, 'font-family': 'Helvetica'}, )
+], style={'backgroundColor': '#1D1D1D', 'margin': 0, 'font-family': 'Helvetica'})
 
 app.css.append_css({"external_url": "https://codepen.io/chriddyp/pen/bWLwgP.css"})
 
