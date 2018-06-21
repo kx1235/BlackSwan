@@ -12,6 +12,7 @@ from data.data_getter import list_positions, get_dates
 from postDeposit import *
 
 
+
 class Data:
     def __init__(self, accounts, dates):
         self.accounts = accounts
@@ -118,7 +119,7 @@ class Data:
         self.y_hisa_data.pop(0)
 
 
-date_beg = date(2018, month=3, day=16)
+date_beg = date(2018, month=3, day=12)
 date_end = date(2018, month=4, day=23)
 
 dates = get_dates(date_beg, date_end)
@@ -342,9 +343,10 @@ radio_currency = dcc.RadioItems(
 
 
 app.layout = html.Div([
+
     html.Div([
-        html.H1("BLACK SWAN", style={'color': '#444ECC', 'margin': 20, },),
-        html.H2("See what we've been up to", style={'color': '#444ECC', 'margin': 20}),
+        html.H1("Welcome back Addison", style={'color': '#F8B041', 'margin': 20, }, ),
+        html.H2("Here's what changed", style={'color': '#F8B041', 'margin': 20}),
     ], style={'backgroundColor': '#1D1D1D'}, className='rows'),
 
     html.Div([
