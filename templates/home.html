@@ -58,18 +58,15 @@
     box-shadow: 0 2.5em 0 0;
   }
 }
-
 body{
   background-color: #1D1D1D
 }
-
 #title {
   text-align: center;
   margin-top: 250px;
   color: #F8B041;
   font-family: 'Roboto', sans-serif;
 }
-
 #login button{
   text-align: center;
   background-color: transparent;
@@ -87,7 +84,12 @@ body{
   cursor: pointer;
 }
 
-
+#msg{
+  text-align: center;
+  color: #FFFFFF;
+  font-family: 'Roboto', sans-serif;
+  margin-top: 20px;
+}
 </style>
 
 <head>
@@ -95,21 +97,19 @@ body{
   <title>Black Swan</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script>
-
   $(document).ready(function(){
      var myVar;
      $('#loader').hide();
+     $('#msg').hide();
    $( "#login" ).click(function() {
     	myFunction(this);
   });
-
    function myFunction(div) {
    $("#loader").toggle();
-
+   $("#msg").toggle();
    $(div).toggle();
    }
   });
-
   </script>
 </head>
 
@@ -140,6 +140,9 @@ body{
 <a id="login" href="{{ controller.links['request_access'] }}">
     <button>Log in</button>
 </a>
+<div id="msg">
+  Please wait a moment while we load your information
+</div>
 <div id="loader"></div>
 </body>
 </html>

@@ -142,7 +142,6 @@ y2=[total_rrsp[x2[0]]]
 y3=[total_hisa[x3[0]]]
 
 app = dash.Dash(url_base_pathname='/dash')
-df = pd.read_csv("https://raw.githubusercontent.com/plotly/datasets/master/finance-charts-apple.csv")
 
 
 
@@ -166,7 +165,7 @@ slider = dcc.Slider(
     },
 )
 
-nextbut = html.Button('Next', id='button')
+nextbut = html.Button('Next', id='button', n_clicks=0)
 
 fig1 = go.Layout(
     showlegend=False,
@@ -226,7 +225,7 @@ fig3 = go.Layout(
 trace0 = go.Scatter(
     x=x1,
     y=y1,
-                name = "TFSA",
+    name = "TFSA",
     line=dict(color='#FFFFFF'),
                 opacity = 0.8)
 
@@ -248,8 +247,8 @@ portfolio_value = {
                         'data': [trace0,trace1, trace2],
                         "layout":dict(
                             title = "Portfolio value",
-                            showlegend= False,
                             width = 300,
+                            showlegend=True,
                             titlefont= dict(color='#dbdbdb'),
                             margin=go.Margin(
                                 l=50,
@@ -344,7 +343,7 @@ radio_currency = dcc.RadioItems(
 
 app.layout = html.Div([
     html.Div([
-        html.H1("BLACK SWAN", style={'color': '#444ECC', 'margin': 20}),
+        html.H1("BLACK SWAN", style={'color': '#444ECC', 'margin': 20, },),
         html.H2("See what we've been up to", style={'color': '#444ECC', 'margin': 20}),
     ], style={'backgroundColor': '#1D1D1D'}, className='rows'),
 
@@ -447,7 +446,7 @@ app.layout = html.Div([
         html.Div([
                 dcc.Graph(
                     id = 's1',
-                    style={'margin-left': 0, 'margin-bottom': 50, 'height': 350},
+                    style={'margin-left': 0, 'margin-bottom': 50, 'height': 350,},
                     figure= portfolio_value,
                     animate=False
                 )
@@ -461,7 +460,7 @@ app.layout = html.Div([
 
     html.Div([
         html.Div(nextbut),
-    ], style={"margin-top": 30, "margin-left": 40, "margin-bottom": 100, "backgroundColor": "#F8B041", "width": 94}),
+    ], style={"margin-top": 30, "margin-left": 40, "margin-bottom": 100, "backgroundColor": "#F8B041", "width": 95}),
 
     html.Div([
         html.Div([
@@ -491,25 +490,25 @@ app.layout = html.Div([
 
         html.Div([
             html.Div([
-                html.H4("Time since last deposit:", style={'color': '#F8B041', 'margin-left': 60})
+                html.H4("Time since last deposit:", style={'color': '#F8B041', 'margin-left': 100})
             ], className="six columns"),
 
             html.Div(
                 id='dayssince',
-                children=html.H4('{}'.format(days_tfsa), style={'color': '#ffffff', 'margin-left': 30}),
-                className="six columns"),
+                children=html.H4('{}'.format(days_tfsa), style={'color': '#ffffff', 'margin-left': 30, }),
+                className="six columns", style={"margin-top": 5}),
         ], className="five columns"),
 
         html.Div([
             html.Div([
-                html.H4("What you missed out on:", style={'color': '#F8B041', 'margin-left': 60})
+                html.H4("What you missed out on:", style={'color': '#F8B041', 'margin-left': 100})
             ], className="six columns"),
 
             html.Div(
                 id='missed',
                 children=html.H4('${}'.format(round((data.y_tfsa * 1.9) - data.y_tfsa), 2),
                                  style={'color': '#ffffff', 'margin-left': 40})
-                , className="six columns"),
+                , className="six columns", style={"margin-top": 5}),
         ], className="five columns"),
 
         html.Div([
@@ -519,7 +518,7 @@ app.layout = html.Div([
             ], style={'margin-top': 20, 'margin-left': 100}),
             html.Div([
                 html.Div(drop_bank),
-            ], style={'margin-top:': 20, 'margin-left': 100}),
+            ], style={'margin-top': 20, 'margin-left': 100}),
             html.Div([
                 html.Div(radio_currency),
             ], style={'color': "#FFFFFF", 'margin-top': 20, 'margin-left': 100}),
@@ -533,7 +532,7 @@ app.layout = html.Div([
         ], className="five columns")
 
     ], className="row"),
-], style={'backgroundColor': '#1D1D1D', 'margin': 0}, )
+], style={'backgroundColor': '#1D1D1D', 'margin': 0, 'font-family': 'Helvetica'}, )
 
 app.css.append_css({"external_url": "https://codepen.io/chriddyp/pen/bWLwgP.css"})
 
