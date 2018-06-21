@@ -19,7 +19,8 @@ def get_personid():
 
 def deposit_request(amount, currency, bank, port, client):
     endpoint = "https://api.sandbox.wealthsimple.com/v1/deposits"
-    headers = {'Authorization': 'Bearer %s' % creds['access_token']}
+    headers = {'Content-Type': 'application/json', 'Authorization': 'Bearer %s' % creds['access_token']}
+
     data = {
         "client_id": client,
         "bank_account_id": bank,
@@ -30,7 +31,7 @@ def deposit_request(amount, currency, bank, port, client):
         }
     }
 
-    r = requests.post(url=endpoint, headers=headers, data=data)
+    r = requests.post(url=endpoint, headers=headers, data=json.dumps(data))
 
-    response = r.text
+    response = r
     print(response)
