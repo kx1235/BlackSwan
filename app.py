@@ -12,7 +12,6 @@ from data.data_getter import list_positions, get_dates
 from postDeposit import *
 
 
-
 class Data:
     def __init__(self, accounts, dates):
         self.accounts = accounts
@@ -344,7 +343,6 @@ radio_currency = dcc.RadioItems(
 
 
 app.layout = html.Div([
-
     html.Div([
         html.H1("BLACK SWAN", style={'color': '#444ECC', 'margin': 20}),
         html.H2("See what we've been up to", style={'color': '#444ECC', 'margin': 20}),
